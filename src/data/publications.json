@@ -1,5 +1,19 @@
 [
   {
+    "title": "Quality assessment of quantum teleportation through the distribution of fidelity",
+    "year": 2026,
+    "authors": [
+      "Diego G. Bussandri",
+      "Gustavo M. Bosyk",
+      "Pablo Crespo Del Amo",
+      "Karol Życzkowski"
+    ],
+    "venue": "Physical Review Applied",
+    "doi": "10.1103/3gvb-qqx1",
+    "arxiv": null,
+    "url": "https://doi.org/10.1103/3gvb-qqx1"
+  },
+  {
     "title": "Q2SAR: A Quantum Multiple Kernel Learning Approach for Drug Discovery",
     "year": 2025,
     "authors": [
