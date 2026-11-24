@@ -61,7 +61,10 @@ jobs:
         run: gh workflow run deploy.yml --ref main
 
       # GitHub desactiva los cron de repos públicos tras 60 días sin actividad.
-      # Re-habilitar el workflow en cada corrida reinicia ese contador.
-      - name: Keep schedule alive
+      # Re-habilitar los workflows con cron en cada corrida reinicia ese contador
+      # (este, semanal, y el deploy, que tiene una corrida anual el 1 de enero).
+      - name: Keep schedules alive
         if: ${{ !cancelled() && github.ref == 'refs/heads/main' }}
-        run: gh workflow enable update-publications.yml
+        run: |
+          gh workflow enable update-publications.yml
+          gh workflow enable deploy.yml
