@@ -89,17 +89,6 @@
     "sortOrder": 70
   },
   {
-    "id": "martin-santesteban",
-    "name": "Martín Santesteban",
-    "category": "student",
-    "role": "Master's Student",
-    "bio": "",
-    "avatar": "santesteban.jpg",
-    "email": "",
-    "google_scholar": "",
-    "sortOrder": 100
-  },
-  {
     "id": "gonzalo-bustos",
     "name": "Gonzalo Bustos",
     "category": "student",
@@ -131,6 +120,28 @@
     "email": "",
     "google_scholar": "",
     "sortOrder": 130
+  },
+  {
+    "id": "lorena-medrano",
+    "name": "Lorena Medrano",
+    "category": "student",
+    "role": "Master's Student",
+    "bio": "",
+    "avatar": "medrano.jpg",
+    "email": "",
+    "google_scholar": "",
+    "sortOrder": 140
+  },
+  {
+    "id": "francisco-domato",
+    "name": "Francisco Domato",
+    "category": "student",
+    "role": "Master's Student",
+    "bio": "",
+    "avatar": "domato.jpg",
+    "email": "",
+    "google_scholar": "",
+    "sortOrder": 150
   },
 
   {
@@ -165,6 +176,17 @@
     "email": "",
     "google_scholar": "",
     "sortOrder": 220
+  },
+  {
+    "id": "martin-santesteban",
+    "name": "Martín Santesteban",
+    "category": "former",
+    "role": "Former Member",
+    "bio": "",
+    "avatar": "santesteban.jpg",
+    "email": "",
+    "google_scholar": "",
+    "sortOrder": 230
   },
   {
     "id": "cesar-massri",
