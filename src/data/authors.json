@@ -89,6 +89,17 @@
     "sortOrder": 70
   },
   {
+    "id": "fernando-vische",
+    "name": "Fernando Vische",
+    "category": "current",
+    "role": "PhD Student",
+    "bio": "",
+    "avatar": "vische.jpg",
+    "email": "",
+    "google_scholar": "",
+    "sortOrder": 80
+  },
+  {
     "id": "gonzalo-bustos",
     "name": "Gonzalo Bustos",
     "category": "student",
@@ -187,6 +198,17 @@
     "email": "",
     "google_scholar": "",
     "sortOrder": 230
+  },
+  {
+    "id": "virginia-feldman",
+    "name": "Virginia Feldman",
+    "category": "former",
+    "role": "Former Member",
+    "bio": "",
+    "avatar": "feldman.jpg",
+    "email": "",
+    "google_scholar": "",
+    "sortOrder": 240
   },
   {
     "id": "cesar-massri",
