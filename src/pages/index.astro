@@ -12,12 +12,8 @@ const posts = (await getCollection('blog'))
 	.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf())
 	.slice(0, 3);
 
-const publications = publicationsData
-	.sort((a, b) => {
-		const yearA = parseInt(a.year || '0');
-		const yearB = parseInt(b.year || '0');
-		return yearB - yearA;
-	})
+const publications = [...publicationsData]
+	.sort((a, b) => (b.year || 0) - (a.year || 0))
 	.slice(0, 3);
 ---
 
@@ -50,11 +46,11 @@ const publications = publicationsData
 
 			.hero-image img {
 				width: 200px;
+				max-width: 100%;
 				height: auto;
 				object-fit: contain;
 				border-radius: 0;
 				box-shadow: none;
-				position: absolute;
 			}
 
 			.pub-mini-item {
@@ -110,8 +106,7 @@ const publications = publicationsData
 				}
 
 				.hero-image img {
-					width: 200px;
-					height: 200px;
+					width: 120px;
 				}
 
 				.hero-buttons {
@@ -160,10 +155,8 @@ const publications = publicationsData
 						"
 					>
 						We are a research group focused on
-						<strong>
-							quantum information science, including quantum
-							computation and quantum communication
-						</strong>.
+						<strong>quantum information science, including quantum
+							computation and quantum communication</strong>.
 					</p>
 
 					<div class="hero-buttons">
@@ -223,29 +216,18 @@ const publications = publicationsData
 						{publications.length > 0 ? (
 							publications.map((pub) => (
 								<div class="pub-mini-item">
-									<span class="pub-title">
-										{pub.title}
-									</span>
+									{pub.url ? (
+										<a class="pub-title" href={pub.url} target="_blank" rel="noopener">{pub.title}</a>
+									) : (
+										<span class="pub-title">{pub.title}</span>
+									)}
 
 									<div class="pub-meta">
 										{pub.authors?.join(', ')}
 
 										<br />
 
-										<span
-											style="
-												font-style: italic;
-												color: var(--color-accent);
-											"
-										>
-											{pub.journal ||
-												pub.booktitle ||
-												'Preprint'}
-										</span>
-
-										{pub.year && (
-											<span>, {pub.year}</span>
-										)}
+										<span style="font-style: italic; color: var(--color-accent);">{pub.venue || 'Preprint'}</span>{pub.year ? `, ${pub.year}` : ''}
 									</div>
 								</div>
 							))
