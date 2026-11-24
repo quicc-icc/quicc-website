@@ -14,6 +14,21 @@
     "url": "https://doi.org/10.1103/3gvb-qqx1"
   },
   {
+    "title": "Humans compress order-based structure into short mental programs",
+    "year": 2026,
+    "authors": [
+      "Elyes Tabbane",
+      "Santiago Figueira",
+      "Lucas Benjamin",
+      "Stanislas Dehaene",
+      "Fosca Al Roumi"
+    ],
+    "venue": "Preprint",
+    "doi": "10.64898/2026.05.14.725160",
+    "arxiv": null,
+    "url": "https://doi.org/10.64898/2026.05.14.725160"
+  },
+  {
     "title": "Q2SAR: A Quantum Multiple Kernel Learning Approach for Drug Discovery",
     "year": 2025,
     "authors": [
@@ -106,6 +121,19 @@
     "doi": "10.1103/physreva.111.042403",
     "arxiv": null,
     "url": "https://doi.org/10.1103/physreva.111.042403"
+  },
+  {
+    "title": "Rauzy complexity and block entropy",
+    "year": 2025,
+    "authors": [
+      "Verónica Becher",
+      "Olivier Carton",
+      "Santiago Figueira"
+    ],
+    "venue": "Information and Computation",
+    "doi": "10.1016/j.ic.2025.105330",
+    "arxiv": null,
+    "url": "https://doi.org/10.1016/j.ic.2025.105330"
   },
   {
     "title": "LOCC convertibility of entangled states in infinite-dimensional systems",
@@ -891,6 +919,26 @@
     "doi": "10.1038/s41598-020-63661-w",
     "arxiv": null,
     "url": "https://doi.org/10.1038/s41598-020-63661-w"
+  },
+  {
+    "title": "Mental compression of binary sequences in a language of thought",
+    "year": 2020,
+    "authors": [
+      "Samuel Planton",
+      "Timo van Kerkoerle",
+      "Leïla Abbih",
+      "Maxime Maheu",
+      "Florent Meyniel",
+      "Mariano Sigman",
+      "Liping Wang",
+      "Santiago Figueira",
+      "Sergio Romano",
+      "Stanislas Dehaene"
+    ],
+    "venue": "Preprint",
+    "doi": "10.31234/osf.io/aez4w",
+    "arxiv": null,
+    "url": "https://doi.org/10.31234/osf.io/aez4w"
   },
   {
     "title": "Optimal common resource in majorization-based resource theories",
