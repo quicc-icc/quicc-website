@@ -13,4 +13,4 @@ https://guido-b.github.io/quicc-website/
 
 ## Contributing
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md)
+See [contributing.md](./contributing.md)
