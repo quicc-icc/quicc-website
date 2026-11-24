@@ -73,6 +73,31 @@ Allí pueden modificarse:
 * enlaces
 * correos electrónicos
 
+## Categorías y secciones de la página Team
+
+El campo `category` de cada integrante decide en qué sección aparece:
+
+| `category` | Sección | Tarjeta |
+|---|---|---|
+| `researcher` | Researchers | grande, con foto |
+| `phd` | PhD Students | grande, con foto |
+| `masters` | Master's Students | grande, con foto |
+| `collaborator` | Collaborators | chica |
+| `former` | Former Members | chica |
+
+* Dentro de cada sección, el orden lo da `sortOrder` (de menor a mayor).
+* Las secciones sin integrantes no se muestran.
+* Si se escribe una categoría que no está en la tabla, el sitio **no se publica** y el error en [`Actions`](https://github.com/guido-b/quicc-website/actions) indica qué integrante tiene la categoría mal escrita. Mientras tanto queda publicada la versión anterior.
+* Para pasar a alguien a otra sección (por ejemplo, al terminar la maestría) alcanza con cambiar `category` y, si corresponde, `role` y `sortOrder`.
+
+Campo opcional `affiliation`: en las tarjetas chicas (Collaborators y Former Members) se muestra la afiliación si está completa; si está vacía se muestra el rol, salvo "Former Member", que no se muestra. Ejemplo:
+
+```json
+"affiliation": "Universidad Nacional de La Plata",
+```
+
+Los correos se escriben con " at " en lugar de "@" (por ejemplo `"usuario at dc.uba.ar"`); el sitio arma el enlace correctamente.
+
 Las imágenes de los integrantes se encuentran en:
 
 [`src/assets/team/`](https://github.com/guido-b/quicc-website/tree/main/src/assets/team)
