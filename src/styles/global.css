@@ -378,3 +378,9 @@ a:hover {
 		height: auto;
 	}
 }
+
+/* Fichas del equipo y nombres que abren el modal: foco visible al navegar con teclado */
+.author-modal-trigger:focus-visible {
+	outline: 2px solid var(--color-accent);
+	outline-offset: 3px;
+}
