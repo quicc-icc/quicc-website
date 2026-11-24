@@ -95,11 +95,17 @@ La información generada se almacena en:
 
 Ese archivo se actualiza automáticamente mediante GitHub Actions, por lo que normalmente no debe editarse manualmente.
 
+La actualización corre todos los lunes de madrugada. Si encuentra publicaciones nuevas, las guarda y vuelve a publicar el sitio solo. Para forzarla en cualquier momento: [`Actions`](https://github.com/guido-b/quicc-website/actions) → **Update Publications** → **Run workflow**.
+
 ---
 
 # Publicación automática del sitio
 
 El sitio se publica automáticamente mediante GitHub Pages luego de cada commit realizado en la rama `main`.
+
+Si un cambio rompe la compilación (por ejemplo, un JSON mal cerrado), el sitio **no** se cae: queda publicada la versión anterior hasta que se corrija el error. Quien hizo el cambio recibe un mail de GitHub avisando de la falla.
+
+En los pull requests, el sitio se compila automáticamente para detectar errores antes de aceptar los cambios.
 
 El estado de compilación y publicación puede verse en:
 

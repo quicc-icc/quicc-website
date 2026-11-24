@@ -1,5 +1,1 @@
-blank_issues_enabled: false
-contact_links:
-  - name: Security vulnerability report
-    url: https://github.com/shravanngoswamii/astro-scholar/security/advisories/new
-    about: Please report vulnerabilities privately using GitHub Security Advisories.
+blank_issues_enabled: true

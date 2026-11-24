@@ -1,0 +1,21 @@
+# Actualizaciones automáticas de dependencias, una vez por mes y agrupadas
+# para no llenar el repo de pull requests. Cada PR pasa por el chequeo de build.
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: /
+    schedule:
+      interval: monthly
+    open-pull-requests-limit: 3
+    groups:
+      dependencias:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: monthly
+    groups:
+      github-actions:
+        patterns: ["*"]
