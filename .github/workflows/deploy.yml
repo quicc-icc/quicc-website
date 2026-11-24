@@ -4,6 +4,8 @@ name: Deploy Astro to GitHub Pages
 # En los pull requests sólo compila, para detectar errores antes de aceptar cambios.
 # También se puede correr a mano (Actions → Deploy Astro to GitHub Pages → Run workflow)
 # y lo dispara automáticamente "Update Publications" cuando hay publicaciones nuevas.
+# Además corre una vez por año (1 de enero) para que la página de publicaciones
+# actualice el corte de "últimos 5 años", que se calcula al compilar.
 
 on:
   push:
@@ -11,6 +13,8 @@ on:
   pull_request:
     branches: [main]
   workflow_dispatch:
+  schedule:
+    - cron: "7 6 1 1 *" # 1 de enero, 06:07 UTC (03:07 en Buenos Aires)
 
 permissions:
   contents: read
