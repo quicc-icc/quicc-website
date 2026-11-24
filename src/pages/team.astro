@@ -105,23 +105,6 @@ const sections = SECTIONS.map((section) => ({
 				padding-top: 2rem;
 			}
 
-			/* Escritorio: cinco tarjetas grandes por fila */
-			@media (min-width: 900px) {
-				.team-grid {
-					grid-template-columns: repeat(5, minmax(0, 1fr));
-					gap: 1.25rem;
-				}
-
-				.team-card {
-					padding: 1.25rem 0.75rem;
-				}
-
-				.team-avatar {
-					width: 120px;
-					height: 120px;
-				}
-			}
-
 			/* Cards */
 
 			.team-card {
@@ -144,7 +127,9 @@ const sections = SECTIONS.map((section) => ({
 
 			.team-avatar {
 				width: 140px;
-				height: 140px;
+				height: auto;
+				max-width: 100%;
+				aspect-ratio: 1 / 1;
 				border-radius: 50%;
 				object-fit: cover;
 				object-position: center top;
@@ -228,6 +213,24 @@ const sections = SECTIONS.map((section) => ({
 			.collab-info .collab-affil {
 				font-size: 0.85rem;
 				color: var(--color-text-muted);
+			}
+
+			/* Escritorio: cinco tarjetas grandes por fila.
+			   Va después de las reglas base para que las pise. */
+			@media (min-width: 900px) {
+				.team-grid {
+					grid-template-columns: repeat(5, minmax(0, 1fr));
+					gap: 1.25rem;
+				}
+
+				.team-card {
+					padding: 1.25rem 0.75rem;
+				}
+
+				.team-avatar {
+					width: 120px;
+					height: 120px;
+				}
 			}
 
 			/* Celular: tarjetas grandes en dos columnas, con foto más chica */
