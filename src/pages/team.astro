@@ -204,6 +204,32 @@ const sections = SECTIONS.map((section) => ({
 					font-size: 2.5rem;
 				}
 			}
+
+			/* Celular: tarjetas grandes en dos columnas, con foto más chica */
+			@media (max-width: 600px) {
+				.team-grid {
+					grid-template-columns: repeat(2, minmax(0, 1fr));
+					gap: 0.75rem;
+					margin-top: 1rem;
+				}
+
+				.team-card {
+					padding: 1rem 0.5rem;
+				}
+
+				.team-avatar {
+					width: 96px;
+					height: 96px;
+				}
+
+				.team-name {
+					font-size: 0.95rem;
+				}
+
+				.team-role {
+					font-size: 0.8rem;
+				}
+			}
 		</style>
 	</head>
 
@@ -225,7 +251,7 @@ const sections = SECTIONS.map((section) => ({
 					<h2 class="section-title">{section.title}</h2>
 
 					{section.card === 'large' ? (
-						<div class="grid-3">
+						<div class="grid-3 team-grid">
 							{section.members.map((profile) => (
 								<div
 									class="team-card interactive-card author-modal-trigger"
