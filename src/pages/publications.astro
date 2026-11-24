@@ -2,32 +2,36 @@
 import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
+import PublicationYear from '../components/PublicationYear.astro';
 import { SITE_TITLE } from '../consts';
 
-import publications from '../data/publications.json';
+import publicationsData from '../data/publications.json';
 
-// ordenar por año
-publications.sort((a, b) => (b.year || 0) - (a.year || 0));
+// Cuántos años se muestran por defecto (el año actual incluido).
+const RECENT_YEARS = 5;
+const firstRecentYear = new Date().getFullYear() - RECENT_YEARS + 1;
 
-// agrupar por año
-const grouped = Object.entries(
-  publications.reduce((acc, pub) => {
-    if (!acc[pub.year]) acc[pub.year] = [];
-    acc[pub.year].push(pub);
-    return acc;
-  }, {})
-).sort((a, b) => b[0] - a[0]);
-
-function formatAuthors(authors) {
-  if (!authors) return "";
-
-  // limitar autores si hay muchos
-  if (authors.length > 6) {
-    return authors.slice(0, 6).join(", ") + ", et al.";
-  }
-
-  return authors.join(", ");
+// Agrupar por año sin modificar el JSON importado. El año 0 (sin fecha) va al final.
+const byYear = new Map<number, any[]>();
+for (const pub of publicationsData) {
+  const year = Number(pub.year) || 0;
+  if (!byYear.has(year)) byYear.set(year, []);
+  byYear.get(year)!.push(pub);
 }
+const groups = [...byYear.entries()].sort(([a], [b]) => {
+  if (a === 0) return 1;
+  if (b === 0) return -1;
+  return b - a;
+});
+
+const recent = groups.filter(([year]) => year >= firstRecentYear);
+const older = groups.filter(([year]) => year < firstRecentYear);
+
+const count = (gs: [number, any[]][]) => gs.reduce((n, [, pubs]) => n + pubs.length, 0);
+const olderYears = older.map(([y]) => y).filter((y) => y > 0);
+const olderRange = olderYears.length
+  ? `${Math.min(...olderYears)}–${Math.max(...olderYears)}`
+  : '';
 ---
 
 <!doctype html>
@@ -46,44 +50,38 @@ function formatAuthors(authors) {
       <h1>Publications</h1>
 
       <p class="intro">
-        This list is automatically generated from ORCID records.
+        Publications since {firstRecentYear} ({count(recent)}).
+        Automatically generated from ORCID records.
       </p>
 
-      {grouped.map(([year, pubs]) => (
-        <section class="year-group">
-          <h2>{year}</h2>
+      {recent.map(([year, pubs]) => <PublicationYear year={year} pubs={pubs} />)}
 
-          {pubs.map((pub) => (
-            <div class="publication-item">
-              
-              <span class="authors">
-                {formatAuthors(pub.authors)}
-              </span>
-
-              <span class="title">
-                {pub.title}
-              </span>
-
-              <span class="venue">
-                <i>{pub.venue}</i> ({pub.year})
-              </span>
-
-              <span class="links">
-                {pub.url && (
-                  <a href={pub.url} target="_blank">DOI</a>
-                )}
-                {pub.arxiv && (
-                  <a href={pub.arxiv} target="_blank">arXiv</a>
-                )}
-              </span>
-
-            </div>
-          ))}
-        </section>
-      ))}
+      {older.length > 0 && (
+        <details class="older" id="older">
+          <summary class="older-toggle">
+            <span class="when-closed">Show earlier publications{olderRange && ` (${olderRange})`} · {count(older)}</span>
+            <span class="when-open">Hide earlier publications</span>
+          </summary>
+          {older.map(([year, pubs]) => <PublicationYear year={year} pubs={pubs} />)}
+        </details>
+      )}
     </main>
 
     <Footer />
+
+    <script>
+      // Si se llega con un enlace a un año anterior (por ejemplo #y2018), abrir la sección.
+      function openForHash() {
+        const target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+        const details = target?.closest('details');
+        if (target && details && !details.open) {
+          details.open = true;
+          target.scrollIntoView();
+        }
+      }
+      openForHash();
+      window.addEventListener('hashchange', openForHash);
+    </script>
   </body>
 </html>
 
@@ -94,55 +92,53 @@ main {
   padding: 2rem 1rem;
 }
 
-/* encabezado */
 .intro {
   color: var(--color-text-muted);
-  margin-bottom: 2rem;
-}
-
-/* año */
-.year-group {
-  margin-top: 2rem;
-}
-
-.year-group h2 {
-  margin-bottom: 0.8rem;
-  font-size: 1.4rem;
-}
-
-/* publicación */
-.publication-item {
-  margin-bottom: 0.9rem;
-  line-height: 1.5;
+  margin-bottom: 1.25rem;
   font-size: 0.95rem;
 }
 
-/* autores */
-.authors {
-  color: var(--color-text-muted);
+.older {
+  margin-top: 2rem;
 }
 
-/* título */
-.title {
-  display: block;
-  font-weight: 500;
-}
-
-/* venue */
-.venue {
-  color: var(--color-text-secondary);
-  margin-right: 0.5rem;
-}
-
-/* links */
-.links a {
-  margin-left: 0.5rem;
-  font-size: 0.85rem;
+.older-toggle {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
   color: var(--color-accent);
-  text-decoration: none;
+  user-select: none;
 }
 
-.links a:hover {
-  text-decoration: underline;
+.older-toggle:hover,
+.older-toggle:focus-visible {
+  background: var(--color-accent-light);
+}
+
+.older-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.older-toggle::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.15s;
+}
+
+.older[open] .older-toggle::before {
+  transform: rotate(90deg);
+}
+
+.older[open] .older-toggle {
+  margin-bottom: 0.5rem;
+}
+
+.older[open] .when-closed,
+.older:not([open]) .when-open {
+  display: none;
 }
 </style>

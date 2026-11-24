@@ -1,0 +1,112 @@
+---
+// Un bloque de año de la página de publicaciones.
+interface Props {
+  year: number;
+  pubs: any[];
+}
+const { year, pubs } = Astro.props;
+
+function formatAuthors(authors?: string[]) {
+  if (!authors || authors.length === 0) return '';
+  return authors.length > 6
+    ? authors.slice(0, 6).join(', ') + ', et al.'
+    : authors.join(', ');
+}
+
+const label = year === 0 ? 'Undated' : String(year);
+const id = year === 0 ? 'undated' : `y${year}`;
+---
+
+<section class="year-group" id={id}>
+  <h2 class="year-heading">
+    {label} <span class="year-count">{pubs.length}</span>
+  </h2>
+  <ul class="pub-list">
+    {pubs.map((pub) => (
+      <li class="publication-item">
+        <span class="pub-title">
+          {pub.url
+            ? <a href={pub.url} target="_blank" rel="noopener">{pub.title}</a>
+            : pub.title}
+        </span>
+        <span class="pub-meta">
+          {formatAuthors(pub.authors)}
+          {pub.venue && <> · <i>{pub.venue}</i></>}
+          {pub.url && <a class="pub-link" href={pub.url} target="_blank" rel="noopener">DOI</a>}
+          {pub.arxiv && <a class="pub-link" href={pub.arxiv} target="_blank" rel="noopener">arXiv</a>}
+        </span>
+      </li>
+    ))}
+  </ul>
+</section>
+
+<style>
+.year-group {
+  margin-top: 1.25rem;
+  scroll-margin-top: 5rem;
+}
+
+.year-heading {
+  font-size: 1.25rem;
+  margin: 0 0 0.4rem;
+  padding-bottom: 0.2rem;
+}
+
+.year-count {
+  font-family: var(--font-sans);
+  font-size: 0.8rem;
+  font-weight: 400;
+  color: var(--color-text-muted);
+  margin-left: 0.25rem;
+}
+
+.pub-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.publication-item {
+  margin: 0;
+  padding: 0.45rem 0;
+  border-bottom: 1px solid var(--color-border);
+  line-height: 1.4;
+}
+
+.publication-item:last-child {
+  border-bottom: none;
+}
+
+.pub-title {
+  display: block;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.pub-title a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.pub-title a:hover {
+  color: var(--color-accent);
+  text-decoration: underline;
+}
+
+.pub-meta {
+  display: block;
+  font-size: 0.85rem;
+  color: var(--color-text-muted);
+}
+
+.pub-link {
+  margin-left: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+.pub-link:hover {
+  text-decoration: underline;
+}
+</style>
