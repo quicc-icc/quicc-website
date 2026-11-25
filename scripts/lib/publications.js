@@ -320,7 +320,7 @@ export function clusterPubs(pubs) {
   });
 
   // mismo título: sólo si comparten algún apellido (o alguno no tiene autores)
-  // y al menos uno de los dos es un preprint
+  // y, además, al menos uno de los dos es un preprint o los dos son del mismo año
   const byTitle = new Map();
   records.forEach((r, i) => {
     const t = normalizeTitle(r.title);
@@ -337,7 +337,13 @@ export function clusterPubs(pubs) {
         // la versión de un congreso y la de una revista son publicaciones distintas:
         // por título sólo se une si al menos uno de los dos es un preprint
         const onePreprint = isPreprint(records[idxs[a]]) || isPreprint(records[idxs[b]]);
-        if (shared && onePreprint) union(idxs[a], idxs[b]);
+        // mismo título y mismo año, sin DOIs de revista distintos: es el mismo trabajo
+        // traído más de una vez (por ejemplo, desde el ORCID de dos coautores)
+        const da = journalDoi(records[idxs[a]]);
+        const db = journalDoi(records[idxs[b]]);
+        const sameWork =
+          records[idxs[a]].year === records[idxs[b]].year && (!da || !db || da === db);
+        if (shared && (onePreprint || sameWork)) union(idxs[a], idxs[b]);
       }
     }
   }
