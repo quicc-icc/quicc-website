@@ -5,7 +5,10 @@ export interface Props {
   open?: boolean;
 }
 
+import { langFromUrl, t } from '../i18n/ui';
+
 const { headings, mobile = false, open = false } = Astro.props;
+const lang = langFromUrl(Astro.url);
 
 // Filter headings to only include h2 and h3
 const toc = headings.filter(
@@ -18,7 +21,7 @@ const toc = headings.filter(
   !mobile && toc.length > 0 && (
     <nav class="toc-container">
       <div class="toc-inner">
-        <h2 class="toc-title">Table of Contents</h2>
+        <h2 class="toc-title">{t(lang, 'post.toc')}</h2>
         <ul class="toc-list">
           {toc.map((heading) => (
             <li class={`toc-item depth-${heading.depth}`}>
@@ -36,7 +39,7 @@ const toc = headings.filter(
   mobile && toc.length > 0 && (
     <details class="toc-mobile-details" {...(open ? { open: true } : {})}>
       <summary class="toc-mobile-summary">
-        Table of Contents
+        {t(lang, 'post.toc')}
         <svg
           xmlns="http://www.w3.org/2000/svg"
           class="icon icon-tabler icon-tabler-chevron-down"

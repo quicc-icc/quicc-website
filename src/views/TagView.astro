@@ -1,0 +1,38 @@
+---
+// Noticias de una etiqueta. La usan src/pages/tags/[tag].astro y src/pages/es/tags/[tag].astro.
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import NewsList from '../components/NewsList.astro';
+import { SITE_TITLE } from '../consts';
+import { term, type LocalizedPost } from '../i18n/content';
+import { langFromUrl, localePath, t } from '../i18n/ui';
+
+interface Props {
+    tag: string;
+    posts: LocalizedPost[];
+}
+
+const { tag, posts } = Astro.props;
+const lang = langFromUrl(Astro.url);
+const label = term(tag, lang);
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={`#${label} | ${SITE_TITLE}`} description={t(lang, 'tag.intro')} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>{t(lang, 'tag.title', { tag: label })}</h1>
+            <p style="margin-bottom: 1.5rem; max-width: 700px; font-size: 0.95rem; color: var(--color-text-muted);">
+                {t(lang, 'tag.intro')}{' '}<a href={localePath(lang, '/tags')} style="color: var(--color-accent); text-decoration: underline;">{t(lang, 'tags.title')} &rarr;</a>
+            </p>
+
+            <NewsList posts={posts} />
+		</main>
+		<Footer />
+	</body>
+</html>

@@ -1,0 +1,10 @@
+---
+import NewsListView from '../../../views/NewsListView.astro';
+import { newsPagePaths } from '../../../i18n/routes';
+
+export async function getStaticPaths() {
+	return newsPagePaths('es');
+}
+---
+
+<NewsListView {...Astro.props} />

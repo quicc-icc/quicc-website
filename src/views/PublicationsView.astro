@@ -1,0 +1,146 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import PublicationYear from '../components/PublicationYear.astro';
+import { SITE_TITLE } from '../consts';
+import { langFromUrl, t } from '../i18n/ui';
+
+import publicationsData from '../data/publications.json';
+
+const lang = langFromUrl(Astro.url);
+
+// Cuántos años se muestran por defecto (el año actual incluido).
+const RECENT_YEARS = 5;
+const firstRecentYear = new Date().getFullYear() - RECENT_YEARS + 1;
+
+// Agrupar por año sin modificar el JSON importado. El año 0 (sin fecha) va al final.
+const byYear = new Map<number, any[]>();
+for (const pub of publicationsData) {
+  const year = Number(pub.year) || 0;
+  if (!byYear.has(year)) byYear.set(year, []);
+  byYear.get(year)!.push(pub);
+}
+const groups = [...byYear.entries()].sort(([a], [b]) => {
+  if (a === 0) return 1;
+  if (b === 0) return -1;
+  return b - a;
+});
+
+const recent = groups.filter(([year]) => year >= firstRecentYear);
+const older = groups.filter(([year]) => year < firstRecentYear);
+
+const count = (gs: [number, any[]][]) => gs.reduce((n, [, pubs]) => n + pubs.length, 0);
+const olderYears = older.map(([y]) => y).filter((y) => y > 0);
+const olderRange = olderYears.length
+  ? `${Math.min(...olderYears)}–${Math.max(...olderYears)}`
+  : '';
+---
+
+<!doctype html>
+<html lang={lang}>
+  <head>
+    <BaseHead
+      title={`${t(lang, 'pubs.title')} | ${SITE_TITLE}`}
+      description={t(lang, 'pubs.description')}
+    />
+  </head>
+
+  <body>
+    <Header />
+
+    <main>
+      <h1>{t(lang, 'pubs.title')}</h1>
+
+      <p class="intro">
+        {t(lang, 'pubs.since', { year: firstRecentYear, count: count(recent) })}{' '}{t(lang, 'pubs.auto')}
+      </p>
+
+      {recent.map(([year, pubs]) => <PublicationYear year={year} pubs={pubs} />)}
+
+      {older.length > 0 && (
+        <details class="older" id="older">
+          <summary class="older-toggle">
+            <span class="when-closed">{t(lang, 'pubs.showOlder')}{olderRange && ` (${olderRange})`} · {count(older)}</span>
+            <span class="when-open">{t(lang, 'pubs.hideOlder')}</span>
+          </summary>
+          {older.map(([year, pubs]) => <PublicationYear year={year} pubs={pubs} />)}
+        </details>
+      )}
+    </main>
+
+    <Footer />
+
+    <script>
+      // Si se llega con un enlace a un año anterior (por ejemplo #y2018), abrir la sección.
+      function openForHash() {
+        const target = location.hash ? document.getElementById(location.hash.slice(1)) : null;
+        const details = target?.closest('details');
+        if (target && details && !details.open) {
+          details.open = true;
+          target.scrollIntoView();
+        }
+      }
+      openForHash();
+      window.addEventListener('hashchange', openForHash);
+    </script>
+  </body>
+</html>
+
+<style>
+main {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.intro {
+  color: var(--color-text-muted);
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+}
+
+.older {
+  margin-top: 2rem;
+}
+
+.older-toggle {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  font-size: 0.95rem;
+  color: var(--color-accent);
+  user-select: none;
+}
+
+.older-toggle:hover,
+.older-toggle:focus-visible {
+  background: var(--color-accent-light);
+}
+
+.older-toggle::-webkit-details-marker {
+  display: none;
+}
+
+.older-toggle::before {
+  content: '▸';
+  display: inline-block;
+  margin-right: 0.5rem;
+  transition: transform 0.15s;
+}
+
+.older[open] .older-toggle::before {
+  transform: rotate(90deg);
+}
+
+.older[open] .older-toggle {
+  margin-bottom: 0.5rem;
+}
+
+.older[open] .when-closed,
+.older:not([open]) .when-open {
+  display: none;
+}
+</style>

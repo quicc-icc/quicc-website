@@ -2,52 +2,74 @@
   {
     "section": "core",
     "title": "Core Activities",
+    "title_es": "Actividades principales",
     "items": [
       {
         "title": "Basic and Applied Research",
-        "description": "Rigorous study of the foundations and theoretical models underlying quantum information and computation, as well as their technological applications."
+        "title_es": "Investigación básica y aplicada",
+        "description": "Rigorous study of the foundations and theoretical models underlying quantum information and computation, as well as their technological applications.",
+        "description_es": "Estudio riguroso de los fundamentos y de los modelos teóricos de la información y la computación cuánticas, así como de sus aplicaciones tecnológicas."
       },
       {
         "title": "Human Resource Development",
-        "description": "Continuous training through teaching undergraduate and graduate courses, supervision of theses, and mentoring of research fellows."
+        "title_es": "Formación de recursos humanos",
+        "description": "Continuous training through teaching undergraduate and graduate courses, supervision of theses, and mentoring of research fellows.",
+        "description_es": "Formación continua a través del dictado de cursos de grado y posgrado, la dirección de tesis y el acompañamiento de becarias y becarios de investigación."
       },
       {
         "title": "Academic and Scientific Events",
-        "description": "Organization of seminars, workshops, and conferences to disseminate advances and foster interdisciplinary exchange."
+        "title_es": "Eventos académicos y científicos",
+        "description": "Organization of seminars, workshops, and conferences to disseminate advances and foster interdisciplinary exchange.",
+        "description_es": "Organización de seminarios, talleres y congresos para difundir los avances y fomentar el intercambio interdisciplinario."
       },
       {
         "title": "Technology Transfer",
-        "description": "Exploration of pathways for transferring knowledge and quantum technologies to industry and society."
+        "title_es": "Transferencia tecnológica",
+        "description": "Exploration of pathways for transferring knowledge and quantum technologies to industry and society.",
+        "description_es": "Exploración de vías para transferir conocimiento y tecnologías cuánticas a la industria y a la sociedad."
       }
     ]
   },
   {
     "section": "research",
     "title": "Research Lines",
+    "title_es": "Líneas de investigación",
     "items": [
       {
         "title": "Characterization and Benchmarking of Quantum Systems",
-        "description": "We develop tools for the characterization of quantum systems in the NISQ era, where direct observation is fundamentally limited. These methods are crucial for progressing towards fault-tolerant quantum computation."
+        "title_es": "Caracterización y evaluación de sistemas cuánticos",
+        "description": "We develop tools for the characterization of quantum systems in the NISQ era, where direct observation is fundamentally limited. These methods are crucial for progressing towards fault-tolerant quantum computation.",
+        "description_es": "Desarrollamos herramientas para caracterizar sistemas cuánticos en la era NISQ, en la que la observación directa está fundamentalmente limitada. Estos métodos son clave para avanzar hacia la computación cuántica tolerante a fallas."
       },
       {
         "title": "Quantum Correlations and Applications",
-        "description": "We study quantum correlations and their role as a resource, enabling applications such as secure key distribution and certified randomness generation."
+        "title_es": "Correlaciones cuánticas y aplicaciones",
+        "description": "We study quantum correlations and their role as a resource, enabling applications such as secure key distribution and certified randomness generation.",
+        "description_es": "Estudiamos las correlaciones cuánticas y su papel como recurso, que hace posibles aplicaciones como la distribución segura de claves y la generación certificada de números aleatorios."
       },
       {
         "title": "Quantum Models of Computation and Randomness",
-        "description": "Using tools from computability and complexity theory, we study whether quantum computational models can detect more structure than classical ones, potentially enabling efficient generation of high-quality deterministic randomness."
+        "title_es": "Modelos cuánticos de computación y aleatoriedad",
+        "description": "Using tools from computability and complexity theory, we study whether quantum computational models can detect more structure than classical ones, potentially enabling efficient generation of high-quality deterministic randomness.",
+        "description_es": "Con herramientas de las teorías de la computabilidad y de la complejidad, estudiamos si los modelos de cómputo cuánticos pueden detectar más estructura que los clásicos, lo que podría permitir generar de manera eficiente aleatoriedad determinista de alta calidad."
       },
       {
         "title": "Quantum Resource Theories",
-        "description": "We explore the role of quantum resources — from coherence to entanglement and beyond — in information processing under restricted sets of operations."
+        "title_es": "Teorías de recursos cuánticos",
+        "description": "We explore the role of quantum resources — from coherence to entanglement and beyond — in information processing under restricted sets of operations.",
+        "description_es": "Exploramos el papel de los recursos cuánticos —desde la coherencia hasta el entrelazamiento y más allá— en el procesamiento de información con conjuntos restringidos de operaciones."
       },
       {
         "title": "Certification of Quantum Teleportation",
-        "description": "We design certification methods that go beyond average fidelity, incorporating robustness to noise and ensuring the integrity of transmitted quantum states."
+        "title_es": "Certificación de la teletransportación cuántica",
+        "description": "We design certification methods that go beyond average fidelity, incorporating robustness to noise and ensuring the integrity of transmitted quantum states.",
+        "description_es": "Diseñamos métodos de certificación que van más allá de la fidelidad promedio, incorporan robustez frente al ruido y garantizan la integridad de los estados cuánticos transmitidos."
       },
       {
         "title": "Quantum Machine Learning and Applications",
-        "description": "Research on quantum-enhanced machine learning and variational quantum algorithms, with emphasis on: (i) knowledge graphs and network analysis, including link prediction and community detection; (ii) quantum optimization algorithms for high-complexity problems; and (iii) machine learning techniques applied to quantum cryptography and quantum information tasks."
+        "title_es": "Aprendizaje automático cuántico y aplicaciones",
+        "description": "Research on quantum-enhanced machine learning and variational quantum algorithms, with emphasis on: (i) knowledge graphs and network analysis, including link prediction and community detection; (ii) quantum optimization algorithms for high-complexity problems; and (iii) machine learning techniques applied to quantum cryptography and quantum information tasks.",
+        "description_es": "Investigamos el aprendizaje automático potenciado por la computación cuántica y los algoritmos cuánticos variacionales, con énfasis en: (i) grafos de conocimiento y análisis de redes, incluidas la predicción de enlaces y la detección de comunidades; (ii) algoritmos de optimización cuántica para problemas de alta complejidad; y (iii) técnicas de aprendizaje automático aplicadas a la criptografía cuántica y a tareas de información cuántica."
       }
     ]
   }

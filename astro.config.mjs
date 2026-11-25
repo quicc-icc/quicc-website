@@ -6,6 +6,7 @@ import { unified } from '@astrojs/markdown-remark';
 import { defineConfig } from 'astro/config';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+import i18nReport from './scripts/i18n-report.mjs';
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,7 +14,14 @@ export default defineConfig({
 	base: '/',
 	integrations: [
 		mdx(),
-		sitemap()
+		// El sitemap indica, para cada página, su versión en el otro idioma
+		sitemap({
+			i18n: {
+				defaultLocale: 'en',
+				locales: { en: 'en', es: 'es' },
+			},
+		}),
+		i18nReport(),
 	],
 	markdown: {
 		shikiConfig: {

@@ -1,0 +1,63 @@
+---
+import BaseHead from '../components/BaseHead.astro';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import { SITE_TITLE } from '../consts';
+import { getPosts, term } from '../i18n/content';
+import { allTags } from '../i18n/routes';
+import { DATE_LOCALES, langFromUrl, localePath, t } from '../i18n/ui';
+
+const lang = langFromUrl(Astro.url);
+const tags = allTags(await getPosts(lang))
+	.map((tag) => ({ tag, label: term(tag, lang) }))
+	.sort((a, b) => a.label.localeCompare(b.label, DATE_LOCALES[lang]));
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={`${t(lang, 'tags.title')} | ${SITE_TITLE}`} description={t(lang, 'tags.intro')} />
+        <style>
+            .tags-container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1rem;
+                margin-top: 2rem;
+            }
+            .tag-card {
+                padding: 1rem 1.5rem;
+                background-color: var(--color-bg-offset);
+                border: 1px solid var(--color-border);
+                border-radius: 8px;
+                text-decoration: none;
+                color: var(--color-text-main);
+                font-weight: 600;
+                font-size: 1.1rem;
+                transition: all 0.2s ease;
+            }
+            .tag-card:hover {
+                border-color: var(--color-accent);
+                color: var(--color-accent);
+                transform: translateY(-2px);
+                box-shadow: var(--shadow-sm);
+            }
+        </style>
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>{t(lang, 'tags.title')}</h1>
+            <p style="margin-bottom: 2rem; color: var(--color-text-muted);">
+                {t(lang, 'tags.intro')}
+            </p>
+            <div class="tags-container">
+                {tags.map(({ tag, label }) => (
+                    <a href={localePath(lang, `/tags/${tag}`)} class="tag-card">
+                        #{label}
+                    </a>
+                ))}
+            </div>
+		</main>
+		<Footer />
+	</body>
+</html>

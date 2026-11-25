@@ -1,0 +1,36 @@
+{
+  "_info": "Traducciones al español de términos que se repiten en authors.json y en las etiquetas de las noticias. Si un término no está acá, se muestra en inglés. Las mayúsculas no importan.",
+  "es": {
+    "PhD Student": "Estudiante de doctorado",
+    "Master's Student": "Estudiante de licenciatura",
+    "Computer Science": "Ciencias de la Computación",
+    "Physics": "Física",
+    "Mathematics": "Matemática",
+    "PhD in Computer Science": "Doctorado en Ciencias de la Computación",
+    "PhD in Physics": "Doctorado en Física",
+    "PhD in Mathematics": "Doctorado en Matemática",
+
+    "Quantum information": "Información cuántica",
+    "Quantum information processing": "Procesamiento de información cuántica",
+    "Quantum computation": "Computación cuántica",
+    "Quantum computing": "Computación cuántica",
+    "Quantum algorithms": "Algoritmos cuánticos",
+    "Quantum optimization": "Optimización cuántica",
+    "Quantum resources": "Recursos cuánticos",
+    "Quantum resource theories": "Teorías de recursos cuánticos",
+    "Non-classical correlations": "Correlaciones no clásicas",
+    "Computability theory": "Teoría de la computabilidad",
+    "Algorithmic randomness": "Aleatoriedad algorítmica",
+    "Kolmogorov complexity": "Complejidad de Kolmogorov",
+    "Mathematical logic": "Lógica matemática",
+    "Majorization": "Mayorización",
+    "Entanglement": "Entrelazamiento",
+    "Quantum thermodynamics": "Termodinámica cuántica",
+    "Quantum foundations": "Fundamentos de la mecánica cuántica",
+    "Quantum cryptography": "Criptografía cuántica",
+    "Quantum complexity": "Complejidad cuántica",
+    "Quantum machine learning": "Aprendizaje automático cuántico",
+    "Conferences": "Congresos",
+    "Special issue": "Número especial"
+  }
+}

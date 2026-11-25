@@ -42,6 +42,34 @@ Contenido de la publicación.
 
 Subir las imágenes directamente dentro de la misma carpeta.
 
+## Versión en español de una noticia (opcional)
+
+Las traducciones van en [`src/content/blog-es/`](https://github.com/quicc-icc/quicc-website/tree/main/src/content/blog-es), con **el mismo nombre de archivo** que la noticia original. Sólo llevan título, descripción y texto; la fecha, la imagen y las etiquetas se toman de la original:
+
+```mdx
+---
+title: "Título en español"
+description: "Descripción breve en español"
+---
+
+Texto de la noticia en español.
+```
+
+Si una noticia no tiene traducción, en la versión en español del sitio se muestra el texto en inglés con un aviso. Para usar en la traducción una imagen de la noticia original, importarla desde `../blog/` (por ejemplo `import flyer from '../blog/flyer.png';`).
+
+---
+
+# Versión en español del sitio
+
+El sitio está en inglés en `/` y en español en `/es/`, con un botón **ES / EN** arriba a la derecha que lleva a la misma página en el otro idioma.
+
+* **Todo se carga una sola vez.** Publicaciones, integrantes, proyectos y noticias salen de los mismos archivos para los dos idiomas. Lo que no tiene traducción se muestra en inglés: nunca queda una página rota ni vacía.
+* **Textos de la interfaz** (menú, botones, títulos de secciones): [`src/i18n/ui.ts`](https://github.com/quicc-icc/quicc-website/blob/main/src/i18n/ui.ts), con la misma clave en inglés y en español.
+* **Términos que se repiten** (carreras, títulos, palabras clave de investigación, etiquetas de noticias): [`src/i18n/terms.json`](https://github.com/quicc-icc/quicc-website/blob/main/src/i18n/terms.json). Al agregar un término ahí, se traduce en todo el sitio.
+* **Campos con versión en español:** en `projects.json` y `authors.json`, cualquier campo puede tener su versión `_es` (por ejemplo `title_es`, `role_es`). Si no está, se usa el campo en inglés.
+* **Las publicaciones no se traducen:** se muestran con su título original.
+* **Qué falta traducir:** al final de cada compilación, el sitio lista lo que todavía se muestra en inglés en la versión en español. En GitHub aparece como aviso en la corrida de **Deploy** dentro de [`Actions`](https://github.com/quicc-icc/quicc-website/actions).
+
 ---
 
 # Modificar proyectos y líneas de investigación
@@ -57,6 +85,8 @@ Allí se pueden modificar:
 * títulos
 
 Es importante conservar correctamente la estructura JSON.
+
+Para la versión en español, cada sección y cada proyecto pueden llevar `title_es` y `description_es`.
 
 ---
 
@@ -77,13 +107,13 @@ Allí pueden modificarse:
 
 El campo `category` de cada integrante decide en qué sección aparece:
 
-| `category` | Sección | Tarjeta |
+| `category` | Sección (inglés / español) | Tarjeta |
 |---|---|---|
-| `researcher` | Researchers | grande, con foto |
-| `phd` | PhD Students | grande, con foto |
-| `masters` | Master's Students | grande, con foto |
-| `collaborator` | Collaborators | chica |
-| `former` | Former Members | chica |
+| `researcher` | Researchers / Investigadores/as | grande, con foto |
+| `phd` | PhD Students / Estudiantes de doctorado | grande, con foto |
+| `masters` | Master's Students / Estudiantes de licenciatura | grande, con foto |
+| `collaborator` | Collaborators / Colaboradores/as | chica |
+| `former` | Former Members / Ex integrantes | chica |
 
 * Dentro de cada sección, el orden lo da `sortOrder` (de menor a mayor).
 * Las secciones sin integrantes no se muestran.
@@ -115,6 +145,19 @@ Estos tres últimos se muestran en la ventana que se abre al tocar la tarjeta. E
 ```
 
 Los correos se escriben con " at " en lugar de "@" (por ejemplo `"usuario at dc.uba.ar"`); el sitio arma el enlace correctamente.
+
+### Versión en español de los datos de un integrante
+
+* `program`, `degree`, `keywords` y el rol de estudiantes (`PhD Student`, `Master's Student`) se traducen solos si el término está en [`src/i18n/terms.json`](https://github.com/quicc-icc/quicc-website/blob/main/src/i18n/terms.json).
+* `role_es` y `positions_es` se cargan a mano, porque en español dependen del género: por ejemplo `"role_es": "Investigadora"` o `"positions_es": ["Investigadora del ICC, UBA-CONICET"]`.
+* También existen `keywords_es`, `bio_es` y `affiliation_es` por si hace falta una versión distinta.
+
+```json
+"role": "Researcher",
+"role_es": "Investigador",
+"positions": ["Researcher at ICC, UBA-CONICET"],
+"positions_es": ["Investigador del ICC, UBA-CONICET"],
+```
 
 Las imágenes de los integrantes se encuentran en:
 
@@ -213,13 +256,21 @@ npm run build
 ```text id="yb5k3x"
 src/
  ├── content/
- │    └── blog/
+ │    ├── blog/          noticias (inglés)
+ │    └── blog-es/       traducciones de las noticias (opcionales)
  │
  ├── data/
  │    ├── authors.json
  │    ├── projects.json
- │    ├── publications.json
+ │    ├── publications.json   (se actualiza sola cada semana)
  │    └── teamImages.ts
+ │
+ ├── i18n/
+ │    ├── ui.ts          textos de la interfaz en inglés y español
+ │    └── terms.json     términos que se traducen en todo el sitio
+ │
+ ├── views/             contenido de cada página, compartido por los dos idiomas
+ ├── pages/             rutas en inglés; pages/es/ rutas en español
  │
  ├── assets/
  │    └── team/

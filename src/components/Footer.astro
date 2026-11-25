@@ -4,13 +4,15 @@ import {
   CONTACT,
   CV_URL,
   FOOTER_CREDIT,
-  SITE_DESCRIPTION,
   SITE_TITLE,
 } from '../consts';
 import Search from './Search.astro';
 import { url } from '../utils/paths';
+import { langFromUrl, localePath, t } from '../i18n/ui';
 
 const cvHref = CV_URL ? url(CV_URL) : null;
+const lang = langFromUrl(Astro.url);
+const p = (path: string) => localePath(lang, path);
 ---
 
 <footer class="site-footer">
@@ -18,26 +20,26 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         <div class="footer-col brand-col">
             <p class="footer-brand">{SITE_TITLE}</p>
             <p>
-                {SITE_DESCRIPTION}
+                {t(lang, 'site.description')}
             </p>
             <div class="copyright">
-                &copy; {today.getFullYear()} {SITE_TITLE}.<br/>All rights reserved.
+                &copy; {today.getFullYear()} {SITE_TITLE}.<br/>{t(lang, 'footer.rights')}
             </div>
         </div>
 
         <div class="footer-col">
-            <h2 class="footer-heading">Quick Links</h2>
+            <h2 class="footer-heading">{t(lang, 'footer.quickLinks')}</h2>
             <ul>
-                <li><a href={url('/')}>Home</a></li>
-                <li><a href={url('/projects')}>Projects</a></li>
-                <li><a href={url('/team')}>Team</a></li>
-                <li><a href={url('/blog')}>News</a></li>
+                <li><a href={p('/')}>{t(lang, 'nav.home')}</a></li>
+                <li><a href={p('/projects')}>{t(lang, 'nav.projects')}</a></li>
+                <li><a href={p('/team')}>{t(lang, 'nav.team')}</a></li>
+                <li><a href={p('/blog')}>{t(lang, 'nav.news')}</a></li>
                 {cvHref && <li><a href={cvHref} target="_blank" rel="noopener noreferrer">Download CV</a></li>}
             </ul>
         </div>
 
         <div class="footer-col">
-            <h2 class="footer-heading">Contact</h2>
+            <h2 class="footer-heading">{t(lang, 'footer.contact')}</h2>
             <address>
                 {CONTACT.organization}<br/>
                 <p>
@@ -66,18 +68,18 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         
     </div>
     <div class="footer-credit">
-        Designed & Created by {FOOTER_CREDIT.designerUrl
+        {t(lang, 'footer.credit')} {FOOTER_CREDIT.designerUrl
             ? <a href={FOOTER_CREDIT.designerUrl} target="_blank" rel="noopener noreferrer">{FOOTER_CREDIT.designerName}</a>
-            : FOOTER_CREDIT.designerName} | <a href={FOOTER_CREDIT.sourceUrl} target="_blank" rel="noopener noreferrer">{FOOTER_CREDIT.sourceLabel}</a>
+            : FOOTER_CREDIT.designerName} | <a href={FOOTER_CREDIT.sourceUrl} target="_blank" rel="noopener noreferrer">{t(lang, 'footer.basedOn')}</a>
     </div>
 </footer>
 
 <Search />
 
 <dialog id="author-modal" class="author-modal" aria-labelledby="modal-name">
-    <button id="close-modal" class="close-btn" aria-label="Close modal">&times;</button>
+    <button id="close-modal" class="close-btn" aria-label={t(lang, 'modal.close')}>&times;</button>
     <div class="modal-flex">
-        <img id="modal-avatar" src="" alt="Avatar" class="modal-avatar" />
+        <img id="modal-avatar" src="" alt={t(lang, 'modal.photo')} class="modal-avatar" />
         <div>
             <h3 id="modal-name"></h3>
             <span id="modal-title"></span>
@@ -87,7 +89,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
     <div id="modal-profile" class="modal-profile">
         <p id="modal-degree" class="modal-degree"></p>
         <ul id="modal-positions" class="modal-positions"></ul>
-        <ul id="modal-keywords" class="modal-keywords" aria-label="Research interests"></ul>
+        <ul id="modal-keywords" class="modal-keywords" aria-label={t(lang, 'modal.interests')}></ul>
     </div>
     <p id="modal-bio"></p>
     <div id="modal-socials"></div>
@@ -118,6 +120,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         degree?: string;
         positions?: string[];
         keywords?: string[];
+        roleLine?: string;
         program?: string;
     };
 
@@ -235,10 +238,10 @@ const cvHref = CV_URL ? url(CV_URL) : null;
                 if (modalName) modalName.textContent = member.name;
                 if (modalTitle) modalTitle.textContent = member.title || '';
                 // "PhD Student" + "Computer Science" → "PhD Student in Computer Science"
+                // roleLine viene armado en el idioma de la página (ver src/i18n/content.ts)
                 if (modalRole) {
-                    modalRole.textContent = member.program
-                        ? `${member.role || ''} in ${member.program}`.trim()
-                        : member.role || '';
+                    modalRole.textContent = member.roleLine
+                        ?? (member.program ? `${member.role || ''} in ${member.program}`.trim() : member.role || '');
                 }
                 // Perfil: título, cargos y palabras clave (todos opcionales en authors.json)
                 if (modalDegree) {
