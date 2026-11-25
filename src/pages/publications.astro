@@ -51,7 +51,7 @@ const olderRange = olderYears.length
 
       <p class="intro">
         Publications since {firstRecentYear} ({count(recent)}).
-        Automatically generated from ORCID records.
+        Automatically generated from ORCID and arXiv.
       </p>
 
       {recent.map(([year, pubs]) => <PublicationYear year={year} pubs={pubs} />)}

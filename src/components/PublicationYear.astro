@@ -32,7 +32,7 @@ const id = year === 0 ? 'undated' : `y${year}`;
         <span class="pub-meta">
           {formatAuthors(pub.authors)}
           {pub.venue && <> · <i>{pub.venue}</i></>}
-          {pub.url && <a class="pub-link" href={pub.url} target="_blank" rel="noopener">DOI</a>}
+          {pub.doi && <a class="pub-link" href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener">DOI</a>}
           {pub.arxiv && <a class="pub-link" href={pub.arxiv} target="_blank" rel="noopener">arXiv</a>}
         </span>
       </li>

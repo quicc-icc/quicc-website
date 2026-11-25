@@ -87,7 +87,7 @@ El campo `category` de cada integrante decide en qué sección aparece:
 
 * Dentro de cada sección, el orden lo da `sortOrder` (de menor a mayor).
 * Las secciones sin integrantes no se muestran.
-* Si se escribe una categoría que no está en la tabla, el sitio **no se publica** y el error en [`Actions`](https://github.com/guido-b/quicc-website/actions) indica qué integrante tiene la categoría mal escrita. Mientras tanto queda publicada la versión anterior.
+* Si se escribe una categoría que no está en la tabla, el sitio **no se publica** y el error en [`Actions`](https://github.com/quicc-icc/quicc-website/actions) indica qué integrante tiene la categoría mal escrita. Mientras tanto queda publicada la versión anterior.
 * Para pasar a alguien a otra sección (por ejemplo, al terminar la maestría) alcanza con cambiar `category` y, si corresponde, `role` y `sortOrder`.
 
 Campo opcional `affiliation`: en las tarjetas chicas (Collaborators y Former Members) se muestra la afiliación si está completa; si está vacía se muestra el rol, salvo "Former Member", que no se muestra. Ejemplo:
@@ -112,15 +112,38 @@ Si se agrega una nueva imagen:
 
 # Publicaciones
 
-La página de publicaciones se sincroniza automáticamente desde ORCID.
+La página de publicaciones se sincroniza automáticamente desde dos fuentes, para cada integrante listado en [`src/data/orcids.json`](https://github.com/quicc-icc/quicc-website/blob/main/src/data/orcids.json):
+
+1. **ORCID**: los trabajos cargados en el perfil de cada persona.
+2. **arXiv**: los artículos de la cuenta de arXiv de cada persona, **sólo si vinculó su ORCID en arXiv**. Así entran los preprints que todavía no se publicaron en una revista.
+
+Cuando un preprint ya se publicó, se muestra una sola vez: la versión de la revista, con el link a arXiv.
+
+## Cómo vincular tu ORCID en arXiv (una sola vez)
+
+1. Entrá a [arxiv.org](https://arxiv.org) con tu usuario y abrí tu página de usuario.
+2. Elegí **Link ORCID iD** y autorizá el acceso.
+3. Si hay artículos tuyos que subió otra persona, reclamalos desde la misma página (**Claim ownership**).
+
+Para comprobarlo, abrí `https://arxiv.org/a/TU-ORCID` (por ejemplo, `https://arxiv.org/a/0000-0001-8213-8270`): tiene que mostrar tu lista de artículos.
+
+Cuando un preprint se publica con otro título, el sitio no puede saber que es el mismo trabajo. Para que se unan, cargá el DOI de la revista en arXiv: desde tu página de usuario, en el artículo, **Add journal ref and DOI** (no hace falta subir una versión nueva).
+
+## Excluir una publicación
+
+Si algo no debería aparecer (un homónimo, un trabajo que no corresponde), agregá su DOI, su número de arXiv o su título exacto a [`src/data/publications-exclude.json`](https://github.com/quicc-icc/quicc-website/blob/main/src/data/publications-exclude.json). Por ejemplo:
+
+```json
+["10.1000/xyz123", "2309.12399", "Título exacto del trabajo"]
+```
 
 La información generada se almacena en:
 
-[`src/data/publications.json`](https://github.com/guido-b/quicc-website/blob/main/src/data/publications.json)
+[`src/data/publications.json`](https://github.com/quicc-icc/quicc-website/blob/main/src/data/publications.json)
 
 Ese archivo se actualiza automáticamente mediante GitHub Actions, por lo que normalmente no debe editarse manualmente.
 
-La actualización corre todos los lunes de madrugada. Si encuentra publicaciones nuevas, las guarda y vuelve a publicar el sitio solo. Para forzarla en cualquier momento: [`Actions`](https://github.com/guido-b/quicc-website/actions) → **Update Publications** → **Run workflow**.
+La actualización corre todos los lunes de madrugada. Si encuentra publicaciones nuevas, las guarda y vuelve a publicar el sitio solo. Para forzarla en cualquier momento: [`Actions`](https://github.com/quicc-icc/quicc-website/actions) → **Update Publications** → **Run workflow**.
 
 ---
 
@@ -134,7 +157,7 @@ En los pull requests, el sitio se compila automáticamente para detectar errores
 
 El estado de compilación y publicación puede verse en:
 
-[`Actions`](https://github.com/guido-b/quicc-website/actions)
+[`Actions`](https://github.com/quicc-icc/quicc-website/actions)
 
 ---
 
