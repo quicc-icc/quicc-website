@@ -9,6 +9,9 @@ import AuthorLink from '../../components/AuthorLink.astro';
 import { SITE_DESCRIPTION, SITE_TITLE } from '../../consts';
 import { url } from '../../utils/paths';
 
+// En la lista se muestran como máximo estas etiquetas por noticia (todas aparecen en la noticia).
+const MAX_TAGS = 4;
+
 export async function getStaticPaths() {
     const posts = (await getCollection('blog')).sort(
         (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
@@ -45,14 +48,14 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
             .blog-list {
                 display: flex;
                 flex-direction: column;
-                gap: 3rem;
-                margin-top: 3rem;
+                gap: 2rem;
+                margin-top: 2rem;
             }
             .blog-post-card {
                 display: flex;
-                gap: 2.5rem;
+                gap: 2rem;
                 align-items: flex-start;
-                padding-bottom: 3rem;
+                padding-bottom: 2rem;
                 border-bottom: 1px solid var(--color-border);
             }
             .blog-post-card:last-child {
@@ -60,7 +63,7 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
             }
 
             .blog-thumb {
-                width: 280px;
+                width: 240px;
                 flex-shrink: 0;
                 border-radius: 8px;
                 overflow: hidden;
@@ -83,14 +86,17 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
 
             .blog-content {
                 flex: 1;
+                min-width: 0; /* que un contenido largo no ensanche la columna */
                 order: 1;
-                padding-right: 1rem;
             }
             .blog-title {
-                margin: -0.2rem 0 0.75rem 0;
+                margin: -0.15rem 0 0.4rem 0;
+                padding: 0;
+                border: none;
+                display: block;
                 font-family: var(--font-serif);
-                font-size: 1.75rem;
-                line-height: 1.25;
+                font-size: 1.4rem;
+                line-height: 1.3;
                 letter-spacing: -0.01em;
             }
             .blog-title a {
@@ -102,9 +108,9 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
                 color: var(--color-accent);
             }
             .blog-meta {
-                font-size: 0.85rem;
+                font-size: 0.78rem;
                 color: var(--color-text-muted);
-                margin-bottom: 1rem;
+                margin-bottom: 0.6rem;
                 display: flex;
                 flex-wrap: wrap;
                 gap: 0.5rem;
@@ -116,14 +122,39 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
             .meta-divider {
                 color: #ddd;
             }
-            .blog-desc {
-                margin: 0 0 1.5rem 0;
+            .blog-tags {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 0.35rem;
+                margin: 0 0 0.75rem;
+                padding: 0;
+                list-style: none;
+            }
+            .blog-tags a,
+            .blog-tags .tag-more {
+                white-space: nowrap;
+                font-size: 0.75rem;
+                padding: 0.1rem 0.5rem;
+                border: 1px solid var(--color-border);
+                border-radius: 4px;
+                background: var(--color-bg-offset);
+                color: var(--color-accent);
+                text-decoration: none;
+            }
+            .blog-tags a:hover {
+                border-color: var(--color-accent);
+            }
+            .blog-tags .tag-more {
                 color: var(--color-text-muted);
-                line-height: 1.7;
-                font-size: 1.05rem;
+            }
+            .blog-desc {
+                margin: 0 0 0.9rem 0;
+                color: var(--color-text-muted);
+                line-height: 1.6;
+                font-size: 0.95rem;
             }
             .read-more {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
                 font-weight: 700;
                 color: var(--color-accent);
                 display: inline-flex;
@@ -152,7 +183,7 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
                     padding-right: 0;
                 }
                 .blog-title {
-                    font-size: 1.5rem;
+                    font-size: 1.25rem;
                 }
             }
         </style>
@@ -161,7 +192,7 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
 		<Header />
 		<main>
 			<h1>News</h1>
-            <p style="margin-bottom: 2rem; max-width: 700px; color: var(--color-text-muted);">
+            <p style="margin-bottom: 1.5rem; max-width: 700px; font-size: 0.95rem; color: var(--color-text-muted);">
                 Explore our latest research highlights, tutorials, and announcements.
             </p>
 
@@ -188,17 +219,18 @@ const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
                                             ))}
                                         </>
                                     )}
-                                    {post.data.tags && post.data.tags.length > 0 && (
-                                        <>
-                                            <span class="meta-divider">&bull;</span>
-                                            <span class="blog-tags" style="display: inline-flex; gap: 0.25rem;">
-                                                {post.data.tags.map((tag) => (
-                                                    <a href={url(`/tags/${tag}`)} style="text-decoration: none; color: var(--color-accent); font-weight: 600;">#{tag}</a>
-                                                ))}
-                                            </span>
-                                        </>
-                                    )}
                                 </div>
+
+                                {post.data.tags && post.data.tags.length > 0 && (
+                                    <ul class="blog-tags">
+                                        {post.data.tags.slice(0, MAX_TAGS).map((tag) => (
+                                            <li><a href={url(`/tags/${tag}`)}>#{tag}</a></li>
+                                        ))}
+                                        {post.data.tags.length > MAX_TAGS && (
+                                            <li><span class="tag-more">+{post.data.tags.length - MAX_TAGS}</span></li>
+                                        )}
+                                    </ul>
+                                )}
 
                                 <p class="blog-desc">
                                     {post.data.description}
