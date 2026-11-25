@@ -9,6 +9,8 @@ interface Props {
 	title: string;
 	description: string;
 	image?: string | ImageMetadata;
+	/** Páginas que no deben indexarse (p. ej. 404): sin canonical y con noindex. */
+	noindex?: boolean;
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site);
@@ -24,7 +26,7 @@ currentPath = currentPath.replace(/^\/|\/$/g, '');
 const ogRoutes = new Set((await getOgRoutes()).map((r) => r.route));
 const defaultImg = ogRoutes.has(currentPath) ? `/${currentPath}.png` : '/og.png';
 
-const { title, description, image = defaultImg } = Astro.props;
+const { title, description, image = defaultImg, noindex = false } = Astro.props;
 const atkinsonRegular = url('/fonts/atkinson-regular.woff');
 const atkinsonBold = url('/fonts/atkinson-bold.woff');
 
@@ -160,8 +162,7 @@ const imageUrl = typeof image === 'string'
 	`}
 />
 
-<link rel="canonical" href={canonicalURL} />
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css">
+{noindex ? <meta name="robots" content="noindex" /> : <link rel="canonical" href={canonicalURL} />}
 
 <title>{title}</title>
 <meta name="title" content={title} />

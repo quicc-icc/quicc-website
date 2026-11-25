@@ -8,6 +8,9 @@ updates:
       interval: monthly
     open-pull-requests-limit: 3
     groups:
+      # Astro y sus integraciones cambian de versión mayor juntos: un solo PR para todos.
+      astro:
+        patterns: ["astro", "@astrojs/*"]
       dependencias:
         patterns: ["*"]
         update-types: [minor, patch]

@@ -1,16 +1,26 @@
 # QuICC Website
 
-Official website of the Quantum Information, Computation and Communication (QuICC) group at ICC, Universidad de Buenos Aires.
+Official website of the Quantum Information, Computation and Communication (QuICC) group at the Instituto de Ciencias de la Computación (ICC, UBA-CONICET).
 
-## Website
+**Live site:** https://quicc.dc.uba.ar
 
-https://guido-b.github.io/quicc-website/
+## How it works
 
-## Built with
+- Built with [Astro](https://astro.build) and published on GitHub Pages every time `main` changes.
+- The publication list is updated automatically every week from ORCID, arXiv and Crossref (see `.github/workflows/update-publications.yml`).
+- Team members, projects and news live in `src/data/` and `src/content/blog/`.
 
-- Astro
-- GitHub Pages
+## Local development
+
+Requires Node.js 22.12 or later.
+
+```sh
+npm ci
+npm run dev      # local preview at http://localhost:4321
+npm test         # checks for the publication scripts
+npm run build    # production build in dist/
+```
 
 ## Contributing
 
-See [contributing.md](./contributing.md)
+See [contributing.md](./contributing.md) for how to add news, team members, projects and publications.

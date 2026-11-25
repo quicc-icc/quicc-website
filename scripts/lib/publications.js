@@ -379,3 +379,38 @@ export function sortPubs(pubs) {
     (a, b) => (b.year || 0) - (a.year || 0) || a.title.localeCompare(b.title)
   );
 }
+
+// =========================
+// Crossref
+// =========================
+
+/** Revista, año y autores de una respuesta de Crossref (campo "message"). */
+export function crossrefFields(message = {}) {
+  const dateParts =
+    message.issued?.["date-parts"]?.[0] ||
+    message["published-print"]?.["date-parts"]?.[0] ||
+    message["published-online"]?.["date-parts"]?.[0] ||
+    [];
+  const authors = (message.author || [])
+    .map((a) => [a.given, a.family].filter(Boolean).join(" ") || a.name || "")
+    .filter(Boolean);
+  return {
+    venue: message["container-title"]?.[0] || null,
+    year: Number(dateParts[0]) || 0,
+    authors,
+  };
+}
+
+/** ¿Le falta a esta publicación algo que Crossref puede completar? */
+export function needsCrossref(pub) {
+  return isPreprintVenue(pub.venue) || !Number(pub.year) || !pub.authors?.length;
+}
+
+/** Completa sólo los datos que faltan; nunca pisa los que ya están. */
+export function fillMissing(pub, info) {
+  const out = {};
+  if (info.venue && isPreprintVenue(pub.venue)) out.venue = info.venue;
+  if (info.year && !Number(pub.year)) out.year = info.year;
+  if (info.authors?.length && !pub.authors?.length) out.authors = dedupeAuthors(info.authors);
+  return out;
+}

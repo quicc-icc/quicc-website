@@ -1,5 +1,7 @@
 ---
 import { Image } from 'astro:assets';
+// Estilos de las fórmulas (KaTeX), servidos desde el propio sitio y sólo en las noticias
+import 'katex/dist/katex.min.css';
 import type { CollectionEntry } from 'astro:content';
 import BaseHead from '../components/BaseHead.astro';
 import AuthorLink from '../components/AuthorLink.astro';
@@ -58,6 +60,12 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 				width: 100%;
 				padding: 1rem;
 				color: var(--color-text-main);
+			}
+			/* Enlaces del texto subrayados: no dependen sólo del color para distinguirse */
+			.prose :global(p a),
+			.prose :global(li a) {
+				text-decoration: underline;
+				text-underline-offset: 2px;
 			}
 			.prose :global(p) {
 				text-align: justify;
