@@ -1,19 +1,5 @@
 [
   {
-    "title": "Quality assessment of quantum teleportation through the distribution of fidelity",
-    "year": 2026,
-    "authors": [
-      "Diego G. Bussandri",
-      "Gustavo M. Bosyk",
-      "Pablo Crespo Del Amo",
-      "Karol Życzkowski"
-    ],
-    "venue": "Physical Review Applied",
-    "doi": "10.1103/3gvb-qqx1",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/3gvb-qqx1"
-  },
-  {
     "title": "Humans compress order-based structure into short mental programs",
     "year": 2026,
     "authors": [
@@ -29,6 +15,74 @@
     "url": "https://doi.org/10.64898/2026.05.14.725160"
   },
   {
+    "title": "Measuring the largest coefficients of a quantum state",
+    "year": 2026,
+    "authors": [
+      "Nicolás Ciancaglini",
+      "Santiago Cifuentes",
+      "Guido Bellomo",
+      "Santiago Figueira",
+      "Ariel Bendersky"
+    ],
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/2605.00341",
+    "url": "https://arxiv.org/abs/2605.00341"
+  },
+  {
+    "title": "Quality assessment of quantum teleportation through the distribution of fidelity",
+    "year": 2026,
+    "authors": [
+      "Diego G. Bussandri",
+      "Gustavo M. Bosyk",
+      "Pablo Crespo Del Amo",
+      "Karol Życzkowski"
+    ],
+    "venue": "Physical Review Applied",
+    "doi": "10.1103/3gvb-qqx1",
+    "arxiv": null,
+    "url": "https://doi.org/10.1103/3gvb-qqx1"
+  },
+  {
+    "title": "A common ancestor of PDL, conjunctive queries, and unary negation first-order",
+    "year": 2025,
+    "authors": [
+      "D. Figueira",
+      "S. Figueira"
+    ],
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/2501.11641",
+    "url": "https://arxiv.org/abs/2501.11641"
+  },
+  {
+    "title": "Algorithms to prove the maximum number of MUBs in arbitrary dimension",
+    "year": 2025,
+    "authors": [
+      "S. Cifuentes",
+      "N. Ciancaglini",
+      "G. Bellomo",
+      "S. Figueira",
+      "A. Bendersky"
+    ],
+    "venue": "Quantum Information Processing",
+    "doi": "10.1007/s11128-025-04778-7",
+    "arxiv": null,
+    "url": "https://doi.org/10.1007/s11128-025-04778-7"
+  },
+  {
+    "title": "Feature Relevancy, Necessity and Usefulness: Complexity and Algorithms",
+    "year": 2025,
+    "authors": [
+      "Tomás Capdevielle",
+      "Santiago Cifuentes"
+    ],
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/2505.09640",
+    "url": "https://arxiv.org/abs/2505.09640"
+  },
+  {
     "title": "Q2SAR: A Quantum Multiple Kernel Learning Approach for Drug Discovery",
     "year": 2025,
     "authors": [
@@ -38,76 +92,10 @@
       "Javier Mancilla",
       "Guido Bellomo"
     ],
-    "venue": "Preprint",
+    "venue": "2025 IEEE CHILEAN Conference on Electrical, Electronics Engineering, Information and Communication Technologies (CHILECON)",
     "doi": "10.1109/chilecon66915.2025.11476277",
     "arxiv": null,
     "url": "https://doi.org/10.1109/chilecon66915.2025.11476277"
-  },
-  {
-    "title": "A common ancestor of PDL, conjunctive queries, and unary negation first-order",
-    "year": 2025,
-    "authors": [
-      "Figueira, D.",
-      "Figueira, S."
-    ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.2501.11641",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2501.11641"
-  },
-  {
-    "title": "Algorithms to prove the maximum number of MUBs in arbitrary dimension",
-    "year": 2025,
-    "authors": [
-      "Cifuentes, S.",
-      "Ciancaglini, N.",
-      "Bellomo, G.",
-      "Figueira, S.",
-      "Bendersky, A."
-    ],
-    "venue": "Quantum Information Processing",
-    "doi": "10.1007/s11128-025-04778-7",
-    "arxiv": null,
-    "url": "https://doi.org/10.1007/s11128-025-04778-7"
-  },
-  {
-    "title": "Selective continuous-variable quantum process tomography",
-    "year": 2025,
-    "authors": [
-      "Virginia Feldman",
-      "Ariel Bendersky"
-    ],
-    "venue": "Physical Review A",
-    "doi": "10.1103/physreva.111.042409",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/physreva.111.042409"
-  },
-  {
-    "title": "Feature Relevancy, Necessity and Usefulness: Complexity and Algorithms",
-    "year": 2025,
-    "authors": [
-      "Capdevielle, Tomás",
-      "Cifuentes, Santiago"
-    ],
-    "venue": "arXiv preprint arXiv:2505.09640",
-    "doi": null,
-    "arxiv": null,
-    "url": null
-  },
-  {
-    "title": "Variational Quantum Models for Knowledge Graph Embeddings on NISQ Devices",
-    "year": 2025,
-    "authors": [
-      "Guido Bellomo",
-      "Martín Santesteban",
-      "Patricio Bruno",
-      "Santiago Cifuentes",
-      "Gustavo Martin Bosyk"
-    ],
-    "venue": "2025 IEEE CHILEAN Conference on Electrical, Electronics Engineering, Information and Communication Technologies (CHILECON)",
-    "doi": "10.1109/chilecon66915.2025.11476453",
-    "arxiv": null,
-    "url": "https://doi.org/10.1109/chilecon66915.2025.11476453"
   },
   {
     "title": "Quantum imaginary time evolution and the unit-disk maximum independent set problem",
@@ -136,72 +124,44 @@
     "url": "https://doi.org/10.1016/j.ic.2025.105330"
   },
   {
-    "title": "LOCC convertibility of entangled states in infinite-dimensional systems",
-    "year": 2024,
+    "title": "Selective continuous-variable quantum process tomography",
+    "year": 2025,
     "authors": [
-      "César Massri",
-      "Guido Bellomo",
-      "Hector Freytes",
-      "Roberto Giuntini",
-      "Giuseppe Sergioli",
-      "Gustavo M Bosyk"
+      "Virginia Feldman",
+      "Ariel Bendersky"
     ],
-    "venue": "New Journal of Physics",
-    "doi": "10.1088/1367-2630/ad503d",
+    "venue": "Physical Review A",
+    "doi": "10.1103/physreva.111.042409",
     "arxiv": null,
-    "url": "https://doi.org/10.1088/1367-2630/ad503d"
+    "url": "https://doi.org/10.1103/physreva.111.042409"
+  },
+  {
+    "title": "Variational Quantum Models for Knowledge Graph Embeddings on NISQ Devices",
+    "year": 2025,
+    "authors": [
+      "Guido Bellomo",
+      "Martín Santesteban",
+      "Patricio Bruno",
+      "Santiago Cifuentes",
+      "Gustavo Martín Bosyk"
+    ],
+    "venue": "2025 IEEE CHILEAN Conference on Electrical, Electronics Engineering, Information and Communication Technologies (CHILECON)",
+    "doi": "10.1109/chilecon66915.2025.11476453",
+    "arxiv": "https://arxiv.org/abs/2605.28723",
+    "url": "https://doi.org/10.1109/chilecon66915.2025.11476453"
   },
   {
     "title": "Axiomatization of XPath with general data comparison",
     "year": 2024,
     "authors": [
-      "Abriola, S.",
-      "Figueira, S.",
-      "González, N."
+      "S. Abriola",
+      "S. Figueira",
+      "N. González"
     ],
     "venue": "Journal of Applied Non Classical Logics",
     "doi": "10.1080/11663081.2024.2430110",
     "arxiv": null,
     "url": "https://doi.org/10.1080/11663081.2024.2430110"
-  },
-  {
-    "title": "Rauzy Dimension and Finite-State Dimension",
-    "year": 2024,
-    "authors": [
-      "Becher, V.",
-      "Carton, O.",
-      "Figueira, S."
-    ],
-    "venue": "Ssrn",
-    "doi": "10.2139/ssrn.4887411",
-    "arxiv": null,
-    "url": "https://doi.org/10.2139/ssrn.4887411"
-  },
-  {
-    "title": "Rauzy dimension and finite-state dimension",
-    "year": 2024,
-    "authors": [
-      "Becher, V.",
-      "Carton, O.",
-      "Figueira, S."
-    ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.2406.18383",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2406.18383"
-  },
-  {
-    "title": "Extending Schmidt vector from pure to mixed states for characterizing entanglement",
-    "year": 2024,
-    "authors": [
-      "F. Meroi",
-      "M. Losada",
-      "G. M. Bosyk"
-    ],
-    "venue": "APL Quantum",
-    "doi": "10.1063/5.0232170",
-    "arxiv": null,
-    "url": "https://doi.org/10.1063/5.0232170"
   },
   {
     "title": "Challenges in certifying quantum teleportation: Moving beyond the conventional fidelity benchmark",
@@ -220,47 +180,29 @@
     "title": "Computational Complexity of Preferred Subset Repairs on Data-Graphs",
     "year": 2024,
     "authors": [
-      "Pardal, Nina",
-      "Cifuentes, Santiago",
-      "Pin, Edwin",
-      "Martinez, Maria Vanina",
-      "Abriola, Sergio"
+      "Nina Pardal",
+      "Santiago Cifuentes",
+      "Edwin Pin",
+      "Maria Vanina Martinez",
+      "Sergio Abriola"
     ],
-    "venue": "arXiv preprint arXiv:2402.09265",
+    "venue": "arXiv preprint",
     "doi": null,
-    "arxiv": null,
-    "url": null
+    "arxiv": "https://arxiv.org/abs/2402.09265",
+    "url": "https://arxiv.org/abs/2402.09265"
   },
   {
-    "title": "Quantum computational complexity of matrix functions",
+    "title": "Extending Schmidt vector from pure to mixed states for characterizing entanglement",
     "year": 2024,
     "authors": [
-      "Cifuentes, Santiago",
-      "Wang, Samson",
-      "Silva, Thais L",
-      "Berta, Mario",
-      "Aolita, Leandro"
+      "F. Meroi",
+      "M. Losada",
+      "G. M. Bosyk"
     ],
-    "venue": "arXiv preprint arXiv:2410.13937",
-    "doi": null,
+    "venue": "APL Quantum",
+    "doi": "10.1063/5.0232170",
     "arxiv": null,
-    "url": null
-  },
-  {
-    "title": "The distributional uncertainty of the shap score in explainable machine learning",
-    "year": 2024,
-    "authors": [
-      "Cifuentes, Santiago",
-      "Bertossi, Leopoldo",
-      "Pardal, Nina",
-      "Abriola, Sergio",
-      "Martinez, Maria Vanina",
-      "Romero, Miguel"
-    ],
-    "venue": "ECAI 2024",
-    "doi": null,
-    "arxiv": null,
-    "url": null
+    "url": "https://doi.org/10.1063/5.0232170"
   },
   {
     "title": "Information quantifiers and wavelet coherence in time-series associated to COVID-19",
@@ -278,62 +220,147 @@
     "url": "https://doi.org/10.56294/piii2024303"
   },
   {
-    "title": "Towards exact algorithmic proofs of maximal mutually unbiased bases sets in arbitrary integer dimension",
+    "title": "LOCC convertibility of entangled states in infinite-dimensional systems",
+    "year": 2024,
+    "authors": [
+      "César Massri",
+      "Guido Bellomo",
+      "Hector Freytes",
+      "Roberto Giuntini",
+      "Giuseppe Sergioli",
+      "Gustavo M Bosyk"
+    ],
+    "venue": "New Journal of Physics",
+    "doi": "10.1088/1367-2630/ad503d",
+    "arxiv": null,
+    "url": "https://doi.org/10.1088/1367-2630/ad503d"
+  },
+  {
+    "title": "Quantum computational complexity of matrix functions",
+    "year": 2024,
+    "authors": [
+      "Santiago Cifuentes",
+      "Samson Wang",
+      "Thais L Silva",
+      "Mario Berta",
+      "Leandro Aolita"
+    ],
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/2410.13937",
+    "url": "https://arxiv.org/abs/2410.13937"
+  },
+  {
+    "title": "Rauzy Dimension and Finite-State Dimension",
+    "year": 2024,
+    "authors": [
+      "V. Becher",
+      "O. Carton",
+      "S. Figueira"
+    ],
+    "venue": "arXiv preprint",
+    "doi": "10.2139/ssrn.4887411",
+    "arxiv": "https://arxiv.org/abs/2406.18383",
+    "url": "https://arxiv.org/abs/2406.18383"
+  },
+  {
+    "title": "The distributional uncertainty of the shap score in explainable machine learning",
+    "year": 2024,
+    "authors": [
+      "Santiago Cifuentes",
+      "Leopoldo Bertossi",
+      "Nina Pardal",
+      "Sergio Abriola",
+      "Maria Vanina Martinez",
+      "Miguel Romero"
+    ],
+    "venue": "ECAI 2024",
+    "doi": null,
+    "arxiv": null,
+    "url": null
+  },
+  {
+    "title": "An epistemic approach to model uncertainty in data-graphs",
+    "year": 2023,
+    "authors": [
+      "Sergio Abriola",
+      "Santiago Cifuentes",
+      "Maria Vanina Martinez",
+      "Nina Pardal",
+      "Edwin Pin"
+    ],
+    "venue": "International Journal of Approximate Reasoning",
+    "doi": null,
+    "arxiv": null,
+    "url": null
+  },
+  {
+    "title": "Complementarity between quantum coherence and mixedness: a majorization approach",
+    "year": 2023,
+    "authors": [
+      "Yanet Alvarez",
+      "Marcelo Losada",
+      "Mariela Portesi",
+      "Gustavo M Bosyk"
+    ],
+    "venue": "Communications in Theoretical Physics",
+    "doi": "10.1088/1572-9494/acc92f",
+    "arxiv": null,
+    "url": "https://doi.org/10.1088/1572-9494/acc92f"
+  },
+  {
+    "title": "Complexity of solving a system of difference constraints with variables restricted to a finite set",
     "year": 2023,
     "authors": [
       "Santiago Cifuentes",
-      "Nicolás Ciancaglini",
-      "Guido Bellomo",
-      "Santiago Figueira",
-      "Ariel Bendersky",
-      "Cifuentes, S.",
-      "Ciancaglini, N.",
-      "Bellomo, G.",
-      "Figueira, S.",
-      "Bendersky, A."
+      "Francisco J Soulignac",
+      "Pablo Terlisky"
     ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.2309.12399",
+    "venue": "Information Processing Letters",
+    "doi": null,
     "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2309.12399"
+    "url": null
+  },
+  {
+    "title": "Data-graph repairs: the preferred approach",
+    "year": 2023,
+    "authors": [
+      "Sergio Abriola",
+      "Santiago Cifuentes",
+      "Nina Pardal",
+      "Edwin Pin"
+    ],
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/2304.00931",
+    "url": "https://arxiv.org/abs/2304.00931"
   },
   {
     "title": "Modal Logic with Relations over Paths: a Theoretical Development through Comonadic Semantics",
     "year": 2023,
     "authors": [
-      "Figueira, S.",
-      "Goren-Roig, G."
+      "S. Figueira",
+      "G. Goren-Roig"
     ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.2307.09679",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2307.09679"
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/2307.09679",
+    "url": "https://arxiv.org/abs/2307.09679"
   },
   {
-    "title": "PDL on Steroids: on Expressive Extensions of PDL with Intersection and Converse",
+    "title": "On the complexity of finding set repairs for data-graphs",
     "year": 2023,
     "authors": [
-      "Figueira, D.",
-      "Figueira, S.",
-      "Pin, E."
+      "Sergio Abriola",
+      "Maria Vanina Martinez",
+      "Nina Pardal",
+      "Santiago Cifuentes",
+      "Edwin Pin Baque"
     ],
-    "venue": "Proceedings Symposium on Logic in Computer Science",
-    "doi": "10.1109/lics56636.2023.10175813",
+    "venue": "Journal of Artificial Intelligence Research",
+    "doi": null,
     "arxiv": null,
-    "url": "https://doi.org/10.1109/lics56636.2023.10175813"
-  },
-  {
-    "title": "PDL on Steroids: on Expressive Extensions of PDL with Intersection and Converse",
-    "year": 2023,
-    "authors": [
-      "Figueira, D.",
-      "Figueira, S.",
-      "Pin, E."
-    ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.2304.10381",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2304.10381"
+    "url": null
   },
   {
     "title": "Optimal quantum teleportation protocols for fixed average fidelity",
@@ -351,22 +378,46 @@
     "url": "https://doi.org/10.1103/physreva.108.042428"
   },
   {
-    "title": "Complementarity between quantum coherence and mixedness: a majorization approach",
+    "title": "Parameterizing density operators with arbitrary symmetries to gain advantage in quantum state estimation",
     "year": 2023,
     "authors": [
-      "Yanet Alvarez",
-      "Marcelo Losada",
-      "Mariela Portesi",
-      "Gustavo M Bosyk",
-      "Alvarez, Y.",
-      "Losada, M.",
-      "Portesi, M.",
-      "Bosyk, G.M."
+      "I. Corte",
+      "M. Losada",
+      "D. Tielas",
+      "F. Holik",
+      "L. Rebón"
     ],
-    "venue": "Communications in Theoretical Physics",
-    "doi": "10.1088/1572-9494/acc92f",
-    "arxiv": null,
-    "url": "https://doi.org/10.1088/1572-9494/acc92f"
+    "venue": "Physica A: Statistical Mechanics and its Applications",
+    "doi": "10.1016/j.physa.2022.128427",
+    "arxiv": "https://arxiv.org/abs/2208.06540",
+    "url": "https://doi.org/10.1016/j.physa.2022.128427"
+  },
+  {
+    "title": "PDL on Steroids: on Expressive Extensions of PDL with Intersection and Converse",
+    "year": 2023,
+    "authors": [
+      "D. Figueira",
+      "S. Figueira",
+      "E. Pin"
+    ],
+    "venue": "Proceedings Symposium on Logic in Computer Science",
+    "doi": "10.1109/lics56636.2023.10175813",
+    "arxiv": "https://arxiv.org/abs/2304.10381",
+    "url": "https://doi.org/10.1109/lics56636.2023.10175813"
+  },
+  {
+    "title": "Segmentation of quantum generated sequences by using the Jensen–Shannon divergence",
+    "year": 2023,
+    "authors": [
+      "Marcelo Losada",
+      "Víctor A. Penas",
+      "Federico Holik",
+      "Pedro W. Lamberti"
+    ],
+    "venue": "Physica A: Statistical Mechanics and its Applications",
+    "doi": "10.1016/j.physa.2023.129162",
+    "arxiv": "https://arxiv.org/abs/2304.09141",
+    "url": "https://doi.org/10.1016/j.physa.2023.129162"
   },
   {
     "title": "Simultaneous quantum estimation of phase and indistinguishability in a two-photon interferometer",
@@ -381,132 +432,28 @@
     "url": "https://doi.org/10.1364/josab.482301"
   },
   {
-    "title": "Parameterizing density operators with arbitrary symmetries to gain advantage in quantum state estimation",
-    "year": 2023,
-    "authors": [
-      "Corte, I.",
-      "Losada, M.",
-      "Tielas, D.",
-      "Holik, F.",
-      "Rebón, L."
-    ],
-    "venue": "Physica A: Statistical Mechanics and its Applications",
-    "doi": "10.1016/j.physa.2022.128427",
-    "arxiv": null,
-    "url": "https://doi.org/10.1016/j.physa.2022.128427"
-  },
-  {
-    "title": "Segmentation of quantum generated sequences by using the Jensen-Shannon divergence",
-    "year": 2023,
-    "authors": [
-      "Losada, M.",
-      "Penas, V.A.",
-      "Lamberti, P.W.",
-      "Holik, F."
-    ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.2304.09141",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2304.09141"
-  },
-  {
-    "title": "Segmentation of quantum generated sequences by using the Jensen–Shannon divergence",
-    "year": 2023,
-    "authors": [
-      "Losada, M.",
-      "Penas, V.A.",
-      "Holik, F.",
-      "Lamberti, P.W.",
-      "Marcelo Losada",
-      "Víctor A. Penas",
-      "Federico Holik",
-      "Pedro W. Lamberti"
-    ],
-    "venue": "Physica A: Statistical Mechanics and its Applications",
-    "doi": "10.1016/j.physa.2023.129162",
-    "arxiv": null,
-    "url": "https://doi.org/10.1016/j.physa.2023.129162"
-  },
-  {
-    "title": "An epistemic approach to model uncertainty in data-graphs",
-    "year": 2023,
-    "authors": [
-      "Abriola, Sergio",
-      "Cifuentes, Santiago",
-      "Martinez, Maria Vanina",
-      "Pardal, Nina",
-      "Pin, Edwin"
-    ],
-    "venue": "International Journal of Approximate Reasoning",
-    "doi": null,
-    "arxiv": null,
-    "url": null
-  },
-  {
-    "title": "Complexity of solving a system of difference constraints with variables restricted to a finite set",
-    "year": 2023,
-    "authors": [
-      "Cifuentes, Santiago",
-      "Soulignac, Francisco J",
-      "Terlisky, Pablo"
-    ],
-    "venue": "Information Processing Letters",
-    "doi": null,
-    "arxiv": null,
-    "url": null
-  },
-  {
-    "title": "Data-graph repairs: the preferred approach",
-    "year": 2023,
-    "authors": [
-      "Abriola, Sergio",
-      "Cifuentes, Santiago",
-      "Pardal, Nina",
-      "Pin, Edwin"
-    ],
-    "venue": "arXiv preprint arXiv:2304.00931",
-    "doi": null,
-    "arxiv": null,
-    "url": null
-  },
-  {
-    "title": "On the complexity of finding set repairs for data-graphs",
-    "year": 2023,
-    "authors": [
-      "Abriola, Sergio",
-      "Martinez, Maria Vanina",
-      "Pardal, Nina",
-      "Cifuentes, Santiago",
-      "Baque, Edwin Pin"
-    ],
-    "venue": "Journal of Artificial Intelligence Research",
-    "doi": null,
-    "arxiv": null,
-    "url": null
-  },
-  {
     "title": "Towards exact algorithmic proofs of maximal mutually unbiased bases sets in arbitrary integer dimension",
     "year": 2023,
     "authors": [
-      "Cifuentes, Santiago",
-      "Ciancaglini, Nicolás",
-      "Bellomo, Guido",
-      "Figueira, Santiago",
-      "Bendersky, Ariel"
+      "Santiago Cifuentes",
+      "Nicolás Ciancaglini",
+      "Guido Bellomo",
+      "Santiago Figueira",
+      "Ariel Bendersky"
     ],
-    "venue": "arXiv preprint arXiv:2309.12399",
+    "venue": "arXiv preprint",
     "doi": null,
-    "arxiv": null,
-    "url": null
+    "arxiv": "https://arxiv.org/abs/2309.12399",
+    "url": "https://arxiv.org/abs/2309.12399"
   },
   {
     "title": "A logical framework to study concept-learning biases in the presence of multiple explanations",
     "year": 2022,
     "authors": [
-      "Abriola, S.",
-      "Tano, P.",
-      "Romano, S.",
-      "Figueira, S."
+      "S. Abriola",
+      "P. Tano",
+      "S. Romano",
+      "S. Figueira"
     ],
     "venue": "Behavior Research Methods",
     "doi": "10.3758/s13428-021-01596-4",
@@ -514,16 +461,33 @@
     "url": "https://doi.org/10.3758/s13428-021-01596-4"
   },
   {
-    "title": "Selective quantum state tomography for continuous-variable systems",
+    "title": "An Algebraic Model for Quantum Unstable States",
     "year": 2022,
     "authors": [
-      "Virginia Feldman",
-      "Ariel Bendersky"
+      "S. Fortin",
+      "M. Gadella",
+      "F. Holik",
+      "J. P. Jorge",
+      "M. Losada"
     ],
-    "venue": "Physical Review A",
-    "doi": "10.1103/physreva.105.032453",
+    "venue": "Mathematics",
+    "doi": "10.3390/math10234562",
     "arxiv": null,
-    "url": "https://doi.org/10.1103/physreva.105.032453"
+    "url": "https://doi.org/10.3390/math10234562"
+  },
+  {
+    "title": "Coherence resource power of isocoherent states",
+    "year": 2022,
+    "authors": [
+      "M. Losada",
+      "G. M. Bosyk",
+      "H. Freytes",
+      "G. Sergioli"
+    ],
+    "venue": "Scientific Reports",
+    "doi": "10.1038/s41598-022-11300-x",
+    "arxiv": null,
+    "url": "https://doi.org/10.1038/s41598-022-11300-x"
   },
   {
     "title": "Entropy-Based Informational Study of the COVID-19 Series of Data",
@@ -541,42 +505,13 @@
     "url": "https://doi.org/10.3390/math10234590"
   },
   {
-    "title": "An Algebraic Model for Quantum Unstable States",
-    "year": 2022,
-    "authors": [
-      "Fortin, S.",
-      "Gadella, M.",
-      "Holik, F.",
-      "Jorge, J.P.",
-      "Losada, M."
-    ],
-    "venue": "Mathematics",
-    "doi": "10.3390/math10234562",
-    "arxiv": null,
-    "url": "https://doi.org/10.3390/math10234562"
-  },
-  {
-    "title": "Coherence resource power of isocoherent states",
-    "year": 2022,
-    "authors": [
-      "Losada, M.",
-      "Bosyk, G.M.",
-      "Freytes, H.",
-      "Sergioli, G."
-    ],
-    "venue": "Scientific Reports",
-    "doi": "10.1038/s41598-022-11300-x",
-    "arxiv": null,
-    "url": "https://doi.org/10.1038/s41598-022-11300-x"
-  },
-  {
     "title": "Mathematical Models for Unstable Quantum Systems and Gamow States",
     "year": 2022,
     "authors": [
-      "Gadella, M.",
-      "Fortin, S.",
-      "Jorge, J.P.",
-      "Losada, M."
+      "M. Gadella",
+      "S. Fortin",
+      "J. P. Jorge",
+      "M. Losada"
     ],
     "venue": "Entropy",
     "doi": "10.3390/e24060804",
@@ -587,10 +522,6 @@
     "title": "MaxEnt principle and reduced density matrix estimation",
     "year": 2022,
     "authors": [
-      "Losada, M.",
-      "Penas, V.A.",
-      "Holik, F.",
-      "Lamberti, P.W.",
       "Marcelo Losada",
       "Víctor A. Penas",
       "Federico Holik",
@@ -602,33 +533,50 @@
     "url": "https://doi.org/10.1016/j.physa.2022.127517"
   },
   {
-    "title": "Parameterizing density operators with arbitrary symmetries to gain advantage in quantum state estimation",
-    "year": 2022,
-    "authors": [
-      "Corte, I.",
-      "Losada, M.",
-      "Tielas, D.",
-      "Holik, F.",
-      "Rebón, L."
-    ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.2208.06540",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2208.06540"
-  },
-  {
     "title": "Performance of the quantum MaxEnt estimation in the presence of physical symmetries",
     "year": 2022,
     "authors": [
-      "Tielas, D.",
-      "Losada, M.",
-      "Rebón, L.",
-      "Holik, F."
+      "D. Tielas",
+      "M. Losada",
+      "L. Rebón",
+      "F. Holik"
     ],
     "venue": "Quantum Information Processing",
     "doi": "10.1007/s11128-022-03568-9",
-    "arxiv": null,
+    "arxiv": "https://arxiv.org/abs/2109.10806",
     "url": "https://doi.org/10.1007/s11128-022-03568-9"
+  },
+  {
+    "title": "Selective quantum state tomography for continuous-variable systems",
+    "year": 2022,
+    "authors": [
+      "Virginia Feldman",
+      "Ariel Bendersky"
+    ],
+    "venue": "Physical Review A",
+    "doi": "10.1103/physreva.105.032453",
+    "arxiv": null,
+    "url": "https://doi.org/10.1103/physreva.105.032453"
+  },
+  {
+    "title": "A theory of memory for binary sequences: Evidence for a mental compression algorithm in humans",
+    "year": 2021,
+    "authors": [
+      "S. Planton",
+      "T. van Kerkoerle",
+      "L. Abbih",
+      "M. Maheu",
+      "F. Meyniel",
+      "M. Sigman",
+      "L. Wang",
+      "S. Figueira",
+      "S. Romano",
+      "S. Dehaene"
+    ],
+    "venue": "Plos Computational Biology",
+    "doi": "10.1371/journal.pcbi.1008598",
+    "arxiv": null,
+    "url": "https://doi.org/10.1371/journal.pcbi.1008598"
   },
   {
     "title": "Characterization of nonsignaling correlations from mutual information",
@@ -639,38 +587,12 @@
       "Daniel Galicer",
       "Santiago Figueira",
       "Augusto J. Roncaglia",
-      "Ariel Bendersky",
-      "Perito, I.",
-      "Bellomo, G.",
-      "Galicer, D.",
-      "Figueira, S.",
-      "Roncaglia, A.J.",
-      "Bendersky, A."
+      "Ariel Bendersky"
     ],
     "venue": "Physical Review A",
     "doi": "10.1103/physreva.103.062216",
-    "arxiv": null,
+    "arxiv": "https://arxiv.org/abs/2010.04795",
     "url": "https://doi.org/10.1103/physreva.103.062216"
-  },
-  {
-    "title": "A theory of memory for binary sequences: Evidence for a mental compression algorithm in humans",
-    "year": 2021,
-    "authors": [
-      "Planton, S.",
-      "van Kerkoerle, T.",
-      "Abbih, L.",
-      "Maheu, M.",
-      "Meyniel, F.",
-      "Sigman, M.",
-      "Wang, L.",
-      "Figueira, S.",
-      "Romano, S.",
-      "Dehaene, S."
-    ],
-    "venue": "Plos Computational Biology",
-    "doi": "10.1371/journal.pcbi.1008598",
-    "arxiv": null,
-    "url": "https://doi.org/10.1371/journal.pcbi.1008598"
   },
   {
     "title": "Fluctuation and dissipation in memoryless open quantum evolutions",
@@ -694,27 +616,22 @@
       "M. Losada",
       "C. Massri",
       "H. Freytes",
-      "G. Sergioli",
-      "Bosyk, G.M.",
-      "Losada, M.",
-      "Massri, C.",
-      "Freytes, H.",
-      "Sergioli, G."
+      "G. Sergioli"
     ],
     "venue": "Physical Review A",
     "doi": "10.1103/physreva.103.012403",
-    "arxiv": null,
+    "arxiv": "https://arxiv.org/abs/2009.09483",
     "url": "https://doi.org/10.1103/physreva.103.012403"
   },
   {
     "title": "Partial orbits of quantum gates and full three-particle entanglement",
     "year": 2021,
     "authors": [
-      "Holik, F.",
-      "Losada, M.",
-      "Freytes, H.",
-      "Plastino, A.",
-      "Sergioli, G."
+      "F. Holik",
+      "M. Losada",
+      "H. Freytes",
+      "A. Plastino",
+      "G. Sergioli"
     ],
     "venue": "Quantum Information Processing",
     "doi": "10.1007/s11128-021-03261-3",
@@ -722,32 +639,59 @@
     "url": "https://doi.org/10.1007/s11128-021-03261-3"
   },
   {
-    "title": "Performance of the quantum MaxEnt estimation in the presence of physical symmetries",
-    "year": 2021,
+    "title": "Evolution of quantum observables: from non-commutativity to commutativity",
+    "year": 2020,
     "authors": [
-      "Tielas, D.",
-      "Losada, M.",
-      "Rebón, L.",
-      "Holik, F."
+      "S. Fortin",
+      "M. Gadella",
+      "F. Holik",
+      "M. Losada"
     ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.2109.10806",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2109.10806"
+    "venue": "Soft Computing",
+    "doi": "10.1007/s00500-019-04546-7",
+    "arxiv": "https://arxiv.org/abs/1906.07226",
+    "url": "https://doi.org/10.1007/s00500-019-04546-7"
   },
   {
-    "title": "Coherence Resource Power of Isocoherent States",
-    "year": 2021,
+    "title": "Extremal elements of a sublattice of the majorization lattice and approximate majorization",
+    "year": 2020,
     "authors": [
-      "Marcelo Losada",
-      "Gustavo Martin Bosyk",
-      "Hector Freytes",
-      "Giuseppe Sergioli"
+      "César Massri",
+      "Guido Bellomo",
+      "Federico Holik",
+      "Gustavo M. Bosyk"
     ],
-    "venue": "Preprint",
-    "doi": "10.2139/ssrn.3940204",
+    "venue": "Journal of Physics A: Mathematical and Theoretical",
+    "doi": "10.1088/1751-8121/ab8674",
+    "arxiv": "https://arxiv.org/abs/2001.08766",
+    "url": "https://doi.org/10.1088/1751-8121/ab8674"
+  },
+  {
+    "title": "Finite controllability for ontology-mediated query answering of crpq",
+    "year": 2020,
+    "authors": [
+      "D. Figueira",
+      "S. Figueira",
+      "E. P. Baque"
+    ],
+    "venue": "17th International Conference on Principles of Knowledge Representation and Reasoning Kr 2020",
+    "doi": null,
     "arxiv": null,
-    "url": "https://doi.org/10.2139/ssrn.3940204"
+    "url": null
+  },
+  {
+    "title": "Gamow vectors formalism applied to the Loschmidt echo",
+    "year": 2020,
+    "authors": [
+      "S. Fortin",
+      "M. Gadella",
+      "F. Holik",
+      "M. Losada"
+    ],
+    "venue": "European Physical Journal Plus",
+    "doi": "10.1140/epjp/s13360-020-00756-3",
+    "arxiv": "https://arxiv.org/abs/2009.10928",
+    "url": "https://doi.org/10.1140/epjp/s13360-020-00756-3"
   },
   {
     "title": "Impossibility of memory in hidden-signaling models for quantum correlations",
@@ -758,167 +702,12 @@
       "Daniel Galicer",
       "Santiago Figueira",
       "Augusto J. Roncaglia",
-      "Ariel Bendersky",
-      "Perito, I.",
-      "Bellomo, G.",
-      "Galicer, D.",
-      "Figueira, S.",
-      "Roncaglia, A.J.",
-      "Bendersky, A."
+      "Ariel Bendersky"
     ],
     "venue": "Physical Review A",
     "doi": "10.1103/physreva.102.052207",
-    "arxiv": null,
+    "arxiv": "https://arxiv.org/abs/2005.11340",
     "url": "https://doi.org/10.1103/physreva.102.052207"
-  },
-  {
-    "title": "Extremal elements of a sublattice of the majorization lattice and approximate majorization",
-    "year": 2020,
-    "authors": [
-      "C Massri",
-      "G Bellomo",
-      "F Holik",
-      "G M Bosyk"
-    ],
-    "venue": "Journal of Physics A: Mathematical and Theoretical",
-    "doi": "10.1088/1751-8121/ab8674",
-    "arxiv": null,
-    "url": "https://doi.org/10.1088/1751-8121/ab8674"
-  },
-  {
-    "title": "Characterization of non-signaling correlations from mutual information",
-    "year": 2020,
-    "authors": [
-      "Perito, I.",
-      "Bellomo, G.",
-      "Galicer, D.",
-      "Figueira, S.",
-      "Roncaglia, A.J.",
-      "Bendersky, A."
-    ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.2010.04795",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2010.04795"
-  },
-  {
-    "title": "Finite controllability for ontology-mediated query answering of crpq",
-    "year": 2020,
-    "authors": [
-      "Figueira, D.",
-      "Figueira, S.",
-      "Baque, E.P."
-    ],
-    "venue": "17th International Conference on Principles of Knowledge Representation and Reasoning Kr 2020",
-    "doi": null,
-    "arxiv": null,
-    "url": null
-  },
-  {
-    "title": "Hidden signaling models for quantum correlations cannot have memory",
-    "year": 2020,
-    "authors": [
-      "Perito, I.",
-      "Bellomo, G.",
-      "Galicer, D.",
-      "Figueira, S.",
-      "Roncaglia, A.J.",
-      "Bendersky, A."
-    ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.2005.11340",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2005.11340"
-  },
-  {
-    "title": "Towards a more flexible language of thought: Bayesian grammar updates after each concept exposure",
-    "year": 2020,
-    "authors": [
-      "Tano, P.",
-      "Romano, S.",
-      "Sigman, M.",
-      "Salles, A.",
-      "Figueira, S."
-    ],
-    "venue": "Physical Review E",
-    "doi": "10.1103/physreve.101.042128",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/physreve.101.042128"
-  },
-  {
-    "title": "Evolution of quantum observables: from non-commutativity to commutativity",
-    "year": 2020,
-    "authors": [
-      "Fortin, S.",
-      "Gadella, M.",
-      "Holik, F.",
-      "Losada, M.",
-      "S. Fortin",
-      "M. Gadella",
-      "F. Holik",
-      "M. Losada"
-    ],
-    "venue": "Soft Computing",
-    "doi": "10.1007/s00500-019-04546-7",
-    "arxiv": null,
-    "url": "https://doi.org/10.1007/s00500-019-04546-7"
-  },
-  {
-    "title": "Gamow vectors formalism applied to the Loschmidt echo",
-    "year": 2020,
-    "authors": [
-      "Fortin, S.",
-      "Gadella, M.",
-      "Holik, F.",
-      "Losada, M."
-    ],
-    "venue": "European Physical Journal Plus",
-    "doi": "10.1140/epjp/s13360-020-00756-3",
-    "arxiv": null,
-    "url": "https://doi.org/10.1140/epjp/s13360-020-00756-3"
-  },
-  {
-    "title": "Gamow vectors formalism applied to the Loschmidt echo",
-    "year": 2020,
-    "authors": [
-      "Fortin, S.",
-      "Gadella, M.",
-      "Holik, F.",
-      "Losada, M."
-    ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.2009.10928",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2009.10928"
-  },
-  {
-    "title": "Generalized coherence vector applied to coherence transformations and quantifiers",
-    "year": 2020,
-    "authors": [
-      "Bosyk, G.M.",
-      "Losada, M.",
-      "Massri, C.",
-      "Freytes, H.",
-      "Sergioli, G."
-    ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.2009.09483",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.2009.09483"
-  },
-  {
-    "title": "Transformations of superpositions by means of incoherent operations",
-    "year": 2020,
-    "authors": [
-      "Losada, M.",
-      "Bosyk, G.M.",
-      "Freytes, H.",
-      "Sergioli, G."
-    ],
-    "venue": "Scientific Reports",
-    "doi": "10.1038/s41598-020-63661-w",
-    "arxiv": null,
-    "url": "https://doi.org/10.1038/s41598-020-63661-w"
   },
   {
     "title": "Mental compression of binary sequences in a language of thought",
@@ -941,27 +730,41 @@
     "url": "https://doi.org/10.31234/osf.io/aez4w"
   },
   {
-    "title": "Optimal common resource in majorization-based resource theories",
-    "year": 2019,
+    "title": "Towards a more flexible language of thought: Bayesian grammar updates after each concept exposure",
+    "year": 2020,
     "authors": [
-      "G M Bosyk",
-      "G Bellomo",
-      "F Holik",
-      "H Freytes",
-      "G Sergioli"
+      "P. Tano",
+      "S. Romano",
+      "M. Sigman",
+      "A. Salles",
+      "S. Figueira"
     ],
-    "venue": "New Journal of Physics",
-    "doi": "10.1088/1367-2630/ab3734",
+    "venue": "Physical Review E",
+    "doi": "10.1103/physreve.101.042128",
     "arxiv": null,
-    "url": "https://doi.org/10.1088/1367-2630/ab3734"
+    "url": "https://doi.org/10.1103/physreve.101.042128"
+  },
+  {
+    "title": "Transformations of superpositions by means of incoherent operations",
+    "year": 2020,
+    "authors": [
+      "M. Losada",
+      "G. M. Bosyk",
+      "H. Freytes",
+      "G. Sergioli"
+    ],
+    "venue": "Scientific Reports",
+    "doi": "10.1038/s41598-020-63661-w",
+    "arxiv": null,
+    "url": "https://doi.org/10.1038/s41598-020-63661-w"
   },
   {
     "title": "Closure properties of synchronized relations",
     "year": 2019,
     "authors": [
-      "Descotte, M.E.",
-      "Figueira, D.",
-      "Figueira, S."
+      "M. E. Descotte",
+      "D. Figueira",
+      "S. Figueira"
     ],
     "venue": "Leibniz International Proceedings in Informatics Lipics",
     "doi": "10.4230/lipics.stacs.2019.22",
@@ -969,17 +772,80 @@
     "url": "https://doi.org/10.4230/lipics.stacs.2019.22"
   },
   {
+    "title": "Frauchiger-Renner argument and quantum histories",
+    "year": 2019,
+    "authors": [
+      "Marcelo Losada",
+      "Roberto Laura",
+      "Olimpia Lombardi"
+    ],
+    "venue": "Physical Review A",
+    "doi": "10.1103/physreva.100.052114",
+    "arxiv": null,
+    "url": "https://doi.org/10.1103/physreva.100.052114"
+  },
+  {
+    "title": "Generalized contexts for quantum histories",
+    "year": 2019,
+    "authors": [
+      "M. Losada",
+      "L. Vanni",
+      "R. Laura"
+    ],
+    "venue": "Quantum Worlds: Perspectives on the Ontology of Quantum Mechanics",
+    "doi": null,
+    "arxiv": null,
+    "url": null
+  },
+  {
+    "title": "Hermite–Gaussian model for quantum states",
+    "year": 2019,
+    "authors": [
+      "M. Losada",
+      "I. S. Gomez",
+      "F. Holik"
+    ],
+    "venue": "Physica A: Statistical Mechanics and its Applications",
+    "doi": "10.1016/j.physa.2019.121806",
+    "arxiv": "https://arxiv.org/abs/1811.01207",
+    "url": "https://doi.org/10.1016/j.physa.2019.121806"
+  },
+  {
+    "title": "Majorization, across the (Quantum) Universe",
+    "year": 2019,
+    "authors": [],
+    "venue": "Quantum Worlds",
+    "doi": "10.1017/9781108562218.018",
+    "arxiv": null,
+    "url": "https://doi.org/10.1017/9781108562218.018"
+  },
+  {
+    "title": "Optimal common resource in majorization-based resource theories",
+    "year": 2019,
+    "authors": [
+      "G. M. Bosyk",
+      "G. Bellomo",
+      "F. Holik",
+      "H. Freytes",
+      "G. Sergioli"
+    ],
+    "venue": "New Journal of Physics",
+    "doi": "10.1088/1367-2630/ab3734",
+    "arxiv": "https://arxiv.org/abs/1902.01836",
+    "url": "https://doi.org/10.1088/1367-2630/ab3734"
+  },
+  {
     "title": "Representation of spatial sequences using nested rules in human prefrontal cortex",
     "year": 2019,
     "authors": [
-      "Wang, L.",
-      "Amalric, M.",
-      "Fang, W.",
-      "Jiang, X.",
-      "Pallier, C.",
-      "Figueira, S.",
-      "Sigman, M.",
-      "Dehaene, S."
+      "L. Wang",
+      "M. Amalric",
+      "W. Fang",
+      "X. Jiang",
+      "C. Pallier",
+      "S. Figueira",
+      "M. Sigman",
+      "S. Dehaene"
     ],
     "venue": "Neuroimage",
     "doi": "10.1016/j.neuroimage.2018.10.061",
@@ -1001,13 +867,18 @@
     "url": "https://doi.org/10.1103/physreva.100.062125"
   },
   {
-    "title": "Majorization, across the (Quantum) Universe",
+    "title": "Solutions for the MaxEnt problem with symmetry constraints",
     "year": 2019,
-    "authors": [],
-    "venue": "Quantum Worlds",
-    "doi": "10.1017/9781108562218.018",
-    "arxiv": null,
-    "url": "https://doi.org/10.1017/9781108562218.018"
+    "authors": [
+      "M. Losada",
+      "F. Holik",
+      "C. Massri",
+      "A. Plastino"
+    ],
+    "venue": "Quantum Information Processing",
+    "doi": "10.1007/s11128-019-2399-y",
+    "arxiv": "https://arxiv.org/abs/1807.11168",
+    "url": "https://doi.org/10.1007/s11128-019-2399-y"
   },
   {
     "title": "Special Issue “Quantum Foundations: 90 Years of Uncertainty”",
@@ -1024,143 +895,26 @@
     "url": "https://doi.org/10.3390/e21020159"
   },
   {
-    "title": "Evolution of quantum observables: From non-commutativity to commutativity",
-    "year": 2019,
-    "authors": [
-      "Fortin, S.",
-      "Gadella, M.",
-      "Holik, F.",
-      "Losada, M."
-    ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.1906.07226",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.1906.07226"
-  },
-  {
-    "title": "Frauchiger-Renner argument and quantum histories",
-    "year": 2019,
-    "authors": [
-      "Losada, M.",
-      "Laura, R.",
-      "Lombardi, O.",
-      "Marcelo Losada",
-      "Roberto Laura",
-      "Olimpia Lombardi"
-    ],
-    "venue": "Physical Review A",
-    "doi": "10.1103/physreva.100.052114",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/physreva.100.052114"
-  },
-  {
-    "title": "Generalized contexts for quantum histories",
-    "year": 2019,
-    "authors": [
-      "Losada, M.",
-      "Vanni, L.",
-      "Laura, R."
-    ],
-    "venue": "Quantum Worlds: Perspectives on the Ontology of Quantum Mechanics",
-    "doi": null,
-    "arxiv": null,
-    "url": null
-  },
-  {
-    "title": "Hermite–Gaussian model for quantum states",
-    "year": 2019,
-    "authors": [
-      "Losada, M.",
-      "Gomez, I.S.",
-      "Holik, F."
-    ],
-    "venue": "Physica A: Statistical Mechanics and its Applications",
-    "doi": "10.1016/j.physa.2019.121806",
-    "arxiv": null,
-    "url": "https://doi.org/10.1016/j.physa.2019.121806"
-  },
-  {
-    "title": "Solutions for the MaxEnt problem with symmetry constraints",
-    "year": 2019,
-    "authors": [
-      "Losada, M.",
-      "Holik, F.",
-      "Massri, C.",
-      "Plastino, A."
-    ],
-    "venue": "Quantum Information Processing",
-    "doi": "10.1007/s11128-019-2399-y",
-    "arxiv": null,
-    "url": "https://doi.org/10.1007/s11128-019-2399-y"
-  },
-  {
     "title": "The Frauchiger-Renner argument and quantum histories",
     "year": 2019,
     "authors": [
-      "Losada, M.",
-      "Laura, R.",
-      "Lombardi, O."
+      "M. Losada",
+      "R. Laura",
+      "O. Lombardi"
     ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.1907.10095",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.1907.10095"
-  },
-  {
-    "title": "Resource-theoretic approach to vectorial coherence",
-    "year": 2018,
-    "authors": [
-      "G. M. Bosyk",
-      "G. Bellomo",
-      "A. Luis",
-      "Bosyk, G.M.",
-      "Bellomo, G.",
-      "Luis, A.A."
-    ],
-    "venue": "Optics Letters",
-    "doi": "10.1364/ol.43.001463",
-    "arxiv": null,
-    "url": "https://doi.org/10.1364/ol.43.001463"
-  },
-  {
-    "title": "The lattice of trumping majorization for 4D probability vectors and 2D catalysts",
-    "year": 2018,
-    "authors": [
-      "Gustavo M. Bosyk",
-      "Hector Freytes",
-      "Guido Bellomo",
-      "Giuseppe Sergioli",
-      "Bosyk, G.M.",
-      "Freytes, H.",
-      "Bellomo, G.",
-      "Sergioli, G."
-    ],
-    "venue": "Scientific Reports",
-    "doi": "10.1038/s41598-018-21947-0",
-    "arxiv": null,
-    "url": "https://doi.org/10.1038/s41598-018-21947-0"
-  },
-  {
-    "title": "Polarization monotones of two-dimensional and three-dimensional random electromagnetic fields",
-    "year": 2018,
-    "authors": [
-      "Bosyk, G.M.",
-      "Bellomo, G.",
-      "Luis, A."
-    ],
-    "venue": "Physical Review A",
-    "doi": "10.1103/physreva.97.023804",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/physreva.97.023804"
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/1907.10095",
+    "url": "https://arxiv.org/abs/1907.10095"
   },
   {
     "title": "Algorithmic identification of probabilities is hard",
     "year": 2018,
     "authors": [
-      "Bienvenu, L.",
-      "Figueira, S.",
-      "Monin, B.",
-      "Shen, A."
+      "L. Bienvenu",
+      "S. Figueira",
+      "B. Monin",
+      "A. Shen"
     ],
     "venue": "Journal of Computer and System Sciences",
     "doi": "10.1016/j.jcss.2018.01.002",
@@ -1171,12 +925,12 @@
     "title": "Bayesian validation of grammar productions for the language of thought",
     "year": 2018,
     "authors": [
-      "Romano, S.",
-      "Salles, A.",
-      "Amalric, M.",
-      "Dehaene, S.",
-      "Sigman, M.",
-      "Figueira, S."
+      "S. Romano",
+      "A. Salles",
+      "M. Amalric",
+      "S. Dehaene",
+      "M. Sigman",
+      "S. Figueira"
     ],
     "venue": "Plos One",
     "doi": "10.1371/journal.pone.0200420",
@@ -1187,10 +941,10 @@
     "title": "Bisimulations on data graphs",
     "year": 2018,
     "authors": [
-      "Abriola, S.",
-      "Barceló, P.",
-      "Figueira, D.",
-      "Figueira, S."
+      "S. Abriola",
+      "P. Barceló",
+      "D. Figueira",
+      "S. Figueira"
     ],
     "venue": "Journal of Artificial Intelligence Research",
     "doi": "10.1613/jair.5637",
@@ -1198,74 +952,12 @@
     "url": "https://doi.org/10.1613/jair.5637"
   },
   {
-    "title": "Distinguishing computable mixtures of quantum states",
-    "year": 2018,
-    "authors": [
-      "Grande, I.H.L.",
-      "Senno, G.",
-      "De La Torre, G.",
-      "Larotonda, M.A.",
-      "Bendersky, A.",
-      "Figueira, S.",
-      "Acín, A."
-    ],
-    "venue": "Physical Review A",
-    "doi": "10.1103/physreva.97.052306",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/physreva.97.052306"
-  },
-  {
-    "title": "Learning is Compiling: Experience Shapes Concept Learning by Combining Primitives in a Language of Thought",
-    "year": 2018,
-    "authors": [
-      "Tano, P.",
-      "Romano, S.",
-      "Sigman, M.",
-      "Salles, A.",
-      "Figueira, S."
-    ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.1805.06924",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.1805.06924"
-  },
-  {
-    "title": "Generalized entropies in quantum and classical statistical theories",
-    "year": 2018,
-    "authors": [
-      "Portesi, M.",
-      "Holik, F.",
-      "Lamberti, P.W.",
-      "Bosyk, G.M.",
-      "Bellomo, G.",
-      "Zozor, S."
-    ],
-    "venue": "European Physical Journal: Special Topics",
-    "doi": "10.1140/epjst/e2018-00108-1",
-    "arxiv": null,
-    "url": "https://doi.org/10.1140/epjst/e2018-00108-1"
-  },
-  {
-    "title": "On an explicit representation of the Łukasiewicz sum as a quantum operation",
-    "year": 2018,
-    "authors": [
-      "Freytes, H.",
-      "Holik, F.",
-      "Bosyk, G.M.",
-      "Sergioli, G."
-    ],
-    "venue": "Soft Computing",
-    "doi": "10.1007/s00500-018-3361-0",
-    "arxiv": null,
-    "url": "https://doi.org/10.1007/s00500-018-3361-0"
-  },
-  {
     "title": "Classical Limit and Quantum Logic",
     "year": 2018,
     "authors": [
-      "Losada, M.",
-      "Fortin, S.",
-      "Holik, F."
+      "M. Losada",
+      "S. Fortin",
+      "F. Holik"
     ],
     "venue": "International Journal of Theoretical Physics",
     "doi": "10.1007/s10773-017-3579-0",
@@ -1276,7 +968,7 @@
     "title": "Contrary quantum histories and contrary inferences",
     "year": 2018,
     "authors": [
-      "Losada, M."
+      "M. Losada"
     ],
     "venue": "Physica A: Statistical Mechanics and its Applications",
     "doi": "10.1016/j.physa.2018.02.214",
@@ -1284,13 +976,26 @@
     "url": "https://doi.org/10.1016/j.physa.2018.02.214"
   },
   {
+    "title": "Distinguishing computable mixtures of quantum states",
+    "year": 2018,
+    "authors": [
+      "I. H. L. Grande",
+      "G. Senno",
+      "G. De La Torre",
+      "M. A. Larotonda",
+      "A. Bendersky",
+      "S. Figueira",
+      "A. Acín"
+    ],
+    "venue": "Physical Review A",
+    "doi": "10.1103/physreva.97.052306",
+    "arxiv": "https://arxiv.org/abs/1709.02307",
+    "url": "https://doi.org/10.1103/physreva.97.052306"
+  },
+  {
     "title": "Dynamics of algebras in quantum unstable systems",
     "year": 2018,
     "authors": [
-      "Losada, M.",
-      "Fortin, S.",
-      "Gadella, M.",
-      "Holik, F.",
       "Marcelo Losada",
       "Sebastian Fortin",
       "Manuel Gadella",
@@ -1298,42 +1003,31 @@
     ],
     "venue": "International Journal of Modern Physics A",
     "doi": "10.1142/s0217751x18501099",
-    "arxiv": null,
+    "arxiv": "https://arxiv.org/abs/1806.04997",
     "url": "https://doi.org/10.1142/s0217751x18501099"
   },
   {
-    "title": "Dynamics of algebras in quantum unstable systems",
+    "title": "Generalized entropies in quantum and classical statistical theories",
     "year": 2018,
     "authors": [
-      "Losada, M.",
-      "Fortin, S.",
-      "Gadella, M.",
-      "Holik, F."
+      "M. Portesi",
+      "F. Holik",
+      "P. W. Lamberti",
+      "G. M. Bosyk",
+      "G. Bellomo",
+      "S. Zozor"
     ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.1806.04997",
+    "venue": "European Physical Journal: Special Topics",
+    "doi": "10.1140/epjst/e2018-00108-1",
     "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.1806.04997"
-  },
-  {
-    "title": "Hermite-Gaussian model for quantum states",
-    "year": 2018,
-    "authors": [
-      "Losada, M.",
-      "Gomez, I.S.",
-      "Holik, F."
-    ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.1811.01207",
-    "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.1811.01207"
+    "url": "https://doi.org/10.1140/epjst/e2018-00108-1"
   },
   {
     "title": "Histories in quantum mechanics: distinguishing between formalism and interpretation",
     "year": 2018,
     "authors": [
-      "Losada, M.",
-      "Lombardi, O."
+      "M. Losada",
+      "O. Lombardi"
     ],
     "venue": "European Journal for Philosophy of Science",
     "doi": "10.1007/s13194-017-0197-x",
@@ -1341,11 +1035,51 @@
     "url": "https://doi.org/10.1007/s13194-017-0197-x"
   },
   {
+    "title": "Learning is Compiling: Experience Shapes Concept Learning by Combining Primitives in a Language of Thought",
+    "year": 2018,
+    "authors": [
+      "P. Tano",
+      "S. Romano",
+      "M. Sigman",
+      "A. Salles",
+      "S. Figueira"
+    ],
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/1805.06924",
+    "url": "https://arxiv.org/abs/1805.06924"
+  },
+  {
+    "title": "On an explicit representation of the Łukasiewicz sum as a quantum operation",
+    "year": 2018,
+    "authors": [
+      "H. Freytes",
+      "F. Holik",
+      "G. M. Bosyk",
+      "G. Sergioli"
+    ],
+    "venue": "Soft Computing",
+    "doi": "10.1007/s00500-018-3361-0",
+    "arxiv": null,
+    "url": "https://doi.org/10.1007/s00500-018-3361-0"
+  },
+  {
+    "title": "Polarization monotones of two-dimensional and three-dimensional random electromagnetic fields",
+    "year": 2018,
+    "authors": [
+      "G. M. Bosyk",
+      "G. Bellomo",
+      "A. Luis"
+    ],
+    "venue": "Physical Review A",
+    "doi": "10.1103/physreva.97.023804",
+    "arxiv": "https://arxiv.org/abs/1709.07307",
+    "url": "https://doi.org/10.1103/physreva.97.023804"
+  },
+  {
     "title": "Quantum histories and correlations in quantum measurements",
     "year": 2018,
     "authors": [
-      "Losada, M.",
-      "Laura, R.",
       "Marcelo Losada",
       "Roberto Laura"
     ],
@@ -1355,56 +1089,82 @@
     "url": "https://doi.org/10.1007/s11128-018-2050-3"
   },
   {
-    "title": "Solutions for the MaxEnt problem with symmetry constraints",
+    "title": "Resource-theoretic approach to vectorial coherence",
     "year": 2018,
     "authors": [
-      "Losada, M.",
-      "Holik, F.",
-      "Massri, C.",
-      "Plastino, A."
+      "G. M. Bosyk",
+      "G. Bellomo",
+      "A. Luis"
     ],
-    "venue": "arXiv",
-    "doi": "10.48550/arxiv.1807.11168",
+    "venue": "Optics Letters",
+    "doi": "10.1364/ol.43.001463",
+    "arxiv": "https://arxiv.org/abs/1711.08595",
+    "url": "https://doi.org/10.1364/ol.43.001463"
+  },
+  {
+    "title": "The lattice of trumping majorization for 4D probability vectors and 2D catalysts",
+    "year": 2018,
+    "authors": [
+      "Gustavo M. Bosyk",
+      "Hector Freytes",
+      "Guido Bellomo",
+      "Giuseppe Sergioli"
+    ],
+    "venue": "Scientific Reports",
+    "doi": "10.1038/s41598-018-21947-0",
     "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.1807.11168"
+    "url": "https://doi.org/10.1038/s41598-018-21947-0"
+  },
+  {
+    "title": "A Quantum-inspired Version of the Classification Problem",
+    "year": 2017,
+    "authors": [
+      "G. Sergioli",
+      "G. M. Bosyk",
+      "E. Santucci",
+      "R. Giuntini"
+    ],
+    "venue": "International Journal of Theoretical Physics",
+    "doi": "10.1007/s10773-017-3371-1",
+    "arxiv": null,
+    "url": "https://doi.org/10.1007/s10773-017-3371-1"
+  },
+  {
+    "title": "About the concept of quantum chaos",
+    "year": 2017,
+    "authors": [
+      "I. S. Gomez",
+      "M. Losada",
+      "O. Lombardi"
+    ],
+    "venue": "Entropy",
+    "doi": "10.3390/e19050205",
+    "arxiv": null,
+    "url": "https://doi.org/10.3390/e19050205"
   },
   {
     "title": "Approximate transformations of bipartite pure-state entanglement from the majorization lattice",
     "year": 2017,
     "authors": [
-      "Bosyk, G.M.",
-      "Sergioli, G.",
-      "Freytes, H.",
-      "Holik, F.",
-      "Bellomo, G."
+      "G. M. Bosyk",
+      "G. Sergioli",
+      "H. Freytes",
+      "F. Holik",
+      "G. Bellomo"
     ],
     "venue": "Physica A: Statistical Mechanics and its Applications",
     "doi": "10.1016/j.physa.2016.12.083",
-    "arxiv": null,
+    "arxiv": "https://arxiv.org/abs/1608.04818",
     "url": "https://doi.org/10.1016/j.physa.2016.12.083"
-  },
-  {
-    "title": "Lossless quantum data compression with exponential penalization: An operational interpretation of the quantum Rényi entropy",
-    "year": 2017,
-    "authors": [
-      "Bellomo, G.",
-      "Bosyk, G.M.",
-      "Holik, F.",
-      "Zozor, S."
-    ],
-    "venue": "Scientific Reports",
-    "doi": "10.1038/s41598-017-13350-y",
-    "arxiv": null,
-    "url": "https://doi.org/10.1038/s41598-017-13350-y"
   },
   {
     "title": "Axiomatizations for downward XPath on data trees",
     "year": 2017,
     "authors": [
-      "Abriola, S.",
-      "Descotte, M.E.",
-      "Fervari, R.",
-      "Figueira, S."
+      "S. Abriola",
+      "M. E. Descotte",
+      "R. Fervari",
+      "S. Figueira"
     ],
     "venue": "Journal of Computer and System Sciences",
     "doi": "10.1016/j.jcss.2017.05.008",
@@ -1412,29 +1172,24 @@
     "url": "https://doi.org/10.1016/j.jcss.2017.05.008"
   },
   {
-    "title": "Distinguishing computable mixtures of quantum states",
+    "title": "Classical models for quantum information",
     "year": 2017,
     "authors": [
-      "López Grande, I.H.",
-      "Senno, G.",
-      "de la Torre, G.",
-      "Larotonda, M.A.",
-      "Bendersky, A.",
-      "Figueira, S.",
-      "Acín, A."
+      "F. Holik",
+      "G. M. Bosyk"
     ],
-    "venue": "Arxiv",
-    "doi": "10.48550/arxiv.1709.02307",
+    "venue": "What is Quantum Information?",
+    "doi": "10.1017/9781316494233.012",
     "arxiv": null,
-    "url": "https://doi.org/10.48550/arxiv.1709.02307"
+    "url": "https://doi.org/10.1017/9781316494233.012"
   },
   {
     "title": "Logics of repeating values on data trees and branching counter systems",
     "year": 2017,
     "authors": [
-      "Abriola, S.",
-      "Figueira, D.",
-      "Figueira, S."
+      "S. Abriola",
+      "D. Figueira",
+      "S. Figueira"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-662-54458-7_12",
@@ -1442,12 +1197,26 @@
     "url": "https://doi.org/10.1007/978-3-662-54458-7_12"
   },
   {
+    "title": "Lossless quantum data compression with exponential penalization: An operational interpretation of the quantum Rényi entropy",
+    "year": 2017,
+    "authors": [
+      "G. Bellomo",
+      "G. M. Bosyk",
+      "F. Holik",
+      "S. Zozor"
+    ],
+    "venue": "Scientific Reports",
+    "doi": "10.1038/s41598-017-13350-y",
+    "arxiv": null,
+    "url": "https://doi.org/10.1038/s41598-017-13350-y"
+  },
+  {
     "title": "Model theory of XPath on data trees. Part II: Binary bisimulation and definability",
     "year": 2017,
     "authors": [
-      "Abriola, S.",
-      "Descotte, M.E.",
-      "Figueira, S."
+      "S. Abriola",
+      "M. E. Descotte",
+      "S. Figueira"
     ],
     "venue": "Information and Computation",
     "doi": "10.1016/j.ic.2017.01.002",
@@ -1458,11 +1227,11 @@
     "title": "Nonsignaling Deterministic Models for Nonlocal Correlations have to be Uncomputable",
     "year": 2017,
     "authors": [
-      "Bendersky, A.",
-      "Senno, G.",
-      "De La Torre, G.",
-      "Figueira, S.",
-      "Acín, A."
+      "A. Bendersky",
+      "G. Senno",
+      "G. De La Torre",
+      "S. Figueira",
+      "A. Acín"
     ],
     "venue": "Physical Review Letters",
     "doi": "10.1103/physrevlett.118.130401",
@@ -1470,55 +1239,13 @@
     "url": "https://doi.org/10.1103/physrevlett.118.130401"
   },
   {
-    "title": "The language of geometry: Fast comprehension of geometrical primitives and rules in human adults and preschoolers",
-    "year": 2017,
-    "authors": [
-      "Amalric, M.",
-      "Wang, L.",
-      "Pica, P.",
-      "Figueira, S.",
-      "Sigman, M.",
-      "Dehaene, S."
-    ],
-    "venue": "Plos Computational Biology",
-    "doi": "10.1371/journal.pcbi.1005273",
-    "arxiv": null,
-    "url": "https://doi.org/10.1371/journal.pcbi.1005273"
-  },
-  {
-    "title": "A Quantum-inspired Version of the Classification Problem",
-    "year": 2017,
-    "authors": [
-      "Sergioli, G.",
-      "Bosyk, G.M.",
-      "Santucci, E.",
-      "Giuntini, R."
-    ],
-    "venue": "International Journal of Theoretical Physics",
-    "doi": "10.1007/s10773-017-3371-1",
-    "arxiv": null,
-    "url": "https://doi.org/10.1007/s10773-017-3371-1"
-  },
-  {
-    "title": "Classical models for quantum information",
-    "year": 2017,
-    "authors": [
-      "Holik, F.",
-      "Bosyk, G.M."
-    ],
-    "venue": "What is Quantum Information?",
-    "doi": "10.1017/9781316494233.012",
-    "arxiv": null,
-    "url": "https://doi.org/10.1017/9781316494233.012"
-  },
-  {
     "title": "On the interpretation of probabilities in generalized probabilistic models",
     "year": 2017,
     "authors": [
-      "Holik, F.",
-      "Fortin, S.",
-      "Bosyk, G.",
-      "Plastino, A."
+      "F. Holik",
+      "S. Fortin",
+      "G. Bosyk",
+      "A. Plastino"
     ],
     "venue": "Lecture Notes in Computer Science (including subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics)",
     "doi": "10.1007/978-3-319-52289-0_16",
@@ -1526,56 +1253,45 @@
     "url": "https://doi.org/10.1007/978-3-319-52289-0_16"
   },
   {
-    "title": "About the concept of quantum chaos",
+    "title": "The language of geometry: Fast comprehension of geometrical primitives and rules in human adults and preschoolers",
     "year": 2017,
     "authors": [
-      "Gomez, I.S.",
-      "Losada, M.",
-      "Lombardi, O."
+      "M. Amalric",
+      "L. Wang",
+      "P. Pica",
+      "S. Figueira",
+      "M. Sigman",
+      "S. Dehaene"
     ],
-    "venue": "Entropy",
-    "doi": "10.3390/e19050205",
+    "venue": "Plos Computational Biology",
+    "doi": "10.1371/journal.pcbi.1005273",
     "arxiv": null,
-    "url": "https://doi.org/10.3390/e19050205"
+    "url": "https://doi.org/10.1371/journal.pcbi.1005273"
   },
   {
-    "title": "Unified entropic measures of quantum correlations induced by local measurements",
+    "title": "A family of generalized quantum entropies: definition and properties",
     "year": 2016,
     "authors": [
-      "G.M. Bosyk",
-      "G. Bellomo",
+      "G. M. Bosyk",
       "S. Zozor",
+      "F. Holik",
       "M. Portesi",
-      "P.W. Lamberti",
-      "Bosyk, G.M.",
-      "Bellomo, G.",
-      "Zozor, S.",
-      "Portesi, M.",
-      "Lamberti, P.W."
+      "P. W. Lamberti"
     ],
-    "venue": "Physica A: Statistical Mechanics and its Applications",
-    "doi": "10.1016/j.physa.2016.06.131",
+    "venue": "Quantum Information Processing",
+    "doi": "10.1007/s11128-016-1329-5",
     "arxiv": null,
-    "url": "https://doi.org/10.1016/j.physa.2016.06.131"
-  },
-  {
-    "title": "Quantumness and the role of locality on quantum correlations",
-    "year": 2016,
-    "authors": [],
-    "venue": "Physical Review A",
-    "doi": "10.1103/physreva.93.062322",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/physreva.93.062322"
+    "url": "https://doi.org/10.1007/s11128-016-1329-5"
   },
   {
     "title": "Algorithmic Pseudorandomness in Quantum Setups",
     "year": 2016,
     "authors": [
-      "Bendersky, A.",
-      "De La Torre, G.",
-      "Senno, G.",
-      "Figueira, S.",
-      "Acín, A."
+      "A. Bendersky",
+      "G. De La Torre",
+      "G. Senno",
+      "S. Figueira",
+      "A. Acín"
     ],
     "venue": "Physical Review Letters",
     "doi": "10.1103/physrevlett.116.230402",
@@ -1586,10 +1302,10 @@
     "title": "Bisimulations on data graphs",
     "year": 2016,
     "authors": [
-      "Abriola, S.",
-      "Barceló, P.",
-      "Figueira, D.",
-      "Figueira, S."
+      "S. Abriola",
+      "P. Barceló",
+      "D. Figueira",
+      "S. Figueira"
     ],
     "venue": "Proceedings of the International Conference on Knowledge Representation and Reasoning",
     "doi": null,
@@ -1597,42 +1313,14 @@
     "url": null
   },
   {
-    "title": "Randomness and non-locality",
-    "year": 2016,
-    "authors": [
-      "Senno, G.",
-      "Bendersky, A.",
-      "Figueira, S."
-    ],
-    "venue": "Fluctuation and Noise Letters",
-    "doi": "10.1142/s0219477516400058",
-    "arxiv": null,
-    "url": "https://doi.org/10.1142/s0219477516400058"
-  },
-  {
-    "title": "A family of generalized quantum entropies: definition and properties",
-    "year": 2016,
-    "authors": [
-      "Bosyk, G.M.",
-      "Zozor, S.",
-      "Holik, F.",
-      "Portesi, M.",
-      "Lamberti, P.W."
-    ],
-    "venue": "Quantum Information Processing",
-    "doi": "10.1007/s11128-016-1329-5",
-    "arxiv": null,
-    "url": "https://doi.org/10.1007/s11128-016-1329-5"
-  },
-  {
     "title": "Comment on \"quantum Kaniadakis entropy under projective measurement\"",
     "year": 2016,
     "authors": [
-      "Bosyk, G.M.",
-      "Zozor, S.",
-      "Holik, F.",
-      "Portesi, M.",
-      "Lamberti, P.W."
+      "G. M. Bosyk",
+      "S. Zozor",
+      "F. Holik",
+      "M. Portesi",
+      "P. W. Lamberti"
     ],
     "venue": "Physical Review E - Statistical, Nonlinear, and Soft Matter Physics",
     "doi": "10.1103/physreve.94.026103",
@@ -1643,9 +1331,9 @@
     "title": "Entropic measures of joint uncertainty: Effects of lack of majorization",
     "year": 2016,
     "authors": [
-      "Luis, A.",
-      "Bosyk, G.M.",
-      "Portesi, M."
+      "A. Luis",
+      "G. M. Bosyk",
+      "M. Portesi"
     ],
     "venue": "Physica A: Statistical Mechanics and its Applications",
     "doi": "10.1016/j.physa.2015.10.097",
@@ -1653,12 +1341,38 @@
     "url": "https://doi.org/10.1016/j.physa.2015.10.097"
   },
   {
+    "title": "Quantumness and the role of locality on quantum correlations",
+    "year": 2016,
+    "authors": [
+      "Guido Bellomo",
+      "Angelo Plastino",
+      "Angel R. Plastino"
+    ],
+    "venue": "Physical Review A",
+    "doi": "10.1103/physreva.93.062322",
+    "arxiv": "https://arxiv.org/abs/1601.01236",
+    "url": "https://doi.org/10.1103/physreva.93.062322"
+  },
+  {
+    "title": "Randomness and non-locality",
+    "year": 2016,
+    "authors": [
+      "G. Senno",
+      "A. Bendersky",
+      "S. Figueira"
+    ],
+    "venue": "Fluctuation and Noise Letters",
+    "doi": "10.1142/s0219477516400058",
+    "arxiv": null,
+    "url": "https://doi.org/10.1142/s0219477516400058"
+  },
+  {
     "title": "The Measurement Process in the Generalized Contexts Formalism for Quantum Histories",
     "year": 2016,
     "authors": [
-      "Losada, M.",
-      "Vanni, L.",
-      "Laura, R."
+      "M. Losada",
+      "L. Vanni",
+      "R. Laura"
     ],
     "venue": "International Journal of Theoretical Physics",
     "doi": "10.1007/s10773-015-2720-1",
@@ -1666,66 +1380,57 @@
     "url": "https://doi.org/10.1007/s10773-015-2720-1"
   },
   {
+    "title": "Unified entropic measures of quantum correlations induced by local measurements",
+    "year": 2016,
+    "authors": [
+      "G. M. Bosyk",
+      "G. Bellomo",
+      "S. Zozor",
+      "M. Portesi",
+      "P. W. Lamberti"
+    ],
+    "venue": "Physica A: Statistical Mechanics and its Applications",
+    "doi": "10.1016/j.physa.2016.06.131",
+    "arxiv": "https://arxiv.org/abs/1604.00329",
+    "url": "https://doi.org/10.1016/j.physa.2016.06.131"
+  },
+  {
+    "title": "A Semiclassical Condition for Chaos Based on Pesin Theorem",
+    "year": 2015,
+    "authors": [
+      "I. Gomez",
+      "M. Losada",
+      "S. Fortin",
+      "M. Castagnino",
+      "M. Portesi"
+    ],
+    "venue": "International Journal of Theoretical Physics",
+    "doi": "10.1007/s10773-014-2437-6",
+    "arxiv": null,
+    "url": "https://doi.org/10.1007/s10773-014-2437-6"
+  },
+  {
     "title": "Classical extension of quantum-correlated separable states",
     "year": 2015,
     "authors": [
-      "Bellomo, G.",
-      "Plastino, A.",
-      "Plastino, A.R."
+      "Guido Bellomo",
+      "Angelo Plastino",
+      "Angel R. Plastino"
     ],
     "venue": "International Journal of Quantum Information",
     "doi": "10.1142/s021974991550015x",
-    "arxiv": null,
+    "arxiv": "https://arxiv.org/abs/1504.02077",
     "url": "https://doi.org/10.1142/s021974991550015x"
-  },
-  {
-    "title": "On a conjecture regarding Fisher information",
-    "year": 2015,
-    "authors": [
-      "Plastino, A.",
-      "Bellomo, G.",
-      "Ricardo, A.P."
-    ],
-    "venue": "Advances in Mathematical Physics",
-    "doi": "10.1155/2015/120698",
-    "arxiv": null,
-    "url": "https://doi.org/10.1155/2015/120698"
-  },
-  {
-    "title": "Quantum information as a non-kolmogorovian generalization of Shannon's theory",
-    "year": 2015,
-    "authors": [
-      "Holik, F.",
-      "Bosyk, G.M.",
-      "Bellomo, G."
-    ],
-    "venue": "Entropy",
-    "doi": "10.3390/e17117349",
-    "arxiv": null,
-    "url": "https://doi.org/10.3390/e17117349"
-  },
-  {
-    "title": "Quantum state space dimension as a quantum resource",
-    "year": 2015,
-    "authors": [
-      "Plastino, A.",
-      "Bellomo, G.",
-      "Plastino, A.R."
-    ],
-    "venue": "International Journal of Quantum Information",
-    "doi": "10.1142/s0219749915500392",
-    "arxiv": null,
-    "url": "https://doi.org/10.1142/s0219749915500392"
   },
   {
     "title": "Counting the changes of random Δ20 sets",
     "year": 2015,
     "authors": [
-      "Figueira, S.",
-      "Hirschfeldt, D.R.",
-      "Miller, J.S.",
-      "Ng, K.M.",
-      "Nies, A."
+      "S. Figueira",
+      "D. R. Hirschfeldt",
+      "J. S. Miller",
+      "K. M. Ng",
+      "A. Nies"
     ],
     "venue": "Journal of Logic and Computation",
     "doi": "10.1093/logcom/exs083",
@@ -1736,8 +1441,8 @@
     "title": "Feasible Analysis, Randomness, and Base Invariance",
     "year": 2015,
     "authors": [
-      "Figueira, S.",
-      "Nies, A."
+      "S. Figueira",
+      "A. Nies"
     ],
     "venue": "Theory of Computing Systems",
     "doi": "10.1007/s00224-013-9507-7",
@@ -1748,9 +1453,9 @@
     "title": "Linearizing well quasi-orders and bounding the length of bad sequences",
     "year": 2015,
     "authors": [
-      "Abriola, S.",
-      "Figueira, S.",
-      "Senno, G."
+      "S. Abriola",
+      "S. Figueira",
+      "G. Senno"
     ],
     "venue": "Theoretical Computer Science",
     "doi": "10.1016/j.tcs.2015.07.012",
@@ -1761,9 +1466,9 @@
     "title": "Model theory of XPath on data trees. Part I: Bisimulation and characterization",
     "year": 2015,
     "authors": [
-      "Figueira, D.",
-      "Figueira, S.",
-      "Areces, C."
+      "D. Figueira",
+      "S. Figueira",
+      "C. Areces"
     ],
     "venue": "Journal of Artificial Intelligence Research",
     "doi": "10.1613/jair.4658",
@@ -1774,8 +1479,8 @@
     "title": "Normality in non-integer bases and polynomial time randomness",
     "year": 2015,
     "authors": [
-      "Almarza, J.I.",
-      "Figueira, S."
+      "J. I. Almarza",
+      "S. Figueira"
     ],
     "venue": "Journal of Computer and System Sciences",
     "doi": "10.1016/j.jcss.2015.04.005",
@@ -1783,12 +1488,51 @@
     "url": "https://doi.org/10.1016/j.jcss.2015.04.005"
   },
   {
+    "title": "On a conjecture regarding Fisher information",
+    "year": 2015,
+    "authors": [
+      "Angelo Plastino",
+      "Guido Bellomo",
+      "Angel R. Plastino"
+    ],
+    "venue": "Advances in Mathematical Physics",
+    "doi": "10.1155/2015/120698",
+    "arxiv": "https://arxiv.org/abs/1504.02058",
+    "url": "https://doi.org/10.1155/2015/120698"
+  },
+  {
+    "title": "Quantum information as a non-kolmogorovian generalization of Shannon's theory",
+    "year": 2015,
+    "authors": [
+      "F. Holik",
+      "G. M. Bosyk",
+      "G. Bellomo"
+    ],
+    "venue": "Entropy",
+    "doi": "10.3390/e17117349",
+    "arxiv": "https://arxiv.org/abs/1509.00082",
+    "url": "https://doi.org/10.3390/e17117349"
+  },
+  {
+    "title": "Quantum state space dimension as a quantum resource",
+    "year": 2015,
+    "authors": [
+      "Angelo Plastino",
+      "Guido Bellomo",
+      "Angel R. Plastino"
+    ],
+    "venue": "International Journal of Quantum Information",
+    "doi": "10.1142/s0219749915500392",
+    "arxiv": "https://arxiv.org/abs/1505.05455",
+    "url": "https://doi.org/10.1142/s0219749915500392"
+  },
+  {
     "title": "Saturation, definability, and separation for X path on data trees",
     "year": 2015,
     "authors": [
-      "Abriola, S.",
-      "Descotte, M.E.",
-      "Figueira, S."
+      "S. Abriola",
+      "M. E. Descotte",
+      "S. Figueira"
     ],
     "venue": "Ceur Workshop Proceedings",
     "doi": null,
@@ -1796,54 +1540,11 @@
     "url": null
   },
   {
-    "title": "A Semiclassical Condition for Chaos Based on Pesin Theorem",
-    "year": 2015,
-    "authors": [
-      "Gomez, I.",
-      "Losada, M.",
-      "Fortin, S.",
-      "Castagnino, M.",
-      "Portesi, M."
-    ],
-    "venue": "International Journal of Theoretical Physics",
-    "doi": "10.1007/s10773-014-2437-6",
-    "arxiv": null,
-    "url": "https://doi.org/10.1007/s10773-014-2437-6"
-  },
-  {
-    "title": "Comment on Quantum discord through the generalized entropy in bipartite quantum states",
-    "year": 2014,
-    "authors": [
-      "Bellomo, G.",
-      "Plastino, A.",
-      "Majtey, A.P.",
-      "Plastino, A.R."
-    ],
-    "venue": "European Physical Journal D",
-    "doi": "10.1140/epjd/e2014-50474-x",
-    "arxiv": null,
-    "url": "https://doi.org/10.1140/epjd/e2014-50474-x"
-  },
-  {
-    "title": "Quantum correlations from classically correlated states",
-    "year": 2014,
-    "authors": [
-      "Bellomo, G.",
-      "Majtey, A.P.",
-      "Plastino, A.R.",
-      "Plastino, A."
-    ],
-    "venue": "Physica A: Statistical Mechanics and its Applications",
-    "doi": "10.1016/j.physa.2014.03.022",
-    "arxiv": null,
-    "url": "https://doi.org/10.1016/j.physa.2014.03.022"
-  },
-  {
     "title": "A note on the order type of minoring orderings and some algebraic properties of ω2-well quasi-orderings",
     "year": 2014,
     "authors": [
-      "Abriola, S.",
-      "Figueira, S."
+      "S. Abriola",
+      "S. Figueira"
     ],
     "venue": "Proceedings of the 2014 Latin American Computing Conference Clei 2014",
     "doi": "10.1109/clei.2014.6965188",
@@ -1854,9 +1555,9 @@
     "title": "Characterization, definability and separation via saturated models",
     "year": 2014,
     "authors": [
-      "Areces, C.",
-      "Carreiro, F.",
-      "Figueira, S."
+      "C. Areces",
+      "F. Carreiro",
+      "S. Figueira"
     ],
     "venue": "Theoretical Computer Science",
     "doi": "10.1016/j.tcs.2014.02.047",
@@ -1864,12 +1565,26 @@
     "url": "https://doi.org/10.1016/j.tcs.2014.02.047"
   },
   {
+    "title": "Comment on Quantum discord through the generalized entropy in bipartite quantum states",
+    "year": 2014,
+    "authors": [
+      "Guido Bellomo",
+      "Angelo Plastino",
+      "Anna P. Majtey",
+      "Angel R. Plastino"
+    ],
+    "venue": "European Physical Journal D",
+    "doi": "10.1140/epjd/e2014-50474-x",
+    "arxiv": "https://arxiv.org/abs/1504.02046",
+    "url": "https://doi.org/10.1140/epjd/e2014-50474-x"
+  },
+  {
     "title": "Definability for downward and vertical XPath on data trees",
     "year": 2014,
     "authors": [
-      "Abriola, S.",
-      "Descotte, M.E.",
-      "Figueira, S."
+      "S. Abriola",
+      "M. E. Descotte",
+      "S. Figueira"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-662-44145-9_2",
@@ -1877,25 +1592,12 @@
     "url": "https://doi.org/10.1007/978-3-662-44145-9_2"
   },
   {
-    "title": "Independence friendly logic with classical negation via flattening is a second-order logic with weak dependencies",
-    "year": 2014,
-    "authors": [
-      "Figueira, S.",
-      "Gorín, D.",
-      "Grimson, R."
-    ],
-    "venue": "Journal of Computer and System Sciences",
-    "doi": "10.1016/j.jcss.2014.04.004",
-    "arxiv": null,
-    "url": "https://doi.org/10.1016/j.jcss.2014.04.004"
-  },
-  {
     "title": "General entropy-like uncertainty relations in finite dimensions",
     "year": 2014,
     "authors": [
-      "Zozor, S.",
-      "Bosyk, G.M.",
-      "Portesi, M."
+      "S. Zozor",
+      "G. M. Bosyk",
+      "M. Portesi"
     ],
     "venue": "Journal of Physics A: Mathematical and Theoretical",
     "doi": "10.1088/1751-8113/47/49/495302",
@@ -1903,14 +1605,26 @@
     "url": "https://doi.org/10.1088/1751-8113/47/49/495302"
   },
   {
+    "title": "Generalized contexts and consistent histories in quantum mechanics",
+    "year": 2014,
+    "authors": [
+      "M. Losada",
+      "R. Laura"
+    ],
+    "venue": "Annals of Physics",
+    "doi": "10.1016/j.aop.2014.03.001",
+    "arxiv": null,
+    "url": "https://doi.org/10.1016/j.aop.2014.03.001"
+  },
+  {
     "title": "Geometric approach to extend Landau-Pollak uncertainty relations for positive operator-valued measures",
     "year": 2014,
     "authors": [
-      "Bosyk, G.M.",
-      "Zozor, S.",
-      "Portesi, M.",
-      "Osán, T.M.",
-      "Lamberti, P.W."
+      "G. M. Bosyk",
+      "S. Zozor",
+      "M. Portesi",
+      "T. M. Osán",
+      "P. W. Lamberti"
     ],
     "venue": "Physical Review A - Atomic, Molecular, and Optical Physics",
     "doi": "10.1103/physreva.90.052114",
@@ -1921,10 +1635,10 @@
     "title": "Geometric formulation of the uncertainty principle",
     "year": 2014,
     "authors": [
-      "Bosyk, G.M.",
-      "Osán, T.M.",
-      "Lamberti, P.W.",
-      "Portesi, M."
+      "G. M. Bosyk",
+      "T. M. Osán",
+      "P. W. Lamberti",
+      "M. Portesi"
     ],
     "venue": "Physical Review A - Atomic, Molecular, and Optical Physics",
     "doi": "10.1103/physreva.89.034101",
@@ -1932,23 +1646,38 @@
     "url": "https://doi.org/10.1103/physreva.89.034101"
   },
   {
-    "title": "Generalized contexts and consistent histories in quantum mechanics",
+    "title": "Independence friendly logic with classical negation via flattening is a second-order logic with weak dependencies",
     "year": 2014,
     "authors": [
-      "Losada, M.",
-      "Laura, R."
+      "S. Figueira",
+      "D. Gorín",
+      "R. Grimson"
     ],
-    "venue": "Annals of Physics",
-    "doi": "10.1016/j.aop.2014.03.001",
+    "venue": "Journal of Computer and System Sciences",
+    "doi": "10.1016/j.jcss.2014.04.004",
     "arxiv": null,
-    "url": "https://doi.org/10.1016/j.aop.2014.03.001"
+    "url": "https://doi.org/10.1016/j.jcss.2014.04.004"
+  },
+  {
+    "title": "Quantum correlations from classically correlated states",
+    "year": 2014,
+    "authors": [
+      "Guido Bellomo",
+      "Ana P. Majtey",
+      "A. R. Plastino",
+      "A. Plastino"
+    ],
+    "venue": "Physica A: Statistical Mechanics and its Applications",
+    "doi": "10.1016/j.physa.2014.03.022",
+    "arxiv": "https://arxiv.org/abs/1504.02127",
+    "url": "https://doi.org/10.1016/j.physa.2014.03.022"
   },
   {
     "title": "Quantum histories without contrary inferences",
     "year": 2014,
     "authors": [
-      "Losada, M.",
-      "Laura, R."
+      "M. Losada",
+      "R. Laura"
     ],
     "venue": "Annals of Physics",
     "doi": "10.1016/j.aop.2014.09.008",
@@ -1956,27 +1685,13 @@
     "url": "https://doi.org/10.1016/j.aop.2014.09.008"
   },
   {
-    "title": "19th Workshop on Logic, Language, Information and Computation (WoLLIC 2012)",
-    "year": 2013,
-    "authors": [
-      "Ong, L.",
-      "Areces, C.",
-      "Figueira, S.",
-      "De Queiroz, R."
-    ],
-    "venue": "Bulletin of Symbolic Logic",
-    "doi": "10.1017/s107989860001074x",
-    "arxiv": null,
-    "url": "https://doi.org/10.1017/s107989860001074x"
-  },
-  {
     "title": "19th workshop on logic, language, information and computation (WoLLIC 2012)",
     "year": 2013,
     "authors": [
-      "Ong, L.",
-      "Areces, C.",
-      "Figueira, S.",
-      "De Queiroz, R."
+      "L. Ong",
+      "C. Areces",
+      "S. Figueira",
+      "R. De Queiroz"
     ],
     "venue": "Bulletin of Symbolic Logic",
     "doi": "10.2178/bsl.1903060",
@@ -1984,12 +1699,26 @@
     "url": "https://doi.org/10.2178/bsl.1903060"
   },
   {
+    "title": "19th Workshop on Logic, Language, Information and Computation (WoLLIC 2012)",
+    "year": 2013,
+    "authors": [
+      "L. Ong",
+      "C. Areces",
+      "S. Figueira",
+      "R. De Queiroz"
+    ],
+    "venue": "Bulletin of Symbolic Logic",
+    "doi": "10.1017/s107989860001074x",
+    "arxiv": null,
+    "url": "https://doi.org/10.1017/s107989860001074x"
+  },
+  {
     "title": "LT 2 C 2 : A language of thought with Turing-computable Kolmogorov complexity",
     "year": 2013,
     "authors": [
-      "Romano, S.",
-      "Sigman, M.",
-      "Figueira, S."
+      "S. Romano",
+      "M. Sigman",
+      "S. Figueira"
     ],
     "venue": "Papers in Physics",
     "doi": "10.4279/pip.050001",
@@ -2000,9 +1729,9 @@
     "title": "On a generalized entropic uncertainty relation in the case of the qubit",
     "year": 2013,
     "authors": [
-      "Zozor, S.",
-      "Bosyk, G.M.",
-      "Portesi, M."
+      "S. Zozor",
+      "G. M. Bosyk",
+      "M. Portesi"
     ],
     "venue": "Journal of Physics A: Mathematical and Theoretical",
     "doi": "10.1088/1751-8113/46/46/465301",
@@ -2013,10 +1742,10 @@
     "title": "On the connection between complementarity and uncertainty principles in the Mach-Zehnder interferometric setting",
     "year": 2013,
     "authors": [
-      "Bosyk, G.M.",
-      "Portesi, M.",
-      "Holik, F.",
-      "Plastino, A."
+      "G. M. Bosyk",
+      "M. Portesi",
+      "F. Holik",
+      "A. Plastino"
     ],
     "venue": "Physica Scripta",
     "doi": "10.1088/0031-8949/87/06/065002",
@@ -2027,9 +1756,9 @@
     "title": "Probabilities for time-dependent properties in classical and quantum mechanics",
     "year": 2013,
     "authors": [
-      "Losada, M.",
-      "Vanni, L.",
-      "Laura, R."
+      "M. Losada",
+      "L. Vanni",
+      "R. Laura"
     ],
     "venue": "Physical Review A - Atomic, Molecular, and Optical Physics",
     "doi": "10.1103/physreva.87.052128",
@@ -2040,8 +1769,8 @@
     "title": "The Formalism of Generalized Contexts and Decay Processes",
     "year": 2013,
     "authors": [
-      "Losada, M.",
-      "Laura, R."
+      "M. Losada",
+      "R. Laura"
     ],
     "venue": "International Journal of Theoretical Physics",
     "doi": "10.1007/s10773-012-1444-8",
@@ -2049,12 +1778,25 @@
     "url": "https://doi.org/10.1007/s10773-012-1444-8"
   },
   {
+    "title": "Collision entropy and optimal uncertainty",
+    "year": 2012,
+    "authors": [
+      "G. M. Bosyk",
+      "M. Portesi",
+      "A. Plastino"
+    ],
+    "venue": "Physical Review A - Atomic, Molecular, and Optical Physics",
+    "doi": "10.1103/physreva.85.012108",
+    "arxiv": null,
+    "url": "https://doi.org/10.1103/physreva.85.012108"
+  },
+  {
     "title": "Completeness results for memory logics",
     "year": 2012,
     "authors": [
-      "Areces, C.",
-      "Figueira, S.",
-      "Mera, S."
+      "C. Areces",
+      "S. Figueira",
+      "S. Mera"
     ],
     "venue": "Annals of Pure and Applied Logic",
     "doi": "10.1016/j.apal.2011.09.005",
@@ -2065,9 +1807,9 @@
     "title": "Linearizing bad sequences: Upper bounds for the product and majoring well quasi-orders",
     "year": 2012,
     "authors": [
-      "Abriola, S.",
-      "Figueira, S.",
-      "Senno, G."
+      "S. Abriola",
+      "S. Figueira",
+      "G. Senno"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-642-32621-9_9",
@@ -2075,40 +1817,26 @@
     "url": "https://doi.org/10.1007/978-3-642-32621-9_9"
   },
   {
-    "title": "Collision entropy and optimal uncertainty",
+    "title": "Quantum to classical limit of open systems",
     "year": 2012,
     "authors": [
-      "Bosyk, G.M.",
-      "Portesi, M.",
-      "Plastino, A."
+      "Guido Bellomo",
+      "Mario Castagnino",
+      "Sebastian Fortin"
     ],
-    "venue": "Physical Review A - Atomic, Molecular, and Optical Physics",
-    "doi": "10.1103/physreva.85.012108",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/physreva.85.012108"
-  },
-  {
-    "title": "On the effect of noise and electronics bandwidth on a stochastic-resonance memory device",
-    "year": 2011,
-    "authors": [
-      "Fierens, P.I.",
-      "Patterson, G.A.",
-      "Bellomo, G.",
-      "Grosz, D.F."
-    ],
-    "venue": "AIP Conference Proceedings",
-    "doi": "10.1063/1.3574866",
-    "arxiv": null,
-    "url": "https://doi.org/10.1063/1.3574866"
+    "venue": "arXiv preprint",
+    "doi": null,
+    "arxiv": "https://arxiv.org/abs/1206.5206",
+    "url": "https://arxiv.org/abs/1206.5206"
   },
   {
     "title": "Ackermannian and primitive-recursive bounds with Dickson's Lemma",
     "year": 2011,
     "authors": [
-      "Figueira, D.",
-      "Figueira, S.",
-      "Schmitz, S.",
-      "Schnoebelen, P."
+      "D. Figueira",
+      "S. Figueira",
+      "S. Schmitz",
+      "P. Schnoebelen"
     ],
     "venue": "Proceedings Symposium on Logic in Computer Science",
     "doi": "10.1109/lics.2011.39",
@@ -2119,10 +1847,10 @@
     "title": "Basic model theory for memory logics",
     "year": 2011,
     "authors": [
-      "Areces, C.",
-      "Carreiro, F.",
-      "Figueira, S.",
-      "Mera, S."
+      "C. Areces",
+      "F. Carreiro",
+      "S. Figueira",
+      "S. Mera"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-642-20920-8_8",
@@ -2130,12 +1858,40 @@
     "url": "https://doi.org/10.1007/978-3-642-20920-8_8"
   },
   {
+    "title": "Comment on \"Improved bounds on entropic uncertainty relations\"",
+    "year": 2011,
+    "authors": [
+      "G. M. Bosyk",
+      "M. Portesi",
+      "A. Plastino",
+      "S. Zozor"
+    ],
+    "venue": "Physical Review A - Atomic, Molecular, and Optical Physics",
+    "doi": "10.1103/physreva.84.056101",
+    "arxiv": null,
+    "url": "https://doi.org/10.1103/physreva.84.056101"
+  },
+  {
+    "title": "On the effect of noise and electronics bandwidth on a stochastic-resonance memory device",
+    "year": 2011,
+    "authors": [
+      "P. I. Fierens",
+      "G. A. Patterson",
+      "G. Bellomo",
+      "D. F. Grosz"
+    ],
+    "venue": "AIP Conference Proceedings",
+    "doi": "10.1063/1.3574866",
+    "arxiv": null,
+    "url": "https://doi.org/10.1063/1.3574866"
+  },
+  {
     "title": "On the expressive power of IF-logic with classical negation",
     "year": 2011,
     "authors": [
-      "Figueira, S.",
-      "Gorín, D.",
-      "Grimson, R."
+      "S. Figueira",
+      "D. Gorín",
+      "R. Grimson"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-642-20920-8_16",
@@ -2146,10 +1902,10 @@
     "title": "The expressive power of memory logics",
     "year": 2011,
     "authors": [
-      "Areces, C.",
-      "Figueira, D.",
-      "Figueira, S.",
-      "Mera, S."
+      "C. Areces",
+      "D. Figueira",
+      "S. Figueira",
+      "S. Mera"
     ],
     "venue": "Review of Symbolic Logic",
     "doi": "10.1017/s1755020310000389",
@@ -2160,9 +1916,9 @@
     "title": "Using logic in the generation of referring expressions",
     "year": 2011,
     "authors": [
-      "Areces, C.",
-      "Figueira, S.",
-      "Gorín, D."
+      "C. Areces",
+      "S. Figueira",
+      "D. Gorín"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-642-22221-4_2",
@@ -2170,28 +1926,14 @@
     "url": "https://doi.org/10.1007/978-3-642-22221-4_2"
   },
   {
-    "title": "Comment on \"Improved bounds on entropic uncertainty relations\"",
-    "year": 2011,
-    "authors": [
-      "Bosyk, G.M.",
-      "Portesi, M.",
-      "Plastino, A.",
-      "Zozor, S."
-    ],
-    "venue": "Physical Review A - Atomic, Molecular, and Optical Physics",
-    "doi": "10.1103/physreva.84.056101",
-    "arxiv": null,
-    "url": "https://doi.org/10.1103/physreva.84.056101"
-  },
-  {
     "title": "Counting the changes of random Δ02 sets",
     "year": 2010,
     "authors": [
-      "Figueira, S.",
-      "Hirschfeldt, D.",
-      "Miller, J.S.",
-      "Ng, K.M.",
-      "Nies, A."
+      "S. Figueira",
+      "D. Hirschfeldt",
+      "J. S. Miller",
+      "K. M. Ng",
+      "A. Nies"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-642-13962-8_18",
@@ -2202,9 +1944,9 @@
     "title": "On the formal semantics of IF-like logics",
     "year": 2010,
     "authors": [
-      "Figueira, S.",
-      "Gorín, D.",
-      "Grimson, R."
+      "S. Figueira",
+      "D. Gorín",
+      "R. Grimson"
     ],
     "venue": "Journal of Computer and System Sciences",
     "doi": "10.1016/j.jcss.2009.10.006",
@@ -2215,8 +1957,8 @@
     "title": "On the size of shortest modal descriptions",
     "year": 2010,
     "authors": [
-      "Figueira, S.",
-      "Gorín, D."
+      "S. Figueira",
+      "D. Gorín"
     ],
     "venue": "Advances in Modal Logic 2006",
     "doi": null,
@@ -2227,9 +1969,9 @@
     "title": "Completeness results for memory logics",
     "year": 2009,
     "authors": [
-      "Areces, C.",
-      "Figueira, S.",
-      "Mera, S."
+      "C. Areces",
+      "S. Figueira",
+      "S. Mera"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-540-92687-0_2",
@@ -2240,9 +1982,9 @@
     "title": "Indifferent sets",
     "year": 2009,
     "authors": [
-      "Figueira, S.",
-      "Miller, J.S.",
-      "Nies, A."
+      "S. Figueira",
+      "J. S. Miller",
+      "A. Nies"
     ],
     "venue": "Journal of Logic and Computation",
     "doi": "10.1093/logcom/exn101",
@@ -2253,10 +1995,10 @@
     "title": "Expressive power and decidability for memory logics",
     "year": 2008,
     "authors": [
-      "Areces, C.",
-      "Figueira, D.",
-      "Figueira, S.",
-      "Mera, S."
+      "C. Areces",
+      "D. Figueira",
+      "S. Figueira",
+      "S. Mera"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-540-69937-8_7",
@@ -2267,9 +2009,9 @@
     "title": "Lowness properties and approximations of the jump",
     "year": 2008,
     "authors": [
-      "Figueira, S.",
-      "Nies, A.",
-      "Stephan, F."
+      "S. Figueira",
+      "A. Nies",
+      "F. Stephan"
     ],
     "venue": "Annals of Pure and Applied Logic",
     "doi": "10.1016/j.apal.2007.11.002",
@@ -2280,8 +2022,8 @@
     "title": "On the computing power of fuzzy Turing machines",
     "year": 2008,
     "authors": [
-      "Bedregal, B.C.",
-      "Figueira, S."
+      "B. C. Bedregal",
+      "S. Figueira"
     ],
     "venue": "Fuzzy Sets and Systems",
     "doi": "10.1016/j.fss.2007.10.013",
@@ -2292,9 +2034,9 @@
     "title": "On the formal semantics of IF-like logics",
     "year": 2008,
     "authors": [
-      "Figueira, S.",
-      "Gorín, D.",
-      "Grimson, R."
+      "S. Figueira",
+      "D. Gorín",
+      "R. Grimson"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/978-3-540-69937-8_15",
@@ -2305,9 +2047,9 @@
     "title": "Turing's unpublished algorithm for normal numbers",
     "year": 2007,
     "authors": [
-      "Becher, V.",
-      "Figueira, S.",
-      "Picchi, R."
+      "V. Becher",
+      "S. Figueira",
+      "R. Picchi"
     ],
     "venue": "Theoretical Computer Science",
     "doi": "10.1016/j.tcs.2007.02.022",
@@ -2318,8 +2060,8 @@
     "title": "Classical computability and fuzzy Turing machines",
     "year": 2006,
     "authors": [
-      "Bedregal, B.R.C.",
-      "Figueira, S."
+      "B. R. C. Bedregal",
+      "S. Figueira"
     ],
     "venue": "Lecture Notes in Computer Science Including Subseries Lecture Notes in Artificial Intelligence and Lecture Notes in Bioinformatics",
     "doi": "10.1007/11682462_18",
@@ -2330,9 +2072,9 @@
     "title": "Lowness properties and approximations of the jump",
     "year": 2006,
     "authors": [
-      "Figueira, S.",
-      "Nies, A.",
-      "Stephan, F."
+      "S. Figueira",
+      "A. Nies",
+      "F. Stephan"
     ],
     "venue": "Electronic Notes in Theoretical Computer Science",
     "doi": "10.1016/j.entcs.2005.05.025",
@@ -2343,10 +2085,10 @@
     "title": "Randomness and halting probabilities",
     "year": 2006,
     "authors": [
-      "Becher, V.",
-      "Figueira, S.",
-      "Grigorieff, S.",
-      "Miller, J.S."
+      "V. Becher",
+      "S. Figueira",
+      "S. Grigorieff",
+      "J. S. Miller"
     ],
     "venue": "Journal of Symbolic Logic",
     "doi": "10.2178/jsl/1164060463",
@@ -2357,9 +2099,9 @@
     "title": "Randomness and universal machines",
     "year": 2006,
     "authors": [
-      "Figueira, S.",
-      "Stephan, F.",
-      "Wu, G."
+      "S. Figueira",
+      "F. Stephan",
+      "G. Wu"
     ],
     "venue": "Journal of Complexity",
     "doi": "10.1016/j.jco.2006.05.001",
@@ -2370,8 +2112,8 @@
     "title": "Kolmogorov complexity for possibly infinite computations",
     "year": 2005,
     "authors": [
-      "Becher, V.",
-      "Figueira, S."
+      "V. Becher",
+      "S. Figueira"
     ],
     "venue": "Journal of Logic Language and Information",
     "doi": "10.1007/s10849-005-2255-6",
@@ -2382,10 +2124,10 @@
     "title": "Program size complexity for possibly infinite computations",
     "year": 2005,
     "authors": [
-      "Becher, V.",
-      "Figueira, S.",
-      "Nies, A.",
-      "Picchi, S."
+      "V. Becher",
+      "S. Figueira",
+      "A. Nies",
+      "S. Picchi"
     ],
     "venue": "Notre Dame Journal of Formal Logic",
     "doi": "10.1305/ndjfl/1107220673",
@@ -2396,8 +2138,8 @@
     "title": "An example of a computable absolutely normal number",
     "year": 2002,
     "authors": [
-      "Becher, V.",
-      "Figueira, S."
+      "V. Becher",
+      "S. Figueira"
     ],
     "venue": "Theoretical Computer Science",
     "doi": "10.1016/s0304-3975(01)00170-0",
