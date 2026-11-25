@@ -1,79 +1,66 @@
+// Actualiza src/data/publications.json a partir de:
+//   1. ORCID de cada integrante (src/data/orcids.json)
+//   2. el feed de arXiv de cada ORCID (https://arxiv.org/a/<ORCID>.atom2), que sólo
+//      existe si la persona vinculó su ORCID en su cuenta de arXiv
+// Une duplicados (preprint / versión publicada), y respeta
+// src/data/publications-exclude.json. Lo que ya estaba en el JSON se conserva.
+
 import fs from "fs/promises";
+import {
+  parseArxivFeed,
+  mergeAll,
+  applyExclusions,
+  sortPubs,
+  isPreprintVenue,
+} from "./lib/publications.js";
 
-// =========================
-// LOAD EXISTING
-// =========================
-let existing = [];
+const DATA = "./src/data";
+const USER_AGENT = "QuICC-website/1.0 (+https://quicc.dc.uba.ar; publications updater)";
+const ARXIV_PAUSE_MS = 3000; // arXiv pide no más de un pedido cada 3 segundos
 
-try {
-  existing = JSON.parse(
-    await fs.readFile("./src/data/publications.json", "utf-8")
-  );
-} catch {
-  existing = [];
+const sleep = (ms) => new Promise((resolve) => setTimeout(resolve, ms));
+const problems = [];
+
+async function readJson(path, fallback) {
+  try {
+    return JSON.parse(await fs.readFile(path, "utf-8"));
+  } catch {
+    return fallback;
+  }
+}
+
+async function request(url, accept) {
+  for (let attempt = 1; attempt <= 2; attempt++) {
+    const res = await fetch(url, {
+      headers: { Accept: accept, "User-Agent": USER_AGENT },
+    });
+    // límite de pedidos o servicio caído: esperar y reintentar una vez
+    if ((res.status === 429 || res.status === 503) && attempt === 1) {
+      await sleep(15000);
+      continue;
+    }
+    return res;
+  }
 }
 
 // =========================
-// LOAD ORCIDS
+// ORCID
 // =========================
-const ORCIDS = JSON.parse(
-  await fs.readFile("./src/data/orcids.json", "utf-8")
-);
-
-// =========================
-// FETCH FUNCTIONS
-// =========================
-async function fetchWorks(orcid) {
-  const res = await fetch(`https://pub.orcid.org/v3.0/${orcid}/works`, {
-    headers: { Accept: "application/json" }
-  });
-
-  const data = await res.json();
-  return data.group.map((item) => item["work-summary"][0]);
-}
-
-async function fetchWorkDetails(orcid, putCode) {
-  const res = await fetch(
-    `https://pub.orcid.org/v3.0/${orcid}/work/${putCode}`,
-    { headers: { Accept: "application/json" } }
-  );
-
+async function orcidJson(url) {
+  const res = await request(url, "application/json");
+  if (!res.ok) throw new Error(`HTTP ${res.status} en ${url}`);
   return res.json();
 }
 
-// =========================
-// EXTRACTORS
-// =========================
 function extractAuthors(contributors) {
-  if (!contributors) return [];
-
-  return contributors
-    .map((c) => c["credit-name"]?.value)
-    .filter(Boolean);
+  return (contributors || []).map((c) => c["credit-name"]?.value).filter(Boolean);
 }
 
-function extractDOI(externalIds) {
-  if (!externalIds) return null;
-
-  const doi = externalIds["external-id"]?.find(
-    (id) => id["external-id-type"] === "doi"
+function extractId(externalIds, ...types) {
+  const id = externalIds?.["external-id"]?.find((e) =>
+    types.includes(String(e["external-id-type"]).toLowerCase())
   );
-
-  return doi ? doi["external-id-value"].toLowerCase() : null;
-}
-
-function extractArxiv(externalIds) {
-  if (!externalIds) return null;
-
-  const arxiv = externalIds["external-id"]?.find(
-    (id) =>
-      id["external-id-type"] === "arxiv" ||
-      id["external-id-type"] === "arXiv"
-  );
-
-  return arxiv
-    ? `https://arxiv.org/abs/${arxiv["external-id-value"]}`
-    : null;
+  return id ? String(id["external-id-value"]).trim() : null;
 }
 
 function extractVenue(work) {
@@ -85,117 +72,120 @@ function extractVenue(work) {
   );
 }
 
-// =========================
-// DEDUPLICATION
-// =========================
-function normalizeTitle(title) {
-  return title
-    .toLowerCase()
-    .replace(/[^a-z0-9]/g, "")
-    .trim();
-}
+async function fetchOrcid(researcher) {
+  const base = `https://pub.orcid.org/v3.0/${researcher.orcid}`;
+  const data = await orcidJson(`${base}/works`);
+  const summaries = (data.group || []).map((g) => g["work-summary"][0]);
+  const pubs = [];
 
-function getKey(pub) {
-  if (pub.doi) return `doi:${pub.doi}`;
-  return `title:${normalizeTitle(pub.title)}-${pub.year}`;
-}
-
-// =========================
-// MERGE LOGIC
-// =========================
-function mergePubs(existing, incoming) {
-  return {
-    ...existing,
-
-    venue:
-      existing.venue !== "Preprint"
-        ? existing.venue
-        : incoming.venue,
-
-    url: existing.url || incoming.url,
-
-    arxiv: existing.arxiv || incoming.arxiv,
-
-    authors: Array.from(
-      new Set([...(existing.authors || []), ...(incoming.authors || [])])
-    )
-  };
-}
-
-// =========================
-// INITIAL MAP (WITH EXISTING)
-// =========================
-let publicationsMap = {};
-
-for (const pub of existing) {
-  publicationsMap[getKey(pub)] = pub;
-}
-
-// =========================
-// FETCH LOOP
-// =========================
-for (const researcher of ORCIDS) {
-  console.log(`Fetching ${researcher.name}...`);
-
-  const works = await fetchWorks(researcher.orcid);
-
-  for (const work of works) {
+  for (const summary of summaries) {
     try {
-      const details = await fetchWorkDetails(
-        researcher.orcid,
-        work["put-code"]
-      );
+      const details = await orcidJson(`${base}/work/${summary["put-code"]}`);
+      const doi = extractId(details["external-ids"], "doi");
+      const arxivId = extractId(details["external-ids"], "arxiv");
 
-      const title = details.title?.title?.value || "No title";
-
-      const year =
-        parseInt(details["publication-date"]?.year?.value) || 0;
-
-      const authors = extractAuthors(
-        details.contributors?.contributor || []
-      );
-
-      const doi = extractDOI(details["external-ids"]);
-      const arxiv = extractArxiv(details["external-ids"]);
-      const venue = extractVenue(details);
-
-      const pub = {
-        title,
-        year,
-        authors,
-        venue,
-        doi,
-        arxiv,
-        url: doi ? `https://doi.org/${doi}` : null
-      };
-
-      const key = getKey(pub);
-
-      if (publicationsMap[key]) {
-        publicationsMap[key] = mergePubs(publicationsMap[key], pub);
-      } else {
-        publicationsMap[key] = pub;
-      }
+      pubs.push({
+        title: details.title?.title?.value || "No title",
+        year: parseInt(details["publication-date"]?.year?.value, 10) || 0,
+        authors: extractAuthors(details.contributors?.contributor),
+        venue: extractVenue(details),
+        doi: doi ? doi.toLowerCase() : null,
+        arxiv: arxivId ? `https://arxiv.org/abs/${arxivId}` : null,
+        url: doi ? `https://doi.org/${doi.toLowerCase()}` : null,
+      });
     } catch (err) {
-      console.warn("Error fetching work:", err);
+      problems.push(`ORCID ${researcher.name}, trabajo ${summary["put-code"]}: ${err.message}`);
+    }
+  }
+
+  console.log(`  ORCID: ${pubs.length} trabajos.`);
+  return pubs;
+}
+
+// =========================
+// arXiv
+// =========================
+async function fetchArxiv(researcher) {
+  const url = `https://arxiv.org/a/${researcher.orcid}.atom2`;
+  const res = await request(url, "application/atom+xml");
+
+  // 404 = la persona todavía no vinculó su ORCID en arXiv; no es un error
+  if (res.status === 404) {
+    console.log("  arXiv: sin feed (ORCID no vinculado en arXiv).");
+    return [];
+  }
+  if (!res.ok) throw new Error(`HTTP ${res.status} en ${url}`);
+
+  const pubs = parseArxivFeed(await res.text());
+  console.log(`  arXiv: ${pubs.length} artículos.`);
+  return pubs;
+}
+
+// =========================
+// Crossref: nombre de la revista cuando ORCID no lo trae
+// =========================
+async function venueFromCrossref(doi) {
+  const res = await request(
+    `https://api.crossref.org/works/${encodeURIComponent(doi)}`,
+    "application/json"
+  );
+  if (!res.ok) return null;
+  const data = await res.json();
+  return data.message?.["container-title"]?.[0] || null;
+}
+
+// =========================
+// Principal
+// =========================
+const existing = await readJson(`${DATA}/publications.json`, []);
+const researchers = await readJson(`${DATA}/orcids.json`, []);
+const exclude = await readJson(`${DATA}/publications-exclude.json`, []);
+
+const incoming = [];
+for (const [i, researcher] of researchers.entries()) {
+  console.log(`== ${researcher.name} (${researcher.orcid})`);
+
+  try {
+    incoming.push(...(await fetchOrcid(researcher)));
+  } catch (err) {
+    problems.push(`ORCID ${researcher.name}: ${err.message}`);
+  }
+
+  if (i > 0) await sleep(ARXIV_PAUSE_MS);
+  try {
+    incoming.push(...(await fetchArxiv(researcher)));
+  } catch (err) {
+    problems.push(`arXiv ${researcher.name}: ${err.message}`);
+  }
+}
+
+let publications = mergeAll([...existing, ...incoming]);
+
+for (const pub of publications) {
+  if (pub.doi && isPreprintVenue(pub.venue)) {
+    try {
+      const venue = await venueFromCrossref(pub.doi);
+      if (venue) pub.venue = venue;
+    } catch (err) {
+      problems.push(`Crossref ${pub.doi}: ${err.message}`);
     }
   }
 }
 
-// =========================
-// FINAL ARRAY
-// =========================
-let publications = Object.values(publicationsMap);
+const merged = publications.length;
+publications = sortPubs(applyExclusions(publications, exclude));
 
-// ordenar por año (desc)
-publications.sort((a, b) => b.year - a.year);
-
-// =========================
-// SAVE
-// =========================
 await fs.writeFile(
-  "./src/data/publications.json",
-  JSON.stringify(publications, null, 2)
+  `${DATA}/publications.json`,
+  JSON.stringify(publications, null, 2) + "\n"
 );
 
-console.log("Publications updated.");
+console.log(
+  `\nPublicaciones: ${existing.length} antes → ${publications.length} ahora` +
+    ` (${merged - publications.length} excluidas).`
+);
+
+// Los problemas quedan como aviso en el resumen de GitHub Actions, sin cortar la actualización.
+for (const problem of problems) {
+  console.log(process.env.GITHUB_ACTIONS ? `::warning::${problem}` : `AVISO: ${problem}`);
+}
