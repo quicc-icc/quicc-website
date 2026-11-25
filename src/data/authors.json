@@ -25,6 +25,7 @@
     "name": "Ariel Bendersky",
     "category": "researcher",
     "role": "Researcher",
+    "degree": "PhD in Physics",
     "positions": [
       "Researcher at ICC, UBA-CONICET",
       "Professor at the Department of Computer Science, FCEyN, UBA"
@@ -45,6 +46,7 @@
     "name": "Guido Bellomo",
     "category": "researcher",
     "role": "Researcher",
+    "degree": "PhD in Physics",
     "positions": [
       "Researcher at ICC, UBA-CONICET"
     ],
@@ -64,6 +66,7 @@
     "name": "Gustavo Martín Bosyk",
     "category": "researcher",
     "role": "Researcher",
+    "degree": "PhD in Physics",
     "positions": [
       "Researcher at ICC, UBA-CONICET"
     ],
@@ -83,6 +86,7 @@
     "name": "Marcelo Losada",
     "category": "researcher",
     "role": "Researcher",
+    "degree": "PhD in Physics",
     "positions": [
       "Researcher at ICC, UBA-CONICET"
     ],
