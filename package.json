@@ -23,7 +23,7 @@
     "@astrojs/sitemap": "^3.7.6",
     "@resvg/resvg-js": "^2.6.2",
     "astro": "^7.4.13",
-    "katex": "^0.16.47",
+    "katex": "^0.19.1",
     "rehype-katex": "^7.0.1",
     "remark-math": "^6.0.0",
     "satori": "^0.63.2",
