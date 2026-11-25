@@ -3,7 +3,6 @@ import BaseHead from '../components/BaseHead.astro';
 import Header from '../components/Header.astro';
 import Footer from '../components/Footer.astro';
 import { SITE_TITLE, SITE_DESCRIPTION } from '../consts';
-import { Image } from 'astro:assets';
 import { getCollection } from 'astro:content';
 import publicationsData from '../data/publications.json';
 import { url } from '../utils/paths';
@@ -25,32 +24,49 @@ const publications = [...publicationsData]
 		<style>
 			.hero {
 				display: flex;
-				align-items: center;
-				gap: 4rem;
-				padding: 4rem 0;
-				margin-bottom: 2rem;
-			}
-
-			.hero-content {
-				flex: 4;
-			}
-
-			.hero-image {
-				flex: 1;
-				display: flex;
-				justify-content: center;
+				flex-direction: column;
 				align-items: center;
 				text-align: center;
-				position: relative;
+				padding: 1rem 0 2rem;
 			}
 
-			.hero-image img {
-				width: 200px;
-				max-width: 100%;
-				height: auto;
-				object-fit: contain;
+			.hero-logo {
+				height: 200px;
+				width: auto;
+				margin-bottom: 2rem;
 				border-radius: 0;
 				box-shadow: none;
+			}
+
+			.hero-title {
+				font-size: 4.5rem;
+				line-height: 1;
+				margin-bottom: 1.25rem;
+			}
+
+			.hero-subtitle,
+			.hero-place {
+				font-family: var(--font-sans);
+				text-transform: uppercase;
+				letter-spacing: 0.06em;
+				color: var(--color-text-muted);
+				margin: 0;
+			}
+
+			.hero-subtitle {
+				font-size: 1.1rem;
+				margin-bottom: 0.5rem;
+			}
+
+			.hero-place {
+				font-size: 0.85rem;
+			}
+
+			.hero-intro {
+				font-size: 1.05rem;
+				line-height: 1.7;
+				max-width: 40rem;
+				margin: 2.5rem auto 2rem;
 			}
 
 			.pub-mini-item {
@@ -81,6 +97,7 @@ const publications = [...publicationsData]
 
 			.hero-buttons {
 				display: flex;
+				justify-content: center;
 				gap: 1rem;
 				flex-wrap: wrap;
 			}
@@ -99,18 +116,28 @@ const publications = [...publicationsData]
 
 			@media (max-width: 768px) {
 				.hero {
-					flex-direction: column-reverse;
-					text-align: center;
-					padding: 2rem 0;
-					gap: 2rem;
+					padding: 0 0 1rem;
 				}
 
-				.hero-image img {
-					width: 120px;
+				.hero-logo {
+					height: 140px;
+					margin-bottom: 1.5rem;
 				}
 
-				.hero-buttons {
-					justify-content: center;
+				.hero-title {
+					font-size: 3.25rem;
+				}
+
+				.hero-subtitle {
+					font-size: 0.95rem;
+				}
+
+				.hero-place span {
+					display: block;
+				}
+
+				.hero-place .sep {
+					display: none;
 				}
 			}
 		</style>
@@ -121,78 +148,52 @@ const publications = [...publicationsData]
 
 		<main>
 			<section class="hero">
-				<div class="hero-content">
-					<h1 style="margin-bottom: 0.5rem; font-size: 4rem;">
-						QuICC
-					</h1>
+				<img
+					src={url('/quicc_lightt.png')}
+					width="1394"
+					height="1899"
+					alt="QuICC logo"
+					class="hero-logo logo-light"
+					fetchpriority="high"
+					decoding="async"
+				/>
 
-					<h2
-						style="
-							font-weight: 400;
-							color: var(--color-text-muted);
-							margin-bottom: 1.5rem;
-							font-family: var(--font-sans);
-							text-transform: uppercase;
-							letter-spacing: 0.05em;
-							font-size: 1rem;
-							border-bottom: none;
-							padding-bottom: 0;
-							display: block;
-							margin-top: 0;
-						"
+				<img
+					src={url('/quicc_darkk.png')}
+					width="1393"
+					height="1899"
+					alt="QuICC logo"
+					class="hero-logo logo-dark"
+					decoding="async"
+				/>
+
+				<h1 class="hero-title">QuICC</h1>
+
+				<p class="hero-subtitle">
+					Quantum Information, Computation and Communication
+				</p>
+
+				<p class="hero-place">
+					<span>Instituto de Ciencias de la Computación</span><span class="sep"> — </span><span>UBA-CONICET</span>
+				</p>
+
+				<p class="hero-intro">
+					We are a research group focused on
+					<strong>quantum information science, including quantum
+						computation and quantum communication</strong>.
+				</p>
+
+				<div class="hero-buttons">
+					<a href={url('/publications')} class="btn">
+						View Publications
+					</a>
+
+					<a
+						href={url('/projects')}
+						class="btn btn-outline"
 					>
-						Quantum Information, Computation and Communication
-						<br />
-						Instituto de Ciencias de la Computación,
-						Universidad de Buenos Aires
-					</h2>
-
-					<p
-						style="
-							font-size: 1.1rem;
-							line-height: 1.7;
-							margin-bottom: 2rem;
-						"
-					>
-						We are a research group focused on
-						<strong>quantum information science, including quantum
-							computation and quantum communication</strong>.
-					</p>
-
-					<div class="hero-buttons">
-						<a href={url('/publications')} class="btn">
-							View Publications
-						</a>
-
-						<a
-							href={url('/projects')}
-							class="btn btn-outline"
-						>
-							Current Projects
-						</a>
-					</div>
-				</div>
-
-				<div class="hero-image">
-					<Image
-						src={url('/quicc_lightt.png')}
-						width={280}
-						height={280}
-						alt="QuICC Logo"
-						class="logo-light"
-						fetchpriority="high"
-						decoding="async"
-					/>
-
-					<Image
-						src={url('/quicc_darkk.png')}
-						width={280}
-						height={280}
-						alt="QuICC Logo"
-						class="logo-dark"
-						fetchpriority="high"
-						decoding="async"
-					/>
+						Current Projects
+					</a>
 				</div>
 			</section>
 
