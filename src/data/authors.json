@@ -4,10 +4,15 @@
     "name": "Santiago Figueira",
     "category": "researcher",
     "role": "Researcher",
+    "role_es": "Investigador",
     "degree": "PhD in Computer Science",
     "positions": [
       "Researcher at ICC, UBA-CONICET",
       "Professor at the Department of Computer Science, FCEyN, UBA"
+    ],
+    "positions_es": [
+      "Investigador del ICC, UBA-CONICET",
+      "Profesor del Departamento de Computación, FCEyN, UBA"
     ],
     "keywords": [
       "Computability theory",
@@ -25,10 +30,15 @@
     "name": "Ariel Bendersky",
     "category": "researcher",
     "role": "Researcher",
+    "role_es": "Investigador",
     "degree": "PhD in Physics",
     "positions": [
       "Researcher at ICC, UBA-CONICET",
       "Professor at the Department of Computer Science, FCEyN, UBA"
+    ],
+    "positions_es": [
+      "Investigador del ICC, UBA-CONICET",
+      "Profesor del Departamento de Computación, FCEyN, UBA"
     ],
     "keywords": [
       "Quantum information processing",
@@ -46,9 +56,13 @@
     "name": "Guido Bellomo",
     "category": "researcher",
     "role": "Researcher",
+    "role_es": "Investigador",
     "degree": "PhD in Physics",
     "positions": [
       "Researcher at ICC, UBA-CONICET"
+    ],
+    "positions_es": [
+      "Investigador del ICC, UBA-CONICET"
     ],
     "keywords": [
       "Quantum information",
@@ -66,9 +80,13 @@
     "name": "Gustavo Martín Bosyk",
     "category": "researcher",
     "role": "Researcher",
+    "role_es": "Investigador",
     "degree": "PhD in Physics",
     "positions": [
       "Researcher at ICC, UBA-CONICET"
+    ],
+    "positions_es": [
+      "Investigador del ICC, UBA-CONICET"
     ],
     "keywords": [
       "Quantum resources",
@@ -86,9 +104,13 @@
     "name": "Marcelo Losada",
     "category": "researcher",
     "role": "Researcher",
+    "role_es": "Investigador",
     "degree": "PhD in Physics",
     "positions": [
       "Researcher at ICC, UBA-CONICET"
+    ],
+    "positions_es": [
+      "Investigador del ICC, UBA-CONICET"
     ],
     "keywords": [
       "Quantum information",
@@ -214,6 +236,7 @@
     "name": "Alejandro Diaz-Caro",
     "category": "former",
     "role": "Co-founder and former researcher",
+    "role_es": "Cofundador y ex investigador",
     "affiliation": "",
     "bio": "",
     "avatar": "diaz-caro.jpg",
@@ -226,6 +249,7 @@
     "name": "Gabriel Senno",
     "category": "former",
     "role": "Former PhD Student",
+    "role_es": "Ex doctorando",
     "affiliation": "",
     "bio": "",
     "avatar": "senno.jpg",
@@ -238,6 +262,7 @@
     "name": "Ignacio Perito",
     "category": "former",
     "role": "Former PhD Student",
+    "role_es": "Ex doctorando",
     "affiliation": "",
     "bio": "",
     "avatar": "perito.jpg",
@@ -250,6 +275,7 @@
     "name": "Martín Santesteban",
     "category": "former",
     "role": "Former Master's Student",
+    "role_es": "Ex estudiante de licenciatura",
     "affiliation": "",
     "bio": "",
     "avatar": "santesteban.jpg",
@@ -262,6 +288,7 @@
     "name": "Virginia Feldman",
     "category": "former",
     "role": "Former PhD Student",
+    "role_es": "Ex doctoranda",
     "affiliation": "",
     "bio": "",
     "avatar": "feldman.jpg",
@@ -274,10 +301,15 @@
     "name": "César Massri",
     "category": "collaborator",
     "role": "Collaborator",
+    "role_es": "Colaborador",
     "degree": "PhD in Mathematics",
     "positions": [
       "Researcher at IMAS, UBA-CONICET",
       "Professor at the Department of Mathematics, FCEyN, UBA"
+    ],
+    "positions_es": [
+      "Investigador del IMAS, UBA-CONICET",
+      "Profesor del Departamento de Matemática, FCEyN, UBA"
     ],
     "affiliation": "IMAS, UBA-CONICET",
     "bio": "",
@@ -291,6 +323,7 @@
     "name": "Patricio Bruno",
     "category": "former",
     "role": "Former Master's Student",
+    "role_es": "Ex estudiante de licenciatura",
     "affiliation": "",
     "bio": "",
     "avatar": "bruno.jpg",

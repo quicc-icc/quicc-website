@@ -1,5 +1,7 @@
 ---
 import authorsData from '../data/authors.json';
+import { localizeMember } from '../i18n/content';
+import { langFromUrl } from '../i18n/ui';
 
 interface Props {
   nameOrSlug: string;
@@ -25,7 +27,7 @@ if (!author && target) {
 ---
 
 {author ? (
-    <span class="author-link author-modal-trigger" data-member={JSON.stringify(author)} style="cursor: pointer;">
+    <span class="author-link author-modal-trigger" data-member={JSON.stringify(localizeMember(author, langFromUrl(Astro.url)))} style="cursor: pointer;">
         {author.name}
     </span>
 ) : (

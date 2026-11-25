@@ -16,8 +16,11 @@ const pathname = normalizePath(Astro.url.pathname);
 const hrefValue = typeof href === 'string' ? href : href?.toString() || '/';
 const isExternal = /^(https?:|mailto:|tel:)/.test(hrefValue);
 const normalizedHref = isExternal ? hrefValue : normalizePath(hrefValue);
-const subpath = pathname.match(/[^\/]+/g);
-const isActive = !isExternal && (normalizedHref === pathname || normalizedHref === '/' + (subpath?.[0] || ''));
+// Inicio ("/" o "/es") sólo se marca en la portada; el resto también en sus subpáginas
+const isHome = normalizedHref === '/' || normalizedHref === '/es';
+const isActive =
+	!isExternal &&
+	(normalizedHref === pathname || (!isHome && pathname.startsWith(`${normalizedHref}/`)));
 ---
 
 <a href={href} class:list={[className, { active: isActive }]} {...props}>

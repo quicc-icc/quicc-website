@@ -10,14 +10,23 @@ import FormattedDate from '../components/FormattedDate.astro';
 import Header from '../components/Header.astro';
 import TableOfContents from '../components/TableOfContents.astro';
 import { url } from '../utils/paths';
+import { term } from '../i18n/content';
+import { langFromUrl, localePath, t } from '../i18n/ui';
 
-type Props = CollectionEntry<'blog'>['data'] & { id?: string, headings?: { depth: number; slug: string; text: string }[], toc?: boolean };
+type Props = CollectionEntry<'blog'>['data'] & {
+	id?: string;
+	headings?: { depth: number; slug: string; text: string }[];
+	toc?: boolean;
+	/** false cuando la página en español muestra la noticia original en inglés */
+	translated?: boolean;
+};
 
-const { title, description, pubDate, updatedDate, heroImage, authors, tags, id, headings = [], toc } = Astro.props;
-const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
+const { title, description, pubDate, updatedDate, heroImage, authors, tags, id, headings = [], toc, translated = true } = Astro.props;
+const lang = langFromUrl(Astro.url);
+const fallbackHero = id ? localePath(lang, `/blog/${id}.png`) : url('/og.png');
 ---
 
-<html lang="en">
+<html lang={lang}>
 	<head>
 		<BaseHead title={title} description={description} />
 		<style>
@@ -66,6 +75,15 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 			.prose :global(li a) {
 				text-decoration: underline;
 				text-underline-offset: 2px;
+			}
+			.translation-note {
+				margin: 0 0 1rem;
+				padding: 0.6rem 0.9rem;
+				border-left: 3px solid var(--color-accent);
+				background: var(--color-bg-offset);
+				font-size: 0.9rem;
+				color: var(--color-text-muted);
+				text-align: left;
 			}
 			.prose :global(p) {
 				text-align: justify;
@@ -492,7 +510,11 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 	<body>
 		<Header />
 		<main>
-			<article>
+			<article
+				data-copy={t(lang, 'post.copy')}
+				data-copied={t(lang, 'post.copied')}
+				data-copy-label={t(lang, 'post.copyLabel')}
+			>
 				<div class="hero-image">
 					{heroImage ? (
 						<Image width={1020} height={510} src={heroImage} alt={title} />
@@ -509,12 +531,12 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 									{
 										updatedDate && (
 											<div class="last-updated-on">
-												Last updated on <FormattedDate date={updatedDate} />
+												{t(lang, 'post.lastUpdated')} <FormattedDate date={updatedDate} />
 											</div>
 										)
 									}
 								</div>
-								<h1>{title}</h1>
+								<h1 lang={translated ? undefined : 'en'}>{title}</h1>
 								{authors && authors.length > 0 && (
 									<div class="blog-authors">
 										{authors.map((authorId, i) => (
@@ -528,13 +550,16 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 								{tags && tags.length > 0 && (
 									<div class="blog-tags" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap; margin-top: 0.75rem;">
 										{tags.map((tag) => (
-											<a href={url(`/tags/${tag}`)} style="text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--color-accent); background: var(--color-bg-offset); padding: 0.2rem 0.6rem; border-radius: 999px; border: 1px solid var(--color-border);">
-												#{tag}
+											<a href={localePath(lang, `/tags/${tag}`)} style="text-decoration: none; font-size: 0.85rem; font-weight: 600; color: var(--color-accent); background: var(--color-bg-offset); padding: 0.2rem 0.6rem; border-radius: 999px; border: 1px solid var(--color-border);">
+												#{term(tag, lang)}
 											</a>
 										))}
 									</div>
 								)}
 								<hr />
+								{!translated && (
+									<p class="translation-note">{t(lang, 'post.onlyOriginal')}</p>
+								)}
 							</div>
 
 							{toc !== false && headings.length > 0 && (
@@ -543,7 +568,7 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 									<TableOfContents headings={headings} mobile={false} />
 								</>
 							)}
-							<slot />
+							{translated ? <slot /> : <div lang="en"><slot /></div>}
 						</div>
 					</div>
 				</div>
@@ -635,9 +660,18 @@ const fallbackHero = id ? url(`/blog/${id}.png`) : url('/og.png');
 					const copyButton = document.createElement('button');
 					copyButton.type = 'button';
 					copyButton.className = 'copy-code-button';
-					copyButton.innerHTML =
-						'<span class="copy-code-button__default">Copy</span><span class="copy-code-button__success">Copied</span>';
-					copyButton.setAttribute('aria-label', `Copy ${label.textContent} code`);
+					const texts = document.querySelector('article')?.dataset || {};
+					const copyDefault = document.createElement('span');
+					copyDefault.className = 'copy-code-button__default';
+					copyDefault.textContent = texts.copy || 'Copy';
+					const copySuccess = document.createElement('span');
+					copySuccess.className = 'copy-code-button__success';
+					copySuccess.textContent = texts.copied || 'Copied';
+					copyButton.append(copyDefault, copySuccess);
+					copyButton.setAttribute(
+						'aria-label',
+						(texts.copyLabel || 'Copy {label} code').replace('{label}', label.textContent || '')
+					);
 
 					copyButton.addEventListener('click', async () => {
 						try {

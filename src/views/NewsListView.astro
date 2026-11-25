@@ -1,0 +1,65 @@
+---
+// Página de noticias (con paginado). La usan src/pages/blog/[...page].astro
+// y src/pages/es/blog/[...page].astro.
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+import NewsList from '../components/NewsList.astro';
+import { SITE_TITLE } from '../consts';
+import type { LocalizedPost } from '../i18n/content';
+import { langFromUrl, localePath, t } from '../i18n/ui';
+
+interface Props {
+    posts: LocalizedPost[];
+    currentPage: number;
+    totalPages: number;
+    nextPage: number | null;
+    prevPage: number | null;
+}
+
+const { posts, currentPage, totalPages, nextPage, prevPage } = Astro.props;
+const lang = langFromUrl(Astro.url);
+const p = (path: string) => localePath(lang, path);
+const pageTitle = currentPage > 1
+    ? `${t(lang, 'blog.title')} (${currentPage}) | ${SITE_TITLE}`
+    : `${t(lang, 'blog.title')} | ${SITE_TITLE}`;
+---
+
+<!doctype html>
+<html lang={lang}>
+	<head>
+		<BaseHead title={pageTitle} description={t(lang, 'blog.intro')} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<h1>{t(lang, 'blog.title')}</h1>
+            <p style="margin-bottom: 1.5rem; max-width: 700px; font-size: 0.95rem; color: var(--color-text-muted);">
+                {t(lang, 'blog.intro')}
+            </p>
+
+            <NewsList posts={posts} />
+
+            {totalPages > 1 && (
+                <div style="display: flex; justify-content: center; gap: 1rem; margin-top: 3rem;">
+                    {prevPage ? (
+                        <a href={p(prevPage === 1 ? '/blog' : `/blog/${prevPage}`)} style="padding: 0.5rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; text-decoration: none; color: var(--color-text-main); font-weight: 500;">&larr; {t(lang, 'blog.previous')}</a>
+                    ) : (
+                        <span style="padding: 0.5rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-text-muted); opacity: 0.5; cursor: not-allowed; font-weight: 500;">&larr; {t(lang, 'blog.previous')}</span>
+                    )}
+
+                    <span style="display: flex; align-items: center; font-weight: 600; color: var(--color-text-muted);">
+                        {t(lang, 'blog.pageOf', { current: currentPage, total: totalPages })}
+                    </span>
+
+                    {nextPage ? (
+                        <a href={p(`/blog/${nextPage}`)} style="padding: 0.5rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; text-decoration: none; color: var(--color-text-main); font-weight: 500;">{t(lang, 'blog.next')} &rarr;</a>
+                    ) : (
+                        <span style="padding: 0.5rem 1rem; border: 1px solid var(--color-border); border-radius: 8px; color: var(--color-text-muted); opacity: 0.5; cursor: not-allowed; font-weight: 500;">{t(lang, 'blog.next')} &rarr;</span>
+                    )}
+                </div>
+            )}
+		</main>
+		<Footer />
+	</body>
+</html>

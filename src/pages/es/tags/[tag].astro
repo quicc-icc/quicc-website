@@ -1,0 +1,13 @@
+---
+import TagView from '../../../views/TagView.astro';
+import { tagPaths } from '../../../i18n/routes';
+
+export async function getStaticPaths() {
+	return tagPaths('es');
+}
+
+const { tag } = Astro.params;
+const { posts } = Astro.props;
+---
+
+<TagView tag={tag} posts={posts} />

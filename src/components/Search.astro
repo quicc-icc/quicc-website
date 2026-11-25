@@ -1,5 +1,8 @@
 ---
 import "@pagefind/default-ui/css/ui.css";
+import { langFromUrl, t } from '../i18n/ui';
+
+const lang = langFromUrl(Astro.url);
 ---
 
 <div id="search-overlay" class="search-overlay hidden">
@@ -7,7 +10,7 @@ import "@pagefind/default-ui/css/ui.css";
   <div class="search-panel-wrapper">
     <div id="search-panel" class="search-panel">
       <div class="search-panel-header">
-        <span class="search-title">Search</span>
+        <span class="search-title">{t(lang, 'search.title')}</span>
         <button id="search-close-btn" class="search-close-btn">Esc</button>
       </div>
       <div class="search-panel-content">
@@ -29,18 +32,19 @@ import "@pagefind/default-ui/css/ui.css";
 </div>
 
 <script>
-  let searchAbort;
+  let searchAbort: AbortController | undefined;
 
   function setupSearch() {
     if (searchAbort) searchAbort.abort();
     searchAbort = new AbortController();
     const { signal } = searchAbort;
 
-    const overlay = document.getElementById("search-overlay");
+    const overlayElement = document.getElementById("search-overlay");
     const backdrop = document.getElementById("search-backdrop");
     const closeBtn = document.getElementById("search-close-btn");
     
-    if (!overlay) return;
+    if (!overlayElement) return;
+    const overlay: HTMLElement = overlayElement;
 
     function openSearch() {
       overlay.classList.remove("hidden");
@@ -53,21 +57,38 @@ import "@pagefind/default-ui/css/ui.css";
         const onIdle = window.requestIdleCallback || ((cb) => setTimeout(cb, 1));
         onIdle(async () => {
           const { PagefindUI } = await import("@pagefind/default-ui");
+          // Textos del buscador en español (en inglés usa los que trae Pagefind)
+          const translations = document.documentElement.lang === "es"
+            ? {
+                placeholder: "Buscar",
+                clear_search: "Borrar",
+                load_more: "Ver más resultados",
+                search_label: "Buscar en el sitio",
+                filters_label: "Filtros",
+                zero_results: "No hay resultados para [SEARCH_TERM]",
+                many_results: "[COUNT] resultados para [SEARCH_TERM]",
+                one_result: "[COUNT] resultado para [SEARCH_TERM]",
+                alt_search: "No hay resultados para [SEARCH_TERM]. Se muestran resultados para [DIFFERENT_TERM]",
+                search_suggestion: "No hay resultados para [SEARCH_TERM]. Probá con alguna de estas búsquedas:",
+                searching: "Buscando [SEARCH_TERM]...",
+              }
+            : undefined;
           new PagefindUI({
+            translations,
             baseUrl: import.meta.env.BASE_URL,
             bundlePath: import.meta.env.BASE_URL.replace(/\/$/, "") + "/pagefind/",
             element: "#pagefind__search",
             showImages: false,
             showSubResults: true,
           });
-          const searchInput = overlay.querySelector(".pagefind-ui__search-input");
+          const searchInput = overlay.querySelector<HTMLInputElement>(".pagefind-ui__search-input");
           if (searchInput) {
             searchInput.focus();
           }
         });
       } else {
         requestAnimationFrame(() => {
-          const searchInput = overlay.querySelector(".pagefind-ui__search-input");
+          const searchInput = overlay.querySelector<HTMLInputElement>(".pagefind-ui__search-input");
           if (searchInput) {
             searchInput.focus();
           }

@@ -4,7 +4,10 @@ interface Props {
   year: number;
   pubs: any[];
 }
+import { langFromUrl, t } from '../i18n/ui';
+
 const { year, pubs } = Astro.props;
+const lang = langFromUrl(Astro.url);
 
 function formatAuthors(authors?: string[]) {
   if (!authors || authors.length === 0) return '';
@@ -13,7 +16,7 @@ function formatAuthors(authors?: string[]) {
     : authors.join(', ');
 }
 
-const label = year === 0 ? 'Undated' : String(year);
+const label = year === 0 ? t(lang, 'pubs.undated') : String(year);
 const id = year === 0 ? 'undated' : `y${year}`;
 ---
 
@@ -32,8 +35,8 @@ const id = year === 0 ? 'undated' : `y${year}`;
         <span class="pub-meta">
           {formatAuthors(pub.authors)}
           {pub.venue && <> · <i>{pub.venue}</i></>}
-          {pub.doi && <a class="pub-link" href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener">DOI</a>}
-          {pub.arxiv && <a class="pub-link" href={pub.arxiv} target="_blank" rel="noopener">arXiv</a>}
+          {pub.doi && <>{' '}<a class="pub-link" href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener">DOI</a></>}
+          {pub.arxiv && <>{' '}<a class="pub-link" href={pub.arxiv} target="_blank" rel="noopener">arXiv</a></>}
         </span>
       </li>
     ))}
@@ -100,7 +103,7 @@ const id = year === 0 ? 'undated' : `y${year}`;
 }
 
 .pub-link {
-  margin-left: 0.5rem;
+  margin-left: 0.3rem;
   font-size: 0.8rem;
   color: var(--color-accent);
   text-decoration: none;
