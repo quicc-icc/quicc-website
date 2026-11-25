@@ -116,6 +116,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         degree?: string;
         positions?: string[];
         keywords?: string[];
+        program?: string;
     };
 
     const getInitials = (name: string) => {
@@ -199,7 +200,12 @@ const cvHref = CV_URL ? url(CV_URL) : null;
                 
                 if (modalName) modalName.textContent = member.name;
                 if (modalTitle) modalTitle.textContent = member.title || '';
-                if (modalRole) modalRole.textContent = member.role || '';
+                // "PhD Student" + "Computer Science" → "PhD Student in Computer Science"
+                if (modalRole) {
+                    modalRole.textContent = member.program
+                        ? `${member.role || ''} in ${member.program}`.trim()
+                        : member.role || '';
+                }
                 // Perfil: título, cargos y palabras clave (todos opcionales en authors.json)
                 if (modalDegree) {
                     modalDegree.textContent = member.degree || '';

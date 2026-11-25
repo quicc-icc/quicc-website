@@ -7,7 +7,7 @@ import authorsData from '../data/authors.json';
 import { generateFallbackAvatar } from '../utils/avatar';
 import { teamImages } from '../data/teamImages';
 
-type AuthorRecord = (typeof authorsData)[number] & { affiliation?: string };
+type AuthorRecord = (typeof authorsData)[number] & { affiliation?: string; program?: string };
 
 // Secciones de la página, en orden. Cada categoría de authors.json va a una sola sección.
 // card: 'large' = tarjeta grande con foto; 'small' = tarjeta chica en lista.
@@ -214,7 +214,10 @@ const sections = SECTIONS.map((section) => ({
 			}
 
 			.collab-info .collab-affil {
+				display: block;
 				font-size: 0.85rem;
+				line-height: 1.35;
+				margin-top: 0.15rem;
 				color: var(--color-text-muted);
 			}
 
@@ -292,7 +295,8 @@ const sections = SECTIONS.map((section) => ({
 
 									<span class="team-name">{profile.name}</span>
 
-									<span class="team-role">{profile.role}</span>
+									{/* En las secciones de estudiantes el título ya dice el rol: se muestra la carrera */}
+									<span class="team-role">{profile.program || profile.role}</span>
 								</div>
 							))}
 						</div>
