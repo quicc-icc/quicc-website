@@ -82,6 +82,11 @@ const cvHref = CV_URL ? url(CV_URL) : null;
             <span id="modal-role"></span>
         </div>
     </div>
+    <div id="modal-profile" class="modal-profile">
+        <p id="modal-degree" class="modal-degree"></p>
+        <ul id="modal-positions" class="modal-positions"></ul>
+        <ul id="modal-keywords" class="modal-keywords" aria-label="Research interests"></ul>
+    </div>
     <p id="modal-bio"></p>
     <div id="modal-socials"></div>
 </dialog>
@@ -108,6 +113,10 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         linkedin?: string;
         google_scholar?: string;
         email?: string;
+        degree?: string;
+        positions?: string[];
+        keywords?: string[];
+        program?: string;
     };
 
     const getInitials = (name: string) => {
@@ -144,6 +153,21 @@ const cvHref = CV_URL ? url(CV_URL) : null;
     const modalTitle = document.getElementById('modal-title');
     const modalRole = document.getElementById('modal-role');
     const modalBio = document.getElementById('modal-bio');
+    const modalProfile = document.getElementById('modal-profile');
+    const modalDegree = document.getElementById('modal-degree');
+    const modalPositions = document.getElementById('modal-positions');
+    const modalKeywords = document.getElementById('modal-keywords');
+
+    // Llena una lista con textos (sin HTML) y la oculta si está vacía.
+    function fillList(list: HTMLElement | null, items: string[] | undefined) {
+        if (!list) return;
+        list.replaceChildren(...(items || []).filter(Boolean).map((text) => {
+            const li = document.createElement('li');
+            li.textContent = text;
+            return li;
+        }));
+        list.hidden = list.children.length === 0;
+    }
     const modalSocials = document.getElementById('modal-socials');
 
     const initModals = () => {
@@ -176,8 +200,26 @@ const cvHref = CV_URL ? url(CV_URL) : null;
                 
                 if (modalName) modalName.textContent = member.name;
                 if (modalTitle) modalTitle.textContent = member.title || '';
-                if (modalRole) modalRole.textContent = member.role || '';
-                if (modalBio) modalBio.textContent = member.bio || 'No description available.';
+                // "PhD Student" + "Computer Science" → "PhD Student in Computer Science"
+                if (modalRole) {
+                    modalRole.textContent = member.program
+                        ? `${member.role || ''} in ${member.program}`.trim()
+                        : member.role || '';
+                }
+                // Perfil: título, cargos y palabras clave (todos opcionales en authors.json)
+                if (modalDegree) {
+                    modalDegree.textContent = member.degree || '';
+                    modalDegree.hidden = !member.degree;
+                }
+                fillList(modalPositions, member.positions);
+                fillList(modalKeywords, member.keywords);
+                if (modalProfile) {
+                    modalProfile.hidden = !member.degree && !member.positions?.length && !member.keywords?.length;
+                }
+                if (modalBio) {
+                    modalBio.textContent = member.bio || '';
+                    modalBio.hidden = !member.bio;
+                }
 
                 if (modalAvatar) {
                     const fallbackAvatar = generateFallbackAvatar(member.name);
@@ -363,7 +405,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
     .author-modal {
         padding: 2.5rem 2rem;
         border: 1px solid var(--color-border);
-        border-radius: 16px;
+        border-radius: 8px;
         background-color: var(--color-bg);
         color: var(--color-text-main);
         max-width: 500px;
@@ -422,7 +464,45 @@ const cvHref = CV_URL ? url(CV_URL) : null;
     #modal-bio {
         line-height: 1.6;
         color: var(--color-text-main);
-        margin-bottom: 2rem;
+        margin: 0 0 1.5rem;
+    }
+    .modal-profile {
+        margin-bottom: 1.5rem;
+    }
+    .modal-degree {
+        margin: 0 0 0.35rem;
+        font-weight: 600;
+        color: var(--color-text-main);
+    }
+    .modal-positions {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        font-size: 0.92rem;
+        line-height: 1.45;
+        color: var(--color-text-muted);
+    }
+    .modal-positions :global(li + li) {
+        margin-top: 0.2rem;
+    }
+    .modal-keywords {
+        list-style: none;
+        margin: 0.9rem 0 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.4rem;
+    }
+    .modal-keywords :global(li) {
+        font-size: 0.8rem;
+        padding: 0.2rem 0.6rem;
+        border: 1px solid var(--color-border);
+        border-radius: 4px;
+        background-color: var(--color-bg-offset);
+        color: var(--color-text-main);
+    }
+    [hidden] {
+        display: none !important;
     }
     #modal-socials {
         display: flex;
@@ -430,7 +510,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         flex-wrap: wrap;
     }
 
-    .social-icon-btn {
+    :global(.social-icon-btn) {
         display: flex;
         align-items: center;
         justify-content: center;
@@ -442,7 +522,7 @@ const cvHref = CV_URL ? url(CV_URL) : null;
         color: var(--color-text-muted);
         transition: all 0.2s ease;
     }
-    .social-icon-btn:hover {
+    :global(.social-icon-btn:hover) {
         background-color: var(--color-accent);
         color: var(--color-bg);
         border-color: var(--color-accent);

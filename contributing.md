@@ -96,6 +96,24 @@ Campo opcional `affiliation`: en las tarjetas chicas (Collaborators y Former Mem
 "affiliation": "Universidad Nacional de La Plata",
 ```
 
+Otros campos opcionales:
+
+* `program`: la carrera de los estudiantes (`"Computer Science"`, `"Physics"`, `"Mathematics"`). En la tarjeta se muestra en lugar del rol, y en la ventana queda "PhD Student in Computer Science".
+* `degree`: título, por ejemplo `"PhD in Mathematics"`.
+* `positions`: lista de cargos, uno por línea.
+* `keywords`: tres o cuatro palabras clave de su investigación.
+
+Estos tres últimos se muestran en la ventana que se abre al tocar la tarjeta. Ejemplo:
+
+```json
+"degree": "PhD in Computer Science",
+"positions": [
+  "Researcher at ICC, UBA-CONICET",
+  "Professor at the Department of Computer Science, FCEyN, UBA"
+],
+"keywords": ["Computability theory", "Algorithmic randomness", "Quantum information"],
+```
+
 Los correos se escriben con " at " en lugar de "@" (por ejemplo `"usuario at dc.uba.ar"`); el sitio arma el enlace correctamente.
 
 Las imágenes de los integrantes se encuentran en:

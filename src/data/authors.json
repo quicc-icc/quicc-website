@@ -4,6 +4,16 @@
     "name": "Santiago Figueira",
     "category": "researcher",
     "role": "Researcher",
+    "degree": "PhD in Computer Science",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET",
+      "Professor at the Department of Computer Science, FCEyN, UBA"
+    ],
+    "keywords": [
+      "Computability theory",
+      "Algorithmic randomness",
+      "Quantum information"
+    ],
     "bio": "",
     "avatar": "figueira.png",
     "email": "sfigueir at gmail.com",
@@ -15,6 +25,15 @@
     "name": "Ariel Bendersky",
     "category": "researcher",
     "role": "Researcher",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET",
+      "Professor at the Department of Computer Science, FCEyN, UBA"
+    ],
+    "keywords": [
+      "Quantum information processing",
+      "Quantum computation",
+      "Quantum algorithms"
+    ],
     "bio": "",
     "avatar": "bendersky.png",
     "email": "aribender at dc.uba.ar",
@@ -26,6 +45,14 @@
     "name": "Guido Bellomo",
     "category": "researcher",
     "role": "Researcher",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET"
+    ],
+    "keywords": [
+      "Quantum information",
+      "Non-classical correlations",
+      "Quantum computing"
+    ],
     "bio": "",
     "avatar": "bellomo.png",
     "email": "gbellomo at icc.fcen.uba.ar",
@@ -37,6 +64,14 @@
     "name": "Gustavo Martín Bosyk",
     "category": "researcher",
     "role": "Researcher",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET"
+    ],
+    "keywords": [
+      "Quantum resources",
+      "Quantum algorithms",
+      "Quantum information"
+    ],
     "bio": "",
     "avatar": "bosyk.png",
     "email": "gbosyk at icc.fcen.uba.ar",
@@ -48,6 +83,14 @@
     "name": "Marcelo Losada",
     "category": "researcher",
     "role": "Researcher",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET"
+    ],
+    "keywords": [
+      "Quantum information",
+      "Quantum computation",
+      "Quantum optimization"
+    ],
     "bio": "",
     "avatar": "losada.png",
     "email": "marcelolosada at yahoo.com",
@@ -59,18 +102,19 @@
     "name": "Santiago Cifuentes",
     "category": "phd",
     "role": "PhD Student",
+    "program": "Computer Science",
     "bio": "",
     "avatar": "cifuentes.jpg",
     "email": "santiagocifuentes66 at hotmail.com",
     "google_scholar": "https://scholar.google.com/citations?user=oZUZmFYAAAAJ",
     "sortOrder": 50
   },
-
   {
     "id": "nicolas-ciancaglini",
     "name": "Nicolás Ciancaglini",
     "category": "phd",
     "role": "PhD Student",
+    "program": "Computer Science",
     "bio": "",
     "avatar": "ciancaglini.png",
     "email": "abejorrop at gmail.com",
@@ -82,6 +126,7 @@
     "name": "Franco Meroi",
     "category": "phd",
     "role": "PhD Student",
+    "program": "Physics",
     "bio": "",
     "avatar": "meroi.jpg",
     "email": "meroi.f at hotmail.com",
@@ -93,6 +138,7 @@
     "name": "Fernando Vische",
     "category": "phd",
     "role": "PhD Student",
+    "program": "Mathematics",
     "bio": "",
     "avatar": "vische.jpg",
     "email": "",
@@ -104,6 +150,7 @@
     "name": "Gonzalo Bustos",
     "category": "masters",
     "role": "Master's Student",
+    "program": "Computer Science",
     "bio": "",
     "avatar": "bustos.jpg",
     "email": "",
@@ -115,6 +162,7 @@
     "name": "Antonella Berzzotti",
     "category": "masters",
     "role": "Master's Student",
+    "program": "Computer Science",
     "bio": "",
     "avatar": "berzzotti.jpg",
     "email": "",
@@ -126,6 +174,7 @@
     "name": "Zoe Marino",
     "category": "masters",
     "role": "Master's Student",
+    "program": "Computer Science",
     "bio": "",
     "avatar": "marino.jpg",
     "email": "",
@@ -137,6 +186,7 @@
     "name": "Lorena Medrano",
     "category": "masters",
     "role": "Master's Student",
+    "program": "Computer Science",
     "bio": "",
     "avatar": "medrano.jpg",
     "email": "",
@@ -148,18 +198,18 @@
     "name": "Francisco Domato",
     "category": "masters",
     "role": "Master's Student",
+    "program": "Physics",
     "bio": "",
     "avatar": "domato.jpg",
     "email": "",
     "google_scholar": "",
     "sortOrder": 150
   },
-
   {
     "id": "alejandro-diaz-caro",
     "name": "Alejandro Diaz-Caro",
     "category": "former",
-    "role": "Former Member",
+    "role": "Co-founder and former researcher",
     "affiliation": "",
     "bio": "",
     "avatar": "diaz-caro.jpg",
@@ -171,7 +221,7 @@
     "id": "gabriel-senno",
     "name": "Gabriel Senno",
     "category": "former",
-    "role": "Former Member",
+    "role": "Former PhD Student",
     "affiliation": "",
     "bio": "",
     "avatar": "senno.jpg",
@@ -183,7 +233,7 @@
     "id": "ignacio-perito",
     "name": "Ignacio Perito",
     "category": "former",
-    "role": "Former Member",
+    "role": "Former PhD Student",
     "affiliation": "",
     "bio": "",
     "avatar": "perito.jpg",
@@ -195,32 +245,37 @@
     "id": "martin-santesteban",
     "name": "Martín Santesteban",
     "category": "former",
-    "role": "Former Member",
+    "role": "Former Master's Student",
     "affiliation": "",
     "bio": "",
     "avatar": "santesteban.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 230
+    "sortOrder": 240
   },
   {
     "id": "virginia-feldman",
     "name": "Virginia Feldman",
     "category": "former",
-    "role": "Former Member",
+    "role": "Former PhD Student",
     "affiliation": "",
     "bio": "",
     "avatar": "feldman.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 240
+    "sortOrder": 230
   },
   {
     "id": "cesar-massri",
     "name": "César Massri",
     "category": "collaborator",
     "role": "Collaborator",
-    "affiliation": "",
+    "degree": "PhD in Mathematics",
+    "positions": [
+      "Researcher at IMAS, UBA-CONICET",
+      "Professor at the Department of Mathematics, FCEyN, UBA"
+    ],
+    "affiliation": "IMAS, UBA-CONICET",
     "bio": "",
     "avatar": "cesar.jpg",
     "email": "",
@@ -230,13 +285,13 @@
   {
     "id": "patricio-bruno",
     "name": "Patricio Bruno",
-    "category": "collaborator",
-    "role": "Collaborator",
+    "category": "former",
+    "role": "Former Master's Student",
     "affiliation": "",
     "bio": "",
     "avatar": "bruno.jpg",
     "email": "",
     "google_scholar": "",
-    "sortOrder": 160
+    "sortOrder": 250
   }
 ]
