@@ -4,6 +4,16 @@
     "name": "Santiago Figueira",
     "category": "researcher",
     "role": "Researcher",
+    "degree": "PhD in Computer Science",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET",
+      "Professor at the Department of Computer Science, FCEyN, UBA"
+    ],
+    "keywords": [
+      "Computability theory",
+      "Algorithmic randomness",
+      "Quantum information"
+    ],
     "bio": "",
     "avatar": "figueira.png",
     "email": "sfigueir at gmail.com",
@@ -15,6 +25,15 @@
     "name": "Ariel Bendersky",
     "category": "researcher",
     "role": "Researcher",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET",
+      "Professor at the Department of Computer Science, FCEyN, UBA"
+    ],
+    "keywords": [
+      "Quantum information processing",
+      "Quantum computation",
+      "Quantum algorithms"
+    ],
     "bio": "",
     "avatar": "bendersky.png",
     "email": "aribender at dc.uba.ar",
@@ -26,6 +45,14 @@
     "name": "Guido Bellomo",
     "category": "researcher",
     "role": "Researcher",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET"
+    ],
+    "keywords": [
+      "Quantum information",
+      "Non-classical correlations",
+      "Quantum computing"
+    ],
     "bio": "",
     "avatar": "bellomo.png",
     "email": "gbellomo at icc.fcen.uba.ar",
@@ -37,6 +64,14 @@
     "name": "Gustavo Martín Bosyk",
     "category": "researcher",
     "role": "Researcher",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET"
+    ],
+    "keywords": [
+      "Quantum resources",
+      "Quantum algorithms",
+      "Quantum information"
+    ],
     "bio": "",
     "avatar": "bosyk.png",
     "email": "gbosyk at icc.fcen.uba.ar",
@@ -48,6 +83,14 @@
     "name": "Marcelo Losada",
     "category": "researcher",
     "role": "Researcher",
+    "positions": [
+      "Researcher at ICC, UBA-CONICET"
+    ],
+    "keywords": [
+      "Quantum information",
+      "Quantum computation",
+      "Quantum optimization"
+    ],
     "bio": "",
     "avatar": "losada.png",
     "email": "marcelolosada at yahoo.com",
@@ -65,7 +108,6 @@
     "google_scholar": "https://scholar.google.com/citations?user=oZUZmFYAAAAJ",
     "sortOrder": 50
   },
-
   {
     "id": "nicolas-ciancaglini",
     "name": "Nicolás Ciancaglini",
@@ -154,7 +196,6 @@
     "google_scholar": "",
     "sortOrder": 150
   },
-
   {
     "id": "alejandro-diaz-caro",
     "name": "Alejandro Diaz-Caro",
