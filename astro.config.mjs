@@ -2,6 +2,7 @@
 
 import mdx from '@astrojs/mdx';
 import sitemap from '@astrojs/sitemap';
+import { unified } from '@astrojs/markdown-remark';
 import { defineConfig } from 'astro/config';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
@@ -21,8 +22,11 @@ export default defineConfig({
 				dark: 'github-dark',
 			},
 		},
-		remarkPlugins: [remarkMath],
-		rehypePlugins: [rehypeKatex]
+		// Fórmulas con $...$ y $$...$$ en las noticias (KaTeX)
+		processor: unified({
+			remarkPlugins: [remarkMath],
+			rehypePlugins: [rehypeKatex],
+		}),
 	},
 	build: {
 		inlineStylesheets: 'always',

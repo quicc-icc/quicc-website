@@ -1,7 +1,7 @@
 name: Update Publications
 
-# Una vez por semana trae las publicaciones de ORCID y, si cambiaron,
-# las commitea y lanza el deploy del sitio.
+# Una vez por semana trae las publicaciones de ORCID y arXiv (y completa datos con
+# Crossref); si cambiaron, las commitea y lanza el deploy del sitio.
 # También se puede correr a mano: Actions → Update Publications → Run workflow.
 
 on:
@@ -20,6 +20,7 @@ concurrency:
 jobs:
   update:
     runs-on: ubuntu-latest
+    timeout-minutes: 30
     env:
       GH_TOKEN: ${{ github.token }}
       GH_REPO: ${{ github.repository }}
@@ -35,6 +36,9 @@ jobs:
 
       - name: Install deps
         run: npm ci
+
+      - name: Run tests
+        run: npm test
 
       - name: Fetch publications
         run: npm run fetch:pubs

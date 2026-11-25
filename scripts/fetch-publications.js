@@ -2,8 +2,9 @@
 //   1. ORCID de cada integrante (src/data/orcids.json)
 //   2. el feed de arXiv de cada ORCID (https://arxiv.org/a/<ORCID>.atom2), que sólo
 //      existe si la persona vinculó su ORCID en su cuenta de arXiv
-// Une duplicados (preprint / versión publicada), y respeta
-// src/data/publications-exclude.json. Lo que ya estaba en el JSON se conserva.
+// Une duplicados (preprint / versión publicada), completa con Crossref la revista,
+// el año o los autores que falten, y respeta src/data/publications-exclude.json.
+// Lo que ya estaba en el JSON se conserva.
 
 import fs from "fs/promises";
 import {
@@ -11,7 +12,9 @@ import {
   mergeAll,
   applyExclusions,
   sortPubs,
-  isPreprintVenue,
+  crossrefFields,
+  needsCrossref,
+  fillMissing,
 } from "./lib/publications.js";
 
 const DATA = "./src/data";
@@ -122,16 +125,15 @@ async function fetchArxiv(researcher) {
 }
 
 // =========================
-// Crossref: nombre de la revista cuando ORCID no lo trae
+// Crossref: completa revista, año y autores cuando ORCID o arXiv no los traen
 // =========================
-async function venueFromCrossref(doi) {
+async function crossrefInfo(doi) {
   const res = await request(
     `https://api.crossref.org/works/${encodeURIComponent(doi)}`,
     "application/json"
   );
   if (!res.ok) return null;
-  const data = await res.json();
-  return data.message?.["container-title"]?.[0] || null;
+  return crossrefFields((await res.json()).message);
 }
 
 // =========================
@@ -162,13 +164,12 @@ for (const [i, researcher] of researchers.entries()) {
 let publications = mergeAll([...existing, ...incoming]);
 
 for (const pub of publications) {
-  if (pub.doi && isPreprintVenue(pub.venue)) {
-    try {
-      const venue = await venueFromCrossref(pub.doi);
-      if (venue) pub.venue = venue;
-    } catch (err) {
-      problems.push(`Crossref ${pub.doi}: ${err.message}`);
-    }
+  if (!pub.doi || !needsCrossref(pub)) continue;
+  try {
+    const info = await crossrefInfo(pub.doi);
+    if (info) Object.assign(pub, fillMissing(pub, info));
+  } catch (err) {
+    problems.push(`Crossref ${pub.doi}: ${err.message}`);
   }
 }
 

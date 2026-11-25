@@ -9,7 +9,7 @@ import { url } from '../utils/paths';
 <!doctype html>
 <html lang="en">
   <head>
-    <BaseHead title={`404 | ${SITE_TITLE}`} description="The page you requested could not be found." />
+    <BaseHead title={`404 | ${SITE_TITLE}`} description="The page you requested could not be found." noindex />
     <style>
       .not-found-wrap {
         position: relative;
@@ -114,7 +114,10 @@ import { url } from '../utils/paths';
         padding: 1rem;
       }
 
-      .suggest h3 {
+      .suggest h2 {
+        border-bottom: none;
+        padding-bottom: 0;
+        display: block;
         margin: 0 0 0.8rem;
         font-family: var(--font-sans);
         font-size: 0.95rem;
@@ -185,12 +188,12 @@ import { url } from '../utils/paths';
 
             <div class="actions">
               <a class="btn" href={url('/')}>Return Home</a>
-              <a class="btn btn-outline" href={url('/blog')}>Read the Blog</a>
+              <a class="btn btn-outline" href={url('/blog')}>Read the News</a>
             </div>
           </div>
 
           <aside class="suggest">
-            <h3>Quick Destinations</h3>
+            <h2>Quick Destinations</h2>
             <ul>
               <li><a href={url('/publications')}>Publications</a></li>
               <li><a href={url('/projects')}>Projects</a></li>

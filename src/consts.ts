@@ -24,35 +24,6 @@ export const CONTACT = {
   ],
 };
 
-export type SocialIcon = 'website' | 'scholar' | 'email' | 'github' | 'linkedin' | 'twitter';
-
-export const SOCIAL_LINKS: ReadonlyArray<{
-  label: string;
-  href: string;
-  icon: SocialIcon;
-}> = [
-  {
-    label: 'GitHub',
-    href: '',
-    icon: 'github',
-  },
-  {
-    label: 'Email',
-    href: 'mailto:',
-    icon: 'email',
-  },
-  {
-    label: 'LinkedIn',
-    href: '',
-    icon: 'linkedin',
-  },
-  {
-    label: 'X',
-    href: '',
-    icon: 'twitter',
-  },
-];
-
 export const FOOTER_CREDIT = {
   designerName: 'QuICC — ICC, UBA',
   designerUrl: '',
