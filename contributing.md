@@ -10,7 +10,7 @@ La mayor parte del contenido puede modificarse directamente desde la interfaz we
 
 Las entradas del blog se encuentran en:
 
-[`src/content/blog/`](https://github.com/guido-b/quicc-website/tree/main/src/content/blog)
+[`src/content/blog/`](https://github.com/quicc-icc/quicc-website/tree/main/src/content/blog)
 
 Cada entrada está contenida en un archivo `*.mdx`
 
@@ -48,7 +48,7 @@ Subir las imágenes directamente dentro de la misma carpeta.
 
 La información sobre proyectos y líneas de investigación se encuentra en:
 
-[`src/data/projects.json`](https://github.com/guido-b/quicc-website/blob/main/src/data/projects.json)
+[`src/data/projects.json`](https://github.com/quicc-icc/quicc-website/blob/main/src/data/projects.json)
 
 Allí se pueden modificar:
 * líneas de investigación
@@ -64,7 +64,7 @@ Es importante conservar correctamente la estructura JSON.
 
 La información de los integrantes se encuentra en:
 
-[`src/data/authors.json`](https://github.com/guido-b/quicc-website/blob/main/src/data/authors.json)
+[`src/data/authors.json`](https://github.com/quicc-icc/quicc-website/blob/main/src/data/authors.json)
 
 Allí pueden modificarse:
 * nombres
@@ -118,13 +118,13 @@ Los correos se escriben con " at " en lugar de "@" (por ejemplo `"usuario at dc.
 
 Las imágenes de los integrantes se encuentran en:
 
-[`src/assets/team/`](https://github.com/guido-b/quicc-website/tree/main/src/assets/team)
+[`src/assets/team/`](https://github.com/quicc-icc/quicc-website/tree/main/src/assets/team)
 
-Si se agrega una nueva imagen:
-1. Subirla a `src/assets/team/`
-2. Registrarla en:
+Para agregar o cambiar una foto:
+1. Subirla a `src/assets/team/` con el apellido como nombre (por ejemplo `bosyk.jpg`). Conviene que sea cuadrada, de al menos 300 × 300 px, con la cara centrada: el sitio la recorta en círculo.
+2. Poner ese mismo nombre en el campo `"avatar"` de la persona en `authors.json`.
 
-[`src/data/teamImages.ts`](https://github.com/guido-b/quicc-website/blob/main/src/data/teamImages.ts)
+No hace falta registrarla en ningún otro lado: el sitio toma automáticamente todas las imágenes de esa carpeta.
 
 ---
 
