@@ -22,6 +22,16 @@ function loadAssets() {
 const WIDTH = 1200;
 const HEIGHT = 630;
 
+// Tamaño de letra del título según su largo, para que entre completo en el espacio
+// disponible (264 px de alto: 3 líneas a 80/64 px, 4 a 54 px, 5 a 44 px).
+function titleFontSize(title: string) {
+    const length = title.length;
+    if (length <= 45) return 80;
+    if (length <= 70) return 64;
+    if (length <= 115) return 54;
+    return 44;
+}
+
 export async function generateOgImage(title: string, subtitle: string) {
     const [fontDataRegular, fontDataBold, logoSrc] = await loadAssets();
 
@@ -43,7 +53,7 @@ export async function generateOgImage(title: string, subtitle: string) {
                     </div>
                 </div>
 
-                <div style="display: flex; color: #ffffff; font-size: 80px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; max-width: 900px; max-height: 264px; overflow: hidden;">
+                <div style="display: flex; color: #ffffff; font-size: ${titleFontSize(title)}px; font-weight: 700; line-height: 1.1; letter-spacing: -0.02em; max-width: 900px; max-height: 264px; overflow: hidden;">
                     ${title}
                 </div>
 
