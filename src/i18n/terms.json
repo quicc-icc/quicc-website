@@ -9,7 +9,6 @@
     "PhD in Computer Science": "Doctorado en Ciencias de la Computación",
     "PhD in Physics": "Doctorado en Física",
     "PhD in Mathematics": "Doctorado en Matemática",
-
     "Quantum information": "Información cuántica",
     "Quantum information processing": "Procesamiento de información cuántica",
     "Quantum computation": "Computación cuántica",
@@ -31,6 +30,9 @@
     "Quantum complexity": "Complejidad cuántica",
     "Quantum machine learning": "Aprendizaje automático cuántico",
     "Conferences": "Congresos",
-    "Special issue": "Número especial"
+    "Special issue": "Número especial",
+    "Quantum randomness": "Aleatoriedad cuántica",
+    "Nonlocality": "No localidad",
+    "Courses": "Cursos"
   }
 }
